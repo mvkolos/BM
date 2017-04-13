@@ -1,0 +1,24 @@
+﻿<Page x:Class="BigMoscow.Pages.PageSend"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BigMoscow"
+       xmlns:properties="clr-namespace:BigMoscow.Properties"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="PageSend" Loaded="Page_Loaded">
+    <Page.Background>
+        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
+    </Page.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox  Name="textbox_Email" Height="55" Width="500" Opacity="0.6" VerticalAlignment="Bottom" GotFocus="textbox_Email_GotFocus"/>
+        <Button Content="{x:Static properties:Resources.button_send_smth}" Name="button_send_smth" Grid.Row="1" Height="55" Width="200" VerticalAlignment="Top" Margin="405,50" Click="button_send_smth_Click"/>
+    </Grid>
+</Page>

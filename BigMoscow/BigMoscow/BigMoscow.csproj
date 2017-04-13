@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5DF9B89-692A-4683-8703-D9541BFCF6FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BigMoscow</RootNamespace>
+    <AssemblyName>BigMoscow</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controls\en12\p3.xaml.cs">
+      <DependentUpon>p3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\en12\p4.xaml.cs">
+      <DependentUpon>p4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\en12\p5.xaml.cs">
+      <DependentUpon>p5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\en12\p6.xaml.cs">
+      <DependentUpon>p6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\en12\p7.xaml.cs">
+      <DependentUpon>p7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\en12\p2.xaml.cs">
+      <DependentUpon>p2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\en12\p1.xaml.cs">
+      <DependentUpon>p1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CorouselItemsControl.xaml.cs">
+      <DependentUpon>CorouselItemsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\CurrentJournal.cs" />
+    <Compile Include="Logic\MagazineDictionary.cs" />
+    <Compile Include="Pages\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageFeedBack.xaml.cs">
+      <DependentUpon>PageFeedBack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageInfo.xaml.cs">
+      <DependentUpon>PageInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageSend.xaml.cs">
+      <DependentUpon>PageSend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page_Carousel.xaml.cs">
+      <DependentUpon>Page_Carousel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.ru-RU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Flip.xaml.cs">
+      <DependentUpon>Flip.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BookControl\Book.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BookControl\BookPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\en12\p1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CorouselItemsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FeedBackWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LaunchScreenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BookControl\Book.cs" />
+    <Compile Include="BookControl\BookPage.Compute.cs" />
+    <Compile Include="BookControl\BookPage.xaml.cs" />
+    <Compile Include="BookControl\CornerOrigin.cs" />
+    <Compile Include="BookControl\LinearGradientHelper.cs" />
+    <Compile Include="BookControl\PageParameters.cs" />
+    <Compile Include="BookControl\PageStatus.cs" />
+    <Compile Include="FeedBackWindow.xaml.cs">
+      <DependentUpon>FeedBackWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchScreenWindow.xaml.cs">
+      <DependentUpon>LaunchScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\FeedBackRepository.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageFeedBack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageSend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page_Carousel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Flip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ru-RU.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Files\SALT.pdf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bigmoscow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Magazines\EN12\EN_12-001.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-002.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-003.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-004.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-005.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-006.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-007.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-008.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-009.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-010.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-011.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-012.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-013.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-014.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-015.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-016.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-017.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-018.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-019.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-020.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-021.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-022.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-023.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-024.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-025.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-026.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-027.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-028.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-029.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-030.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-031.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-032.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-033.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-034.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-035.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-036.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-037.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-038.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-039.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-040.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-041.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-042.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-043.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-044.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-045.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-046.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-047.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-048.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-049.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-050.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-051.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-052.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-053.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-054.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-055.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-056.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-057.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-058.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-059.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-060.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-061.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-062.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-063.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-064.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-065.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-066.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-067.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-068.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-069.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-070.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-071.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-072.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-073.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-074.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-075.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-076.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-077.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-078.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-079.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-080.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-081.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-082.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-083.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-084.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-085.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-086.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-087.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-088.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-089.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-090.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-091.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-092.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-093.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-094.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-095.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-096.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-097.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-098.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-099.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-100.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-101.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-102.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-103.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-104.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-105.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-106.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-107.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-108.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-109.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-110.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-111.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-112.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-113.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-114.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-115.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-116.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-117.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-118.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-119.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-120.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-121.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-122.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-123.jpg" />
+    <Resource Include="Magazines\EN12\EN_12-124.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\Bornander.UI.TabCarousel.Test.csproj">
+      <Project>{42b7fb8a-f490-40ba-9e8e-eb2baab6a77d}</Project>
+      <Name>Bornander.UI.TabCarousel.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.csproj">
+      <Project>{126ce79b-f551-4ee2-8f92-ca4b145e1af7}</Project>
+      <Name>Bornander.UI.TabCarousel</Name>
+    </ProjectReference>
+    <ProjectReference Include="Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\Bornander.Wpf.Meshes.csproj">
+      <Project>{8c728db1-9f0c-4cdf-b062-83cf42ff0242}</Project>
+      <Name>Bornander.Wpf.Meshes</Name>
+    </ProjectReference>
+    <ProjectReference Include="WPFMitsuControls\WPFMitsuControls.csproj">
+      <Project>{dbc99c0e-f918-4e3b-b154-c03e212d8aca}</Project>
+      <Name>WPFMitsuControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\MainScreen\facebook_icon.png" />
+    <Resource Include="UI\MainScreen\feedback_button.png" />
+    <Resource Include="UI\MainScreen\info_button.png" />
+    <Resource Include="UI\MainScreen\logo_center_bottom.png" />
+    <Resource Include="UI\MainScreen\logo_top_left.png" />
+    <Resource Include="UI\MainScreen\mail_button.png" />
+    <Resource Include="UI\MainScreen\mainscreenMain.jpg" />
+    <Resource Include="UI\MainScreen\main_paddle.png" />
+    <Resource Include="UI\MainScreen\qr.png" />
+    <Resource Include="UI\MainScreen\scroll_paddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Feedback\button.png" />
+    <Resource Include="UI\Feedback\feedback_paddle.png" />
+    <Resource Include="UI\Feedback\message_box_selected.png" />
+    <Resource Include="UI\Feedback\message_box_unselected.png" />
+    <Resource Include="UI\Feedback\name_box_selected.png" />
+    <Resource Include="UI\Feedback\name_box_unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Covers\ru.bigrussia.bgmde.01_2012-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.01_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.01_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.01_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.01_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.02_2012-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.02_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.02_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.02_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.02_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.03_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.03_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.03_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.03_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.04_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.04_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmde.04_2016-v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Covers\ru.bigrussia.bgmen.01_2012-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.01_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.01_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.01_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.01_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.02_2012-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.02_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.02_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.02_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.02_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.03_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.03_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.03_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.03_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.04_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.04_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmen.04_2016-v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Covers\ru.bigrussia.bgmru.01_2012-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.01_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.01_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.01_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.01_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.02_2012-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.02_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.02_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.02_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.02_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.03_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.03_2014-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.03_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.03_2016-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.04_2013-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.04_2015-v.jpg" />
+    <Resource Include="Covers\ru.bigrussia.bgmru.04_2016-v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Magazines\EN_11\" />
+    <Folder Include="Magazines\EN_12\" />
+    <Folder Include="Magazines\EN_13\" />
+    <Folder Include="Magazines\EN_14\" />
+    <Folder Include="Magazines\EN_15\" />
+    <Folder Include="Magazines\EN_16\" />
+    <Folder Include="Magazines\EN_17\" />
+    <Folder Include="Magazines\EN_18\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\MainScreen\earth_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\MainScreen\arrow_left.png" />
+    <Resource Include="UI\MainScreen\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\MainScreen\mainscreenMain.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
