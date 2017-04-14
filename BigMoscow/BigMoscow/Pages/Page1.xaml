@@ -17,9 +17,9 @@
     <Grid >
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -27,8 +27,8 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
-        <ScrollViewer Grid.Column="0" Width="186" Margin="0,133,162,181" Grid.RowSpan="3" HorizontalAlignment="Right">
+
+        <ScrollViewer Grid.Column="0" Width="186" Margin="0,133,0,181" Grid.RowSpan="3" HorizontalAlignment="Right">
             <StackPanel  x:Name="coversPanel"  Grid.RowSpan="3"></StackPanel>
         </ScrollViewer>
 
@@ -93,9 +93,7 @@
 
 
         </Menu>
-        <StackPanel Name="content_magaz" Grid.Column="3" Grid.Row="1">
-
-        </StackPanel>
+        <StackPanel Name="content_magaz" Grid.Row="0" Orientation="Horizontal" Height="50" Width="700" Grid.Column="1" HorizontalAlignment="Center"/>
         <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100" Margin="193,172,347,114" Click="mail_button_click" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mail_button.png"/>

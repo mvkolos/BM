@@ -87,6 +87,7 @@ namespace BigMoscow
         {
             Dispatcher.Invoke(() => BookAdd());
             CoversAdd();
+
             ContentAdd();
 
         }
@@ -103,7 +104,14 @@ namespace BigMoscow
                 Page_Carousel p = new Page_Carousel(_flip);
                 p.BackGroundURL = item;
                 Frame f = new Frame();
-                f.Height = 492;
+                f.Width = 192;
+                f.Height = 256;
+                Thickness th = f.Padding;
+                th.Left = 10;
+                th.Right = 20;
+                th.Top = 10;
+                th.Bottom = 10;
+                f.Padding = th;
                 f.Content = p;
                 coversPanel.Children.Add(f);
                 p.Background = content;
@@ -119,17 +127,21 @@ namespace BigMoscow
         private void ContentAdd()
         {
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
-            string[] cont = MagazineDictionary.GetContent()[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
-            foreach (var item in cont)
+            var contents = MagazineDictionary.GetContent();
+            if (contents.Keys.Contains(MagazineDictionary.GetDictionary()[CurrentJournal.journal]))
             {
-                Button b = new Button();
-                b.Height = 50;
-                b.Content = item.Split(';')[0];
-                CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
-                b.Click += B_Click;
-                content_magaz.Children.Add(b);
+                string[] cont = contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
+                foreach (var item in cont)
+                {
+                    Button b = new Button();
+                    b.Height = 50;
+                    b.Width = 140;
+                    b.Content = item.Split(';')[0];
+                    CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                    b.Click += B_Click;
+                    content_magaz.Children.Add(b);
+                }
             }
-
         }
 
         private void B_Click(object sender, RoutedEventArgs e)
