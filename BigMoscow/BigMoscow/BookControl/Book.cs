@@ -277,6 +277,15 @@ namespace WPFMitsuControls
             sheet1Page1Content.Visibility = sheet1Page1ContentVisibility;
             sheet1Page2Content.Visibility = sheet1Page2ContentVisibility;
 
+
+            //PLACE OF BIG CHANGES
+            //int itemsCount = GetItemsCount();
+            //int currentIndex = count;
+
+            //if (itemsCount == currentIndex)
+            //{
+            //    bp1.IsEnabled = false;
+            //}
         }
 
         private void OnLeftMouseDown(object sender, MouseButtonEventArgs args) 
@@ -300,6 +309,16 @@ namespace WPFMitsuControls
         private void OnRightPageTurned(object sender, RoutedEventArgs args) 
         {
             CurrentSheetIndex++;
+
+            int currentSheetIndex = CurrentSheetIndex;
+            int itemsCount = GetItemsCount();
+
+            if (CurrentSheetIndex == GetItemsCount() / 2)
+            {
+                BookPage bp1 = GetTemplateChild("sheet1") as BookPage;
+                bp1.IsEnabled = false;
+            }
+                
         }
 
         public BookDisplayMode DisplayMode 

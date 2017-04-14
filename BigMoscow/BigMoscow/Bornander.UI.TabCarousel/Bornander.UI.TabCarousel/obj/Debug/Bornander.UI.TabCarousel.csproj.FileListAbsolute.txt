@@ -20,3 +20,14 @@ E:\Users\Masha\Downloads\BigMoscow1204\BigMoscow\BigMoscow\Bornander.UI.TabCarou
 E:\Users\Masha\Downloads\BigMoscow1204\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.g.resources
 E:\Users\Masha\Downloads\BigMoscow1204\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.dll
 E:\Users\Masha\Downloads\BigMoscow1204\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.pdb
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.UI.TabCarousel.dll
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.UI.TabCarousel.pdb
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.Wpf.Meshes.dll
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.Wpf.Meshes.pdb
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.csprojResolveAssemblyReference.cache
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Carousel.baml
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Carousel.g.cs
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel_MarkupCompile.cache
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.g.resources
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.dll
+D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.pdb

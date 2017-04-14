@@ -127,7 +127,14 @@ namespace WPFMitsuControls
                 Canvas.SetZIndex((bp0 as BookPage), 0);
                 Canvas.SetZIndex((bp1 as BookPage), 1);
                 bp1.AutoTurnPage(fromTop ? CornerOrigin.TopRight : CornerOrigin.BottomRight, duration);
+                
+                if (CurrentSheetIndex + 1 >= GetItemsCount() / 2)
+                {
+                    bp1.IsEnabled = false;
+                }
             }
+
+  
         }
 
         public void AnimateToPreviousPage(bool fromTop, int duration)
@@ -372,7 +379,7 @@ namespace WPFMitsuControls
 
         public void MoveToNextPage()
         {
-            if (CurrentPage == BookCurrentPage.LeftSheet)
+            if (CurrentPage == BookCurrentPage.LeftSheet && GetItemsCount() == CurrentSheetIndex)
                 AnimateToNextPage(false, 500);
             CurrentPage = 
                 CurrentPage == BookCurrentPage.LeftSheet ?

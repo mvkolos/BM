@@ -40,24 +40,25 @@ namespace BigMoscow
         }
         private void CreateTabs()
         {
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.01_2012-v.jpg",language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.01_2013-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.01_2014-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.01_2015-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.01_2016-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.02_2012-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.02_2013-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.02_2014-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.02_2015-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.02_2016-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.03_2013-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.03_2014-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.03_2015-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.03_2016-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.04_2013-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.04_2015-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format("../../Covers/ru.bigrussia.bgm{0}.04_2016-v.jpg", language), new Size(height, width)));
-           
+            String baseString = "D:/Users/Marya/";
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2012-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2013-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2014-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2015-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2016-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2012-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2013-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2014-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2015-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2016-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2013-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2014-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2015-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2016-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2013-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2015-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2016-v.jpg", language), new Size(height, width)));
+
 
         }
         private  FrameworkElement CreateFixedSizeLabel(string uri_picture, Size size)
@@ -101,7 +102,7 @@ namespace BigMoscow
         {
             language = "en";
           
-                ConfigurationManager.AppSettings["Culture"] = "en-US";        
+            ConfigurationManager.AppSettings["Culture"] = "en-US";        
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             _flip.frame.Content = new Page2(_flip);
         }

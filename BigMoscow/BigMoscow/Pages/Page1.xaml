@@ -12,7 +12,6 @@
       Title="Page1" Loaded="Page_Loaded">
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
-
     </Page.Background>
 
     <Grid >
@@ -94,6 +93,9 @@
 
 
         </Menu>
+        <StackPanel Name="content_magaz" Grid.Column="3" Grid.Row="1">
+
+        </StackPanel>
         <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100" Margin="193,172,347,114" Click="mail_button_click" BorderBrush="#00707070">
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mail_button.png"/>

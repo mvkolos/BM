@@ -194,6 +194,21 @@ namespace WPFMitsuControls
             return result;
         }
 
+        private int? GetSide(UIElement source, Point position)
+        {
+            int? result = null;
+
+            Rect leftSideRectangle = new Rect(0, gripSize, gripSize, source.RenderSize.Height - 2 * gripSize);
+            Rect rightSideRectangle = new Rect(source.RenderSize.Width - gripSize, gripSize, gripSize, source.RenderSize.Height - 2 * gripSize);
+
+            if (leftSideRectangle.Contains(position))
+                return 0;
+            else if (rightSideRectangle.Contains(position))
+                return 1;
+
+            return result;
+        }
+
         private void OnMouseDown(object sender, MouseButtonEventArgs args)
         {
             if ((Status == PageStatus.DropAnimation) || (Status == PageStatus.TurnAnimation))
@@ -201,10 +216,22 @@ namespace WPFMitsuControls
 
             UIElement source = sender as UIElement;
             Point p = args.GetPosition(source);
-            
-            CornerOrigin? tmp = GetCorner(source, p);
 
-            if (tmp.HasValue)
+            CornerOrigin? tmp = GetCorner(source, p);
+            int? side = GetSide(source, p);
+
+            if (side.HasValue && side == 1)
+            {
+                AutoTurnPage(CornerOrigin.BottomRight, 1000);
+                return;
+            }
+            if (side.HasValue && side == 0)
+            {
+                AutoTurnPage(CornerOrigin.BottomLeft, 1000);
+                return;
+            }
+
+                if (tmp.HasValue)
             {
                 origin = tmp.Value;
                 this.CaptureMouse();

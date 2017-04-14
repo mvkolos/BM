@@ -41,15 +41,14 @@ namespace BigMoscow
         private void BookAdd()
         {
 
-            List<string> pages = f.DirSearch(string.Format("../../Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
+            List<string> pages = f.DirSearch(string.Format("D:/Users/Marya/Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
 
             foreach (var item in pages)
             {
                 BitmapImage b = new BitmapImage(new Uri(item));
-                
                 ImageBrush content = new ImageBrush();
                 content.ImageSource = b;
-                
+
 
                 myBook.Items.Add(new p1(content));
 
@@ -86,13 +85,14 @@ namespace BigMoscow
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            BookAdd();
+            Dispatcher.Invoke(() => BookAdd());
             CoversAdd();
+            ContentAdd();
 
         }
         private void CoversAdd()
         {
-            List<string> covers = f.DirSearch(string.Format("../../Covers"));
+            List<string> covers = f.DirSearch(string.Format("D:/Users/Marya/Covers"));
             List<UserControl> c = new List<UserControl>();
             List<string> covers_new = covers.Where(e => e.Contains("m" + Properties.Resources.magazine.ToLower())).ToList();
             foreach (var item in covers_new)
@@ -103,14 +103,7 @@ namespace BigMoscow
                 Page_Carousel p = new Page_Carousel(_flip);
                 p.BackGroundURL = item;
                 Frame f = new Frame();
-                f.Width = 186;
-                Thickness margin = f.Padding;
-                margin.Top = 10;
-                margin.Bottom = 10;
-                margin.Left = 10;
-                margin.Right = 20;
-                f.Padding  = margin;
-                f.Height = 248;
+                f.Height = 492;
                 f.Content = p;
                 coversPanel.Children.Add(f);
                 p.Background = content;
@@ -121,6 +114,28 @@ namespace BigMoscow
             }
 
 
+
+        }
+        private void ContentAdd()
+        {
+            CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
+            string[] cont = MagazineDictionary.GetContent()[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
+            foreach (var item in cont)
+            {
+                Button b = new Button();
+                b.Height = 50;
+                b.Content = item.Split(';')[0];
+                CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                b.Click += B_Click;
+                content_magaz.Children.Add(b);
+            }
+
+        }
+
+        private void B_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            Dispatcher.Invoke(() => myBook.CurrentSheetIndex = (int.Parse(CurrentJournal.Content_page_dictionary[b.Content.ToString()])) / 2);
 
         }
     }

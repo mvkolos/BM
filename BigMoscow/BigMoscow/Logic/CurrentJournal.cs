@@ -9,5 +9,6 @@ namespace BigMoscow.Logic
     public static class CurrentJournal
     {
         public static string journal;
+        public static Dictionary<string, string> Content_page_dictionary;
     }
 }

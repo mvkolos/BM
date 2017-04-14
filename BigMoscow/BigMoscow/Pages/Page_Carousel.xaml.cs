@@ -32,9 +32,9 @@ namespace BigMoscow
 
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {
-            string[] new_url = BackGroundURL.Split(new char[] { '.' });
+           string[] new_url = BackGroundURL.Split(new char[] { '.' });
            CurrentJournal.journal = "."+new_url[new_url.Length - 2];
-            _flip.frame.Content = new Page1(_flip);
+           _flip.frame.Content = new Page1(_flip);
         }
     }
 }

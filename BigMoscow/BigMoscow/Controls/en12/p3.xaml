@@ -9,7 +9,7 @@
 
     <Grid>
         <Canvas>
-            <Image Source="E:/Magazines/EN12/EN_12-003.jpg" Width="370" Height="492"   />
+            <!--<Image Source="E:/Magazines/EN12/EN_12-003.jpg" Width="370" Height="492"   />-->
         </Canvas>
     </Grid>
 </UserControl>

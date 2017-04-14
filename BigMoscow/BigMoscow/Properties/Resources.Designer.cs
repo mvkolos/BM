@@ -102,11 +102,101 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The file you are trying to send on email is not found.
+        /// </summary>
+        public static string filenotfound {
+            get {
+                return ResourceManager.GetString("filenotfound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Region with the good prospects.
+        /// </summary>
+        public static string m1_1 {
+            get {
+                return ResourceManager.GetString("m1_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m1_2 {
+            get {
+                return ResourceManager.GetString("m1_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m1_3 {
+            get {
+                return ResourceManager.GetString("m1_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m1_4 {
+            get {
+                return ResourceManager.GetString("m1_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m1_5 {
+            get {
+                return ResourceManager.GetString("m1_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m1_6 {
+            get {
+                return ResourceManager.GetString("m1_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Security.
+        /// </summary>
+        public static string m1_7 {
+            get {
+                return ResourceManager.GetString("m1_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m1_8 {
+            get {
+                return ResourceManager.GetString("m1_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на EN.
         /// </summary>
         public static string magazine {
             get {
                 return ResourceManager.GetString("magazine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Check the internet connection.
+        /// </summary>
+        public static string mail_ex {
+            get {
+                return ResourceManager.GetString("mail_ex", resourceCulture);
             }
         }
         

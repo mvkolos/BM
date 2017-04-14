@@ -152,7 +152,7 @@ namespace Bornander.UI.TabCarousel
 
             if (instruction.To < 0 || instruction.To >= elements.Count)
             {
-                if (WrapAtEnd && (instruction.To == -1 || instruction.To == elements.Count))
+                if ((instruction.To == -1 || instruction.To == elements.Count))
                 {
                     wrapIt = true;
                     instruction = new SpinInstruction(instruction.From, instruction.To < 0 ? elements.Count - 1 : 0);

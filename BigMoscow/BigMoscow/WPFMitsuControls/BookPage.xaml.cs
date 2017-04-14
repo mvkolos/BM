@@ -57,7 +57,7 @@ namespace WPFMitsuControls
         }
 
         internal CornerOrigin origin = CornerOrigin.BottomRight;
-        private const double gripSize = 30;
+        private const double gripSize = 300;
         private PageStatus _status = PageStatus.None;
         internal Action<PageStatus> SetStatus = null;
         internal Read<PageStatus> GetStatus = null;
@@ -167,13 +167,13 @@ namespace WPFMitsuControls
 
         private void OnMouseDoubleClick(object sender, MouseButtonEventArgs args)
         {
-            //Application.Current.MainWindow.Title += "D";
+            Application.Current.MainWindow.Title += "D";
 
-            //UIElement source = sender as UIElement;
-            //Point p = args.GetPosition(source);
-            
-            //if (GetCorner(source, p).HasValue)
-            //    TurnPage(animationDuration);
+            UIElement source = sender as UIElement;
+            Point p = args.GetPosition(source);
+
+            if (GetCorner(source, p).HasValue)
+                TurnPage(animationDuration);
         }
 
         private CornerOrigin? GetCorner(UIElement source, Point position) 
@@ -197,6 +197,21 @@ namespace WPFMitsuControls
             return result;
         }
 
+        private int? GetSide(UIElement source, Point position)
+        {
+            int? result = null;
+
+            Rect leftSideRectangle = new Rect(0, 0, gripSize, source.RenderSize.Height);
+            Rect rightSideRectangle = new Rect(source.RenderSize.Width - gripSize, 0, gripSize, source.RenderSize.Height);
+
+            if (leftSideRectangle.Contains(position))
+                return 0;
+            else if (rightSideRectangle.Contains(position))
+                return 1;
+
+            return result;
+        }
+
         private void OnMouseDown(object sender, MouseButtonEventArgs args)
         {
             if ((Status == PageStatus.DropAnimation) || (Status == PageStatus.TurnAnimation))
@@ -206,6 +221,14 @@ namespace WPFMitsuControls
             Point p = args.GetPosition(source);
             
             CornerOrigin? tmp = GetCorner(source, p);
+            int? side = GetSide(source, p);
+
+           
+            if (side.HasValue && side == 1)
+            {
+                TurnPage();
+                return;
+            }
 
             if (tmp.HasValue)
             {
