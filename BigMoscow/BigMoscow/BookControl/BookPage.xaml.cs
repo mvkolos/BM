@@ -220,12 +220,12 @@ namespace WPFMitsuControls
             CornerOrigin? tmp = GetCorner(source, p);
             int? side = GetSide(source, p);
 
-            if (side.HasValue && side == 1)
+            if (side.HasValue && side == 1 && IsBottomRightCornerEnabled)
             {
                 AutoTurnPage(CornerOrigin.BottomRight, 1000);
                 return;
             }
-            if (side.HasValue && side == 0)
+            if (side.HasValue && side == 0 && IsBottomLeftCornerEnabled)
             {
                 AutoTurnPage(CornerOrigin.BottomLeft, 1000);
                 return;
