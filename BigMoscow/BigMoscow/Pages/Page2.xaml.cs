@@ -40,7 +40,7 @@ namespace BigMoscow
         }
         private void CreateTabs()
         {
-            String baseString = "D:/Users/Marya/";
+            String baseString = "../../../../../";
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2012-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2013-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2014-v.jpg", language), new Size(height, width)));

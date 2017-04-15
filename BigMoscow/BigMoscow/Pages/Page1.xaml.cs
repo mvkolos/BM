@@ -41,7 +41,7 @@ namespace BigMoscow
         private void BookAdd()
         {
 
-            List<string> pages = f.DirSearch(string.Format("D:/Users/Marya/Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
+            List<string> pages = f.DirSearch(string.Format("../../../../../Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
 
             foreach (var item in pages)
             {
@@ -93,7 +93,7 @@ namespace BigMoscow
         }
         private void CoversAdd()
         {
-            List<string> covers = f.DirSearch(string.Format("D:/Users/Marya/Covers"));
+            List<string> covers = f.DirSearch(string.Format("../../../../../Covers"));
             List<UserControl> c = new List<UserControl>();
             List<string> covers_new = covers.Where(e => e.Contains("m" + Properties.Resources.magazine.ToLower())).ToList();
             foreach (var item in covers_new)
