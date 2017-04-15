@@ -17,6 +17,7 @@ using BigMoscow.Windows;
 using BigMoscow.Pages;
 using BigMoscow.Controls.en12;
 using System.Configuration;
+using System.ComponentModel;
 
 namespace BigMoscow
 {
@@ -27,6 +28,7 @@ namespace BigMoscow
     {
         FeedBackRepository f;
         Flip _flip;
+        WPFMitsuControls.Book book;
         public Page1(Flip flip)
         {
             f = new FeedBackRepository();
@@ -34,12 +36,19 @@ namespace BigMoscow
             _flip = flip;
             InitializeComponent();
 
-
-
         }
+        
 
         private void BookAdd()
         {
+            IEditableCollectionView items = myBook.Items;
+
+            int countItems = myBook.Items.Count;
+
+            foreach (var item in myBook.Items)
+            {
+                items.Remove(item);
+            }
 
             List<string> pages = f.DirSearch(string.Format("../../../../../Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
 
@@ -49,12 +58,9 @@ namespace BigMoscow
                 ImageBrush content = new ImageBrush();
                 content.ImageSource = b;
 
-
-                myBook.Items.Add(new p1(content));
-
-
+                p1 page = new p1(content);
+                myBook.Items.Add(page);
             }
-
 
         }
         private void mail_button_click(object sender, RoutedEventArgs e)

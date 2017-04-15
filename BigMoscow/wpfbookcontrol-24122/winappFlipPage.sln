@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFMitsuControls", "WPFMitsuControls\WPFMitsuControls.csproj", "{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookDemoApp", "BookDemoApp\BookDemoApp.csproj", "{747C6317-54A2-44AF-A0CF-DC385204B540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLMitsuControls", "SLMitsuControls\SLMitsuControls.csproj", "{32A1603F-3698-47DC-BB94-A256006C079F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLBookDemoApp", "SLBookDemoApp\SLBookDemoApp.csproj", "{2DBC5988-CB04-4274-8C95-9B52E453A28B}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWebSite", "TestWebSite", "{4212C28E-B5B0-4EA5-AF18-6A1B1274EEED}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/TestWebSite"
+		Debug.AspNetCompiler.PhysicalPath = "TestWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TestWebSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/TestWebSite"
+		Release.AspNetCompiler.PhysicalPath = "TestWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TestWebSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "40263"
+		ProjOutputReferences = "{2DBC5988-CB04-4274-8C95-9B52E453A28B}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs03.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WPFMitsuControls\\WPFMitsuControls.csproj
+		SccProjectName1 = WPFMitsuControls
+		SccLocalPath1 = WPFMitsuControls
+		SccProjectUniqueName2 = BookDemoApp\\BookDemoApp.csproj
+		SccProjectName2 = BookDemoApp
+		SccLocalPath2 = BookDemoApp
+		SccProjectUniqueName3 = SLMitsuControls\\SLMitsuControls.csproj
+		SccProjectName3 = SLMitsuControls
+		SccLocalPath3 = SLMitsuControls
+		SccProjectUniqueName4 = SLBookDemoApp\\SLBookDemoApp.csproj
+		SccProjectName4 = SLBookDemoApp
+		SccLocalPath4 = SLBookDemoApp
+		SccWebProject5 = true
+		SccProjectUniqueName5 = TestWebSite
+		SccProjectName5 = TestWebSite
+		SccLocalPath5 = TestWebSite
+		SccProjectEnlistmentChoice5 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC99C0E-F918-4E3B-B154-C03E212D8ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747C6317-54A2-44AF-A0CF-DC385204B540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747C6317-54A2-44AF-A0CF-DC385204B540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747C6317-54A2-44AF-A0CF-DC385204B540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747C6317-54A2-44AF-A0CF-DC385204B540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A1603F-3698-47DC-BB94-A256006C079F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A1603F-3698-47DC-BB94-A256006C079F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A1603F-3698-47DC-BB94-A256006C079F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A1603F-3698-47DC-BB94-A256006C079F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBC5988-CB04-4274-8C95-9B52E453A28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBC5988-CB04-4274-8C95-9B52E453A28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBC5988-CB04-4274-8C95-9B52E453A28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBC5988-CB04-4274-8C95-9B52E453A28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4212C28E-B5B0-4EA5-AF18-6A1B1274EEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4212C28E-B5B0-4EA5-AF18-6A1B1274EEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4212C28E-B5B0-4EA5-AF18-6A1B1274EEED}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4212C28E-B5B0-4EA5-AF18-6A1B1274EEED}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

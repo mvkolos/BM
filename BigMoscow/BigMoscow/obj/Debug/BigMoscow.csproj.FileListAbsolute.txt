@@ -1,8 +1,5 @@
 D:\Users\Marya\BM\BigMoscow\BigMoscow\bin\Debug\BigMoscow.exe.config
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BigMoscow.csprojResolveAssemblyReference.cache
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BookControl\BookPage.baml
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BookControl\Book.g.cs
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BookControl\BookPage.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\en12\p3.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\en12\p4.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\en12\p5.g.cs
@@ -22,10 +19,8 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageSend.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page_Carousel.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Windows\Flip.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\App.g.cs
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BigMoscow_MarkupCompile.cache
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BigMoscow_MarkupCompile.lref
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BookControl\Book.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\en12\p3.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\en12\p4.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\en12\p5.baml
@@ -65,3 +60,5 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BigMoscow.csproj.GenerateResourc
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\en-US\BigMoscow.resources.dll
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\ru-RU\BigMoscow.resources.dll
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BigMoscow.exe
+D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\MyBook.baml
+D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\MyBook.g.cs

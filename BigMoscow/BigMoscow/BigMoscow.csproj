@@ -56,13 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BookControl\Book.cs" />
-    <Compile Include="BookControl\BookPage.Compute.cs" />
-    <Compile Include="BookControl\BookPage.xaml.cs" />
-    <Compile Include="BookControl\CornerOrigin.cs" />
-    <Compile Include="BookControl\LinearGradientHelper.cs" />
-    <Compile Include="BookControl\PageParameters.cs" />
-    <Compile Include="BookControl\PageStatus.cs" />
     <Compile Include="Controls\en12\p1.xaml.cs">
       <DependentUpon>p1.xaml</DependentUpon>
     </Compile>
@@ -72,6 +65,9 @@
     <Compile Include="Controls\en12\p5.xaml.cs" />
     <Compile Include="Controls\en12\p6.xaml.cs" />
     <Compile Include="Controls\en12\p7.xaml.cs" />
+    <Compile Include="Controls\MyBook.xaml.cs">
+      <DependentUpon>MyBook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CorouselItemsControl.xaml.cs">
       <DependentUpon>CorouselItemsControl.xaml</DependentUpon>
     </Compile>
@@ -113,14 +109,6 @@
     <Compile Include="Windows\Flip.xaml.cs">
       <DependentUpon>Flip.xaml</DependentUpon>
     </Compile>
-    <Page Include="BookControl\Book.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="BookControl\BookPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Controls\en12\p1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -148,6 +136,10 @@
     <Page Include="Controls\en12\p7.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MyBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CorouselItemsControl.xaml">
       <SubType>Designer</SubType>
@@ -237,6 +229,10 @@
     <Resource Include="Images\code.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\wpfbookcontrol-24122\WPFMitsuControls\WPFMitsuControls.csproj">
+      <Project>{dbc99c0e-f918-4e3b-b154-c03e212d8aca}</Project>
+      <Name>WPFMitsuControls</Name>
+    </ProjectReference>
     <ProjectReference Include="Bornander.UI.TabCarousel\Bornander.UI.TabCarousel.Test\Bornander.UI.TabCarousel.Test.csproj">
       <Project>{42b7fb8a-f490-40ba-9e8e-eb2baab6a77d}</Project>
       <Name>Bornander.UI.TabCarousel.Test</Name>
@@ -248,10 +244,6 @@
     <ProjectReference Include="Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\Bornander.Wpf.Meshes.csproj">
       <Project>{8c728db1-9f0c-4cdf-b062-83cf42ff0242}</Project>
       <Name>Bornander.Wpf.Meshes</Name>
-    </ProjectReference>
-    <ProjectReference Include="WPFMitsuControls\WPFMitsuControls.csproj">
-      <Project>{dbc99c0e-f918-4e3b-b154-c03e212d8aca}</Project>
-      <Name>WPFMitsuControls</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

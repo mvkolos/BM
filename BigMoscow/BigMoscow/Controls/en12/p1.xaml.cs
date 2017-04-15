@@ -23,6 +23,7 @@ namespace BigMoscow.Controls.en12
         ImageBrush _b;
         public p1(ImageBrush b)
         {
+            System.Diagnostics.Debug.WriteLine("constr");
             _b = b;
             InitializeComponent();
         }
@@ -30,6 +31,11 @@ namespace BigMoscow.Controls.en12
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             this.canvas.Background = _b;
+        }
+        ~p1()
+        {
+            System.Diagnostics.Debug.WriteLine("destr");
+           _b = null;
         }
     }
 }
