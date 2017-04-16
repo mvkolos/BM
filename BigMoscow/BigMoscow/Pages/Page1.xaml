@@ -51,7 +51,7 @@
 
 
         </DockPanel>
-        <Button Grid.Column="9" Grid.Row="0" Grid.RowSpan="3" Background="Transparent" Margin="0,300" HorizontalAlignment="Right">
+        <Button Grid.Column="9" Grid.Row="0" Grid.RowSpan="3" Background="Transparent" Margin="0,300" HorizontalAlignment="Right" Click="Feedback_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="/BigMoscow;component/UI/MainScreen/feedback_button.png" />
                 <TextBlock x:Name="TextBlockFeedBack" Text="{x:Static properties:Resources.TextBlockFeedBack}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="-100,120,-50, 0" FontSize="28" Foreground="#FFFCFBFB" >

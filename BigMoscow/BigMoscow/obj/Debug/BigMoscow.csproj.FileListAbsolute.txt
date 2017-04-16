@@ -62,3 +62,9 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\ru-RU\BigMoscow.resources.dll
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\BigMoscow.exe
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\MyBook.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Controls\MyBook.g.cs
+D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageMedia.g.cs
+D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageQuestion.g.cs
+D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageMedia.baml
+D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageQuestion.baml
+D:\Users\Marya\BM\BigMoscow\BigMoscow\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Marya\BM\BigMoscow\BigMoscow\bin\Debug\Newtonsoft.Json.xml

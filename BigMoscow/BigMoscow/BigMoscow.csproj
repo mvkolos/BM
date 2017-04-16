@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -85,6 +88,12 @@
     <Compile Include="Pages\PageInfo.xaml.cs">
       <DependentUpon>PageInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageMedia.xaml.cs">
+      <DependentUpon>PageMedia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageQuestion.xaml.cs">
+      <DependentUpon>PageQuestion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageSend.xaml.cs">
       <DependentUpon>PageSend.xaml</DependentUpon>
     </Compile>
@@ -92,19 +101,19 @@
       <DependentUpon>Page_Carousel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Properties\Resources.en-US.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.en-US.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Properties\Resources.ru-RU.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.ru-RU.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Windows\Flip.xaml.cs">
       <DependentUpon>Flip.xaml</DependentUpon>
@@ -188,6 +197,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageMedia.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PageQuestion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\PageSend.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,6 +228,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Files\SALT.pdf" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

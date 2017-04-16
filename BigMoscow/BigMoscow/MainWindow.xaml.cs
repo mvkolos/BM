@@ -36,6 +36,8 @@ namespace BigMoscow
 
         private void button_feedback_Click(object sender, RoutedEventArgs e)
         {
+            
+
             // FeedBackWindow f = new FeedBackWindow();
             //f.Show();
             //Close();

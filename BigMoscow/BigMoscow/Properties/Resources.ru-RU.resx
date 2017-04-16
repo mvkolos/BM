@@ -172,4 +172,508 @@ BIGMOSCOW</value>
   <data name="m1_8" xml:space="preserve">
     <value>Консультации</value>
   </data>
+  <data name="m10_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m10_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m10_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m10_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m10_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m10_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m10_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m10_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m10_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m10_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m10_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m11_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m11_10" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m11_11" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m11_12" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m11_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m11_3" xml:space="preserve">
+    <value>События</value>
+  </data>
+  <data name="m11_4" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m11_5" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m11_6" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m11_7" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m11_8" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m11_9" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m12_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m12_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m12_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m12_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m12_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m12_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m12_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m12_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m12_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m12_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m12_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m13_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m13_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m13_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m13_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m13_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m13_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m13_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m13_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m13_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m13_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m13_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m14_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m14_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m14_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m14_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m14_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m14_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m14_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m14_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m14_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m14_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m14_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m15_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m15_10" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m15_11" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m15_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m15_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m15_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m15_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m15_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m15_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m15_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m15_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m2_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m2_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m2_3" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m2_4" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m2_5" xml:space="preserve">
+    <value>Соотечественники</value>
+  </data>
+  <data name="m2_6" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m3_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m3_10" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m3_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m3_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m3_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m3_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m3_6" xml:space="preserve">
+    <value>Тенденции</value>
+  </data>
+  <data name="m3_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m3_8" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m3_9" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m4_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m4_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m4_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m4_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m4_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m4_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m4_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m4_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m4_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m4_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m4_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m5_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m5_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m5_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m5_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m5_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m5_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m5_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m5_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m5_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m5_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m5_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m6_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m6_10" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m6_11" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m6_12" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m6_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m6_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m6_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m6_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m6_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m6_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m6_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m6_9" xml:space="preserve">
+    <value>Репортаж</value>
+  </data>
+  <data name="m7_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m7_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m7_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m7_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m7_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m7_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m7_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m7_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m7_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m7_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m7_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m8_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m8_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m8_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m8_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m8_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m8_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m8_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m8_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m8_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m8_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m8_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="m9_1" xml:space="preserve">
+    <value>Персона</value>
+  </data>
+  <data name="m9_10" xml:space="preserve">
+    <value>Деловая Москва</value>
+  </data>
+  <data name="m9_11" xml:space="preserve">
+    <value>Жизнь в Москве</value>
+  </data>
+  <data name="m9_2" xml:space="preserve">
+    <value>Личный опыт</value>
+  </data>
+  <data name="m9_3" xml:space="preserve">
+    <value>На работу в Москву</value>
+  </data>
+  <data name="m9_4" xml:space="preserve">
+    <value>Торговать с Москвой</value>
+  </data>
+  <data name="m9_5" xml:space="preserve">
+    <value>Стартап и венчур</value>
+  </data>
+  <data name="m9_6" xml:space="preserve">
+    <value>Тренды</value>
+  </data>
+  <data name="m9_7" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="m9_8" xml:space="preserve">
+    <value>Моделируем ситуации</value>
+  </data>
+  <data name="m9_9" xml:space="preserve">
+    <value>Экспозиция</value>
+  </data>
+  <data name="business_owner" xml:space="preserve">
+    <value>Business owner</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Display_category" xml:space="preserve">
+    <value>Display category</value>
+  </data>
+  <data name="Federal_State" xml:space="preserve">
+    <value>Federal State</value>
+  </data>
+  <data name="feedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="German_Chamber_of_Commerce" xml:space="preserve">
+    <value>German Chamber of Commerce</value>
+  </data>
+  <data name="Hall" xml:space="preserve">
+    <value>Hall</value>
+  </data>
+  <data name="hired_manager" xml:space="preserve">
+    <value>Hired manager</value>
+  </data>
+  <data name="Investor" xml:space="preserve">
+    <value>Investor</value>
+  </data>
+  <data name="novice_businessman" xml:space="preserve">
+    <value>Novice businessman</value>
+  </data>
+  <data name="t1" xml:space="preserve">
+    <value>How to start a business in Moscow? Where to find the financing for it?</value>
+  </data>
+  <data name="t2" xml:space="preserve">
+    <value>How to rent an office or land lot in Moscow?</value>
+  </data>
+  <data name="t3" xml:space="preserve">
+    <value>How to localize your production in Moscow?</value>
+  </data>
+  <data name="t4" xml:space="preserve">
+    <value>Analytical data and economic indicators.</value>
+  </data>
+  <data name="t5" xml:space="preserve">
+    <value>Success stories of foreign businessmen in Moscow.</value>
+  </data>
+  <data name="Your_country" xml:space="preserve">
+    <value>Your country:</value>
+  </data>
+  <data name="Your_q" xml:space="preserve">
+    <value>Your question:</value>
+  </data>
+  <data name="You_are" xml:space="preserve">
+    <value>You are</value>
+  </data>
 </root>

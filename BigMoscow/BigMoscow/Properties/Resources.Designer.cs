@@ -61,6 +61,15 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Business owner.
+        /// </summary>
+        public static string business_owner {
+            get {
+                return ResourceManager.GetString("business_owner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Next.
         /// </summary>
         public static string button_next {
@@ -88,6 +97,24 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Display category.
+        /// </summary>
+        public static string Display_category {
+            get {
+                return ResourceManager.GetString("Display_category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на 
         ///Hello
         ///
@@ -102,11 +129,65 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Federal State.
+        /// </summary>
+        public static string Federal_State {
+            get {
+                return ResourceManager.GetString("Federal_State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Feedback.
+        /// </summary>
+        public static string feedback {
+            get {
+                return ResourceManager.GetString("feedback", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на The file you are trying to send on email is not found.
         /// </summary>
         public static string filenotfound {
             get {
                 return ResourceManager.GetString("filenotfound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на German Chamber of Commerce.
+        /// </summary>
+        public static string German_Chamber_of_Commerce {
+            get {
+                return ResourceManager.GetString("German_Chamber_of_Commerce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hall.
+        /// </summary>
+        public static string Hall {
+            get {
+                return ResourceManager.GetString("Hall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hired manager.
+        /// </summary>
+        public static string hired_manager {
+            get {
+                return ResourceManager.GetString("hired_manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Investor.
+        /// </summary>
+        public static string Investor {
+            get {
+                return ResourceManager.GetString("Investor", resourceCulture);
             }
         }
         
@@ -183,6 +264,1356 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m10_1 {
+            get {
+                return ResourceManager.GetString("m10_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m10_10 {
+            get {
+                return ResourceManager.GetString("m10_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m10_11 {
+            get {
+                return ResourceManager.GetString("m10_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m10_2 {
+            get {
+                return ResourceManager.GetString("m10_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m10_3 {
+            get {
+                return ResourceManager.GetString("m10_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m10_4 {
+            get {
+                return ResourceManager.GetString("m10_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m10_5 {
+            get {
+                return ResourceManager.GetString("m10_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m10_6 {
+            get {
+                return ResourceManager.GetString("m10_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m10_7 {
+            get {
+                return ResourceManager.GetString("m10_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m10_8 {
+            get {
+                return ResourceManager.GetString("m10_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m10_9 {
+            get {
+                return ResourceManager.GetString("m10_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m11_1 {
+            get {
+                return ResourceManager.GetString("m11_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m11_10 {
+            get {
+                return ResourceManager.GetString("m11_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m11_11 {
+            get {
+                return ResourceManager.GetString("m11_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m11_12 {
+            get {
+                return ResourceManager.GetString("m11_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m11_2 {
+            get {
+                return ResourceManager.GetString("m11_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Events.
+        /// </summary>
+        public static string m11_3 {
+            get {
+                return ResourceManager.GetString("m11_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m11_4 {
+            get {
+                return ResourceManager.GetString("m11_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m11_5 {
+            get {
+                return ResourceManager.GetString("m11_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m11_6 {
+            get {
+                return ResourceManager.GetString("m11_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m11_7 {
+            get {
+                return ResourceManager.GetString("m11_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m11_8 {
+            get {
+                return ResourceManager.GetString("m11_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m11_9 {
+            get {
+                return ResourceManager.GetString("m11_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m12_1 {
+            get {
+                return ResourceManager.GetString("m12_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m12_10 {
+            get {
+                return ResourceManager.GetString("m12_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m12_11 {
+            get {
+                return ResourceManager.GetString("m12_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m12_2 {
+            get {
+                return ResourceManager.GetString("m12_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m12_3 {
+            get {
+                return ResourceManager.GetString("m12_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m12_4 {
+            get {
+                return ResourceManager.GetString("m12_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m12_5 {
+            get {
+                return ResourceManager.GetString("m12_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m12_6 {
+            get {
+                return ResourceManager.GetString("m12_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m12_7 {
+            get {
+                return ResourceManager.GetString("m12_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m12_8 {
+            get {
+                return ResourceManager.GetString("m12_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m12_9 {
+            get {
+                return ResourceManager.GetString("m12_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m13_1 {
+            get {
+                return ResourceManager.GetString("m13_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m13_10 {
+            get {
+                return ResourceManager.GetString("m13_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m13_11 {
+            get {
+                return ResourceManager.GetString("m13_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m13_2 {
+            get {
+                return ResourceManager.GetString("m13_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m13_3 {
+            get {
+                return ResourceManager.GetString("m13_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m13_4 {
+            get {
+                return ResourceManager.GetString("m13_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m13_5 {
+            get {
+                return ResourceManager.GetString("m13_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m13_6 {
+            get {
+                return ResourceManager.GetString("m13_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m13_7 {
+            get {
+                return ResourceManager.GetString("m13_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m13_8 {
+            get {
+                return ResourceManager.GetString("m13_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m13_9 {
+            get {
+                return ResourceManager.GetString("m13_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m14_1 {
+            get {
+                return ResourceManager.GetString("m14_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m14_10 {
+            get {
+                return ResourceManager.GetString("m14_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m14_11 {
+            get {
+                return ResourceManager.GetString("m14_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m14_2 {
+            get {
+                return ResourceManager.GetString("m14_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m14_3 {
+            get {
+                return ResourceManager.GetString("m14_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m14_4 {
+            get {
+                return ResourceManager.GetString("m14_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m14_5 {
+            get {
+                return ResourceManager.GetString("m14_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m14_6 {
+            get {
+                return ResourceManager.GetString("m14_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m14_7 {
+            get {
+                return ResourceManager.GetString("m14_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m14_8 {
+            get {
+                return ResourceManager.GetString("m14_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m14_9 {
+            get {
+                return ResourceManager.GetString("m14_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m15_1 {
+            get {
+                return ResourceManager.GetString("m15_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m15_10 {
+            get {
+                return ResourceManager.GetString("m15_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m15_11 {
+            get {
+                return ResourceManager.GetString("m15_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m15_2 {
+            get {
+                return ResourceManager.GetString("m15_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m15_3 {
+            get {
+                return ResourceManager.GetString("m15_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m15_4 {
+            get {
+                return ResourceManager.GetString("m15_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m15_5 {
+            get {
+                return ResourceManager.GetString("m15_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m15_6 {
+            get {
+                return ResourceManager.GetString("m15_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m15_7 {
+            get {
+                return ResourceManager.GetString("m15_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m15_8 {
+            get {
+                return ResourceManager.GetString("m15_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m15_9 {
+            get {
+                return ResourceManager.GetString("m15_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m2_1 {
+            get {
+                return ResourceManager.GetString("m2_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m2_2 {
+            get {
+                return ResourceManager.GetString("m2_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m2_3 {
+            get {
+                return ResourceManager.GetString("m2_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m2_4 {
+            get {
+                return ResourceManager.GetString("m2_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Compatriots.
+        /// </summary>
+        public static string m2_5 {
+            get {
+                return ResourceManager.GetString("m2_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m2_6 {
+            get {
+                return ResourceManager.GetString("m2_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m3_1 {
+            get {
+                return ResourceManager.GetString("m3_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m3_10 {
+            get {
+                return ResourceManager.GetString("m3_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m3_2 {
+            get {
+                return ResourceManager.GetString("m3_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на To work in Moscow.
+        /// </summary>
+        public static string m3_3 {
+            get {
+                return ResourceManager.GetString("m3_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m3_4 {
+            get {
+                return ResourceManager.GetString("m3_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m3_5 {
+            get {
+                return ResourceManager.GetString("m3_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tendencies.
+        /// </summary>
+        public static string m3_6 {
+            get {
+                return ResourceManager.GetString("m3_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m3_7 {
+            get {
+                return ResourceManager.GetString("m3_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Exhibitions.
+        /// </summary>
+        public static string m3_8 {
+            get {
+                return ResourceManager.GetString("m3_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Commertial Moscow.
+        /// </summary>
+        public static string m3_9 {
+            get {
+                return ResourceManager.GetString("m3_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m4_1 {
+            get {
+                return ResourceManager.GetString("m4_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m4_10 {
+            get {
+                return ResourceManager.GetString("m4_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Life in Moscow.
+        /// </summary>
+        public static string m4_11 {
+            get {
+                return ResourceManager.GetString("m4_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m4_2 {
+            get {
+                return ResourceManager.GetString("m4_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m4_3 {
+            get {
+                return ResourceManager.GetString("m4_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m4_4 {
+            get {
+                return ResourceManager.GetString("m4_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m4_5 {
+            get {
+                return ResourceManager.GetString("m4_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m4_6 {
+            get {
+                return ResourceManager.GetString("m4_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m4_7 {
+            get {
+                return ResourceManager.GetString("m4_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m4_8 {
+            get {
+                return ResourceManager.GetString("m4_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m4_9 {
+            get {
+                return ResourceManager.GetString("m4_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m5_1 {
+            get {
+                return ResourceManager.GetString("m5_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m5_10 {
+            get {
+                return ResourceManager.GetString("m5_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m5_11 {
+            get {
+                return ResourceManager.GetString("m5_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m5_2 {
+            get {
+                return ResourceManager.GetString("m5_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на To work in Moscow.
+        /// </summary>
+        public static string m5_3 {
+            get {
+                return ResourceManager.GetString("m5_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m5_4 {
+            get {
+                return ResourceManager.GetString("m5_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m5_5 {
+            get {
+                return ResourceManager.GetString("m5_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m5_6 {
+            get {
+                return ResourceManager.GetString("m5_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m5_7 {
+            get {
+                return ResourceManager.GetString("m5_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m5_8 {
+            get {
+                return ResourceManager.GetString("m5_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Exhibitions.
+        /// </summary>
+        public static string m5_9 {
+            get {
+                return ResourceManager.GetString("m5_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m6_1 {
+            get {
+                return ResourceManager.GetString("m6_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m6_10 {
+            get {
+                return ResourceManager.GetString("m6_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m6_11 {
+            get {
+                return ResourceManager.GetString("m6_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m6_12 {
+            get {
+                return ResourceManager.GetString("m6_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m6_2 {
+            get {
+                return ResourceManager.GetString("m6_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m6_3 {
+            get {
+                return ResourceManager.GetString("m6_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m6_4 {
+            get {
+                return ResourceManager.GetString("m6_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m6_5 {
+            get {
+                return ResourceManager.GetString("m6_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m6_6 {
+            get {
+                return ResourceManager.GetString("m6_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m6_7 {
+            get {
+                return ResourceManager.GetString("m6_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m6_8 {
+            get {
+                return ResourceManager.GetString("m6_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Reportage.
+        /// </summary>
+        public static string m6_9 {
+            get {
+                return ResourceManager.GetString("m6_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m7_1 {
+            get {
+                return ResourceManager.GetString("m7_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m7_10 {
+            get {
+                return ResourceManager.GetString("m7_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m7_11 {
+            get {
+                return ResourceManager.GetString("m7_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m7_2 {
+            get {
+                return ResourceManager.GetString("m7_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m7_3 {
+            get {
+                return ResourceManager.GetString("m7_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m7_4 {
+            get {
+                return ResourceManager.GetString("m7_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m7_5 {
+            get {
+                return ResourceManager.GetString("m7_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m7_6 {
+            get {
+                return ResourceManager.GetString("m7_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m7_7 {
+            get {
+                return ResourceManager.GetString("m7_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m7_8 {
+            get {
+                return ResourceManager.GetString("m7_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m7_9 {
+            get {
+                return ResourceManager.GetString("m7_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m8_1 {
+            get {
+                return ResourceManager.GetString("m8_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m8_10 {
+            get {
+                return ResourceManager.GetString("m8_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m8_11 {
+            get {
+                return ResourceManager.GetString("m8_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m8_2 {
+            get {
+                return ResourceManager.GetString("m8_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m8_3 {
+            get {
+                return ResourceManager.GetString("m8_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m8_4 {
+            get {
+                return ResourceManager.GetString("m8_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m8_5 {
+            get {
+                return ResourceManager.GetString("m8_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m8_6 {
+            get {
+                return ResourceManager.GetString("m8_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m8_7 {
+            get {
+                return ResourceManager.GetString("m8_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m8_8 {
+            get {
+                return ResourceManager.GetString("m8_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m8_9 {
+            get {
+                return ResourceManager.GetString("m8_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Persona.
+        /// </summary>
+        public static string m9_1 {
+            get {
+                return ResourceManager.GetString("m9_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Business Moscow.
+        /// </summary>
+        public static string m9_10 {
+            get {
+                return ResourceManager.GetString("m9_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Living in Moscow.
+        /// </summary>
+        public static string m9_11 {
+            get {
+                return ResourceManager.GetString("m9_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Personal Experience.
+        /// </summary>
+        public static string m9_2 {
+            get {
+                return ResourceManager.GetString("m9_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Going to work in Moscow.
+        /// </summary>
+        public static string m9_3 {
+            get {
+                return ResourceManager.GetString("m9_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trading with Moscow.
+        /// </summary>
+        public static string m9_4 {
+            get {
+                return ResourceManager.GetString("m9_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start up and venture.
+        /// </summary>
+        public static string m9_5 {
+            get {
+                return ResourceManager.GetString("m9_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trends.
+        /// </summary>
+        public static string m9_6 {
+            get {
+                return ResourceManager.GetString("m9_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Consultations.
+        /// </summary>
+        public static string m9_7 {
+            get {
+                return ResourceManager.GetString("m9_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на We simulate situations.
+        /// </summary>
+        public static string m9_8 {
+            get {
+                return ResourceManager.GetString("m9_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Expositions.
+        /// </summary>
+        public static string m9_9 {
+            get {
+                return ResourceManager.GetString("m9_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на EN.
         /// </summary>
         public static string magazine {
@@ -210,11 +1641,110 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Novice businessman.
+        /// </summary>
+        public static string novice_businessman {
+            get {
+                return ResourceManager.GetString("novice_businessman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на How to start a business in Moscow? Where to find the financing for it?.
+        /// </summary>
+        public static string t1 {
+            get {
+                return ResourceManager.GetString("t1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на How to rent an office or land lot in Moscow?.
+        /// </summary>
+        public static string t2 {
+            get {
+                return ResourceManager.GetString("t2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на How to localize your production in Moscow?.
+        /// </summary>
+        public static string t3 {
+            get {
+                return ResourceManager.GetString("t3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Analytical data and economic indicators..
+        /// </summary>
+        public static string t4 {
+            get {
+                return ResourceManager.GetString("t4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Success stories of foreign businessmen in Moscow..
+        /// </summary>
+        public static string t5 {
+            get {
+                return ResourceManager.GetString("t5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на FeedBack.
         /// </summary>
         public static string TextBlockFeedBack {
             get {
                 return ResourceManager.GetString("TextBlockFeedBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Which topics would you like to see covered in our magazine?.
+        /// </summary>
+        public static string topic {
+            get {
+                return ResourceManager.GetString("topic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You are.
+        /// </summary>
+        public static string You_are {
+            get {
+                return ResourceManager.GetString("You_are", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your business sector.
+        /// </summary>
+        public static string Your_business_sector {
+            get {
+                return ResourceManager.GetString("Your_business_sector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your country:.
+        /// </summary>
+        public static string Your_country {
+            get {
+                return ResourceManager.GetString("Your_country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your question:.
+        /// </summary>
+        public static string Your_q {
+            get {
+                return ResourceManager.GetString("Your_q", resourceCulture);
             }
         }
     }

@@ -150,5 +150,10 @@ namespace BigMoscow
             Button b = sender as Button;
             myBook.CurrentSheetIndex = int.Parse(CurrentJournal.Content_page_dictionary[b.Content.ToString()]) / 2;
         }
+
+        private void Feedback_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = new PageQuestion();
+        }
     }
 }
