@@ -73,7 +73,7 @@ namespace BigMoscow
 
         private void button_info_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageInfo();
+            _flip.frame.Content = new PageMedia();
         }
 
         private void MenuRuClick(object sender, RoutedEventArgs e)

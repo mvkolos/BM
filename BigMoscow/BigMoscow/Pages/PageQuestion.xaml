@@ -7,43 +7,20 @@
       xmlns:local="clr-namespace:BigMoscow.Pages"
       mc:Ignorable="d" 
       DataContext="PageQuestion.xaml.cs"
-      d:DesignHeight="1080" d:DesignWidth="1920"
+      Height="1080" Width="1920"
       Title="PageQuestion" Loaded="Page_Loaded">
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
     </Page.Background>
+    
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            
-        </Grid.RowDefinitions>
-        <Menu Grid.Column="1" FontSize="30" Background="{x:Null}">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+        <Menu HorizontalAlignment="Center" FontSize="30" Background="{x:Null}">
             <MenuItem Header="RU" Checked="RU_click" />
             <MenuItem Header="EN" Click="en_click" />
         </Menu>
-        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="50"/>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="30"/>
         <Label Grid.Row="2" Grid.Column="1" Content="{x:Static properties:Resources.You_are}" FontSize="30"/>
         <ComboBox Name="combobox_you_are" Grid.Row="3" IsEditable="True" Grid.Column="1">
             <ComboBoxItem Content="{x:Static properties:Resources.Investor}"/>
@@ -71,5 +48,5 @@
         <Label Grid.Row="12" Grid.Column="1" Content="{x:Static properties:Resources.Your_q}" />
         <TextBox Name="texbox_question" Grid.Row="13" Grid.Column="1" Grid.RowSpan="3"/>
         <Button Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Click="Button_Click" />
-    </Grid>
+    </StackPanel>
 </Page>
