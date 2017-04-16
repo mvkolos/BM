@@ -12,7 +12,7 @@
         Title="Flip" Height="1080" Width="1920">
     
     <Window.Background>
-        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
+        <ImageBrush ImageSource="/UI/MainScreen/mainscreenMain.jpg"/>
     </Window.Background>
     
    

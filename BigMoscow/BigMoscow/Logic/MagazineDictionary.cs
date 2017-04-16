@@ -31,20 +31,25 @@ namespace BigMoscow.Logic
 
             return dictionary;
         }
-        public static Dictionary<string, string[]> GetContent()
-        {
-            Dictionary<string, string[]> dictionary = new Dictionary<string, string[]>();
-            dictionary.Add("_01", new string[] {
-                Properties.Resources.m1_1+";"+"3",
-                 Properties.Resources.m1_2+";"+"10",
-                  Properties.Resources.m1_3+";"+"19",
-                   Properties.Resources.m1_4+";"+"31",
-                    Properties.Resources.m1_5+";"+"63",
-                     Properties.Resources.m1_6+";"+"72",
-                      Properties.Resources.m1_7+";"+"81",
 
+        public static Lazy<Dictionary<string, string[]>> GetContent =
+            new Lazy<Dictionary<string, string[]>>(() =>
+            {
+
+                Dictionary<string, string[]> dictionary =
+                    new Dictionary<string, string[]>();
+                dictionary.Add("_01", new string[]
+                {
+                    Properties.Resources.m1_1 + ";" + "3",
+                    Properties.Resources.m1_2 + ";" + "10",
+                    Properties.Resources.m1_3 + ";" + "19",
+                    Properties.Resources.m1_4 + ";" + "31",
+                    Properties.Resources.m1_5 + ";" + "63",
+                    Properties.Resources.m1_6 + ";" + "72",
+                    Properties.Resources.m1_7 + ";" + "81",
+
+                });
+                return dictionary;
             });
-            return dictionary;
-        }
     }
 }

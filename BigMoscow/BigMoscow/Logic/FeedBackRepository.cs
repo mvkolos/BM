@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BigMoscow.Logic
 {
@@ -30,7 +27,7 @@ namespace BigMoscow.Logic
                 }
 
             }
-            catch (System.UnauthorizedAccessException)
+            catch
             {
 
             }
@@ -71,9 +68,9 @@ namespace BigMoscow.Logic
             mailmess.Subject = "BIGMOSCOW";
             mailmess.To.Add(new MailAddress(email));
             mailmess.Body = Properties.Resources.email;
-                //string.Format("{0}", "Здравствуйте!/n Во вложении - ваша копия журнала./nBIGMOSCOW");
-           // Attachment attach = new Attachment(@"..\..\Files\SALT.pdf");
-           // mailmess.Attachments.Add(attach);
+            //string.Format("{0}", "Здравствуйте!/n Во вложении - ваша копия журнала./nBIGMOSCOW");
+            // Attachment attach = new Attachment(@"..\..\Files\SALT.pdf");
+            // mailmess.Attachments.Add(attach);
             SmtpClient smpt = new SmtpClient("smtp.yandex.ru", 25);
             smpt.EnableSsl = true;
             smpt.Credentials = new NetworkCredential("Bigmoscow@3dday.ru".Split('@')[0], "bigmsc");

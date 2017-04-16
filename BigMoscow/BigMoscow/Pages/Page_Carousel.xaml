@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="50"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <Button  Grid.RowSpan="2" Margin="10" Name="button_pattern" Opacity="0" Click="button_pattern_Click">

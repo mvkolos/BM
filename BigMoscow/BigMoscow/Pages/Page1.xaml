@@ -9,7 +9,7 @@
       mc:Ignorable="d" 
       xmlns:properties="clr-namespace:BigMoscow.Properties"
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="Page1" Loaded="Page_Loaded">
+      Title="Page1" >
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
     </Page.Background>
@@ -18,7 +18,7 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer Grid.Column="0" Width="186" Margin="0,133,0,181" Grid.RowSpan="3" HorizontalAlignment="Right">
+        <ScrollViewer Grid.Column="0" Width="186" Height="742" HorizontalAlignment="Center" Margin="292,137,162,201" Grid.RowSpan="3" >
             <StackPanel  x:Name="coversPanel"  Grid.RowSpan="3"></StackPanel>
         </ScrollViewer>
 
