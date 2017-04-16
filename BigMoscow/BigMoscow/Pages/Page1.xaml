@@ -8,7 +8,7 @@
       xmlns:local="clr-namespace:BigMoscow"
       mc:Ignorable="d" 
       xmlns:properties="clr-namespace:BigMoscow.Properties"
-      d:DesignHeight="1080" d:DesignWidth="1920"
+      Height="1080" Width="1920"
       Title="Page1" >
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
