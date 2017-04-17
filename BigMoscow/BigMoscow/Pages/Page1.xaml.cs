@@ -110,17 +110,17 @@ namespace BigMoscow
                 content.ImageSource = b;
                 Page_Carousel p = new Page_Carousel(_flip);
                 p.BackGroundURL = item;
-                Frame f = new Frame();
-                f.Width = 186;
-                f.Height = 260;
-                Thickness th = f.Padding;
+                Frame fr = new Frame();
+                fr.Width = 186;
+                fr.Height = 260;
+                Thickness th = fr.Padding;
                 th.Left = 10;
                 th.Right = 5;
                 th.Top = 10;
                 th.Bottom = 5;
-                f.Padding = th;
-                f.Content = p;
-                coversPanel.Children.Add(f);
+                fr.Padding = th;
+                fr.Content = p;
+                coversPanel.Children.Add(fr);
                 p.Background = content;
             }
         }

@@ -193,6 +193,21 @@ namespace WPFMitsuControls
 
             return result;
         }
+        
+        private int? GetSide(UIElement source, Point position)
+        {
+            int? result = null;
+
+            Rect leftSideRectangle = new Rect(0, 0, gripSize, source.RenderSize.Height);
+            Rect rightSideRectangle = new Rect(source.RenderSize.Width - gripSize, 0, gripSize, source.RenderSize.Height);
+
+            if (leftSideRectangle.Contains(position))
+                return 0;
+            else if (rightSideRectangle.Contains(position))
+                return 1;
+
+            return result;
+        }
 
         private void OnMouseDown(object sender, MouseButtonEventArgs args)
         {
@@ -203,6 +218,19 @@ namespace WPFMitsuControls
             Point p = args.GetPosition(source);
             
             CornerOrigin? tmp = GetCorner(source, p);
+            int? side = GetSide(source, p);
+
+            if (side.HasValue && side == 1 && IsBottomRightCornerEnabled)
+            {
+                AutoTurnPage(CornerOrigin.BottomRight, 500);
+                return;
+            }
+
+            if (side.HasValue && side == 0 && IsBottomLeftCornerEnabled)
+            {
+                AutoTurnPage(CornerOrigin.BottomLeft, 500);
+                return;
+            }
 
             if (tmp.HasValue)
             {

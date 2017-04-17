@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\Users\Marya\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\
+C:\Users\Stepan\Desktop\Shit\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\
 WPFMitsuControls
 none
 false
@@ -16,5 +16,5 @@ DEBUG;TRACE
 14-215853292
 Book.xaml;BookPage.xaml;
 
-False
+True
 

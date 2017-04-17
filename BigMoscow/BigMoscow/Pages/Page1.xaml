@@ -28,7 +28,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer Grid.Column="0" Width="186" Height="742" HorizontalAlignment="Center" Margin="292,137,162,201" Grid.RowSpan="3" >
+        <ScrollViewer Grid.Column="0" Width="186" Height="742" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="292,137,162,201" Grid.RowSpan="3" VerticalScrollBarVisibility="Hidden" >
             <StackPanel  x:Name="coversPanel"  Grid.RowSpan="3"></StackPanel>
         </ScrollViewer>
 
