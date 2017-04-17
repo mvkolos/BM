@@ -104,11 +104,17 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
+    
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Menu Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" Padding="20" >
 
             <MenuItem Header="RU" Click="RU_click" FontSize="28" Foreground="#FFD8D8D8"/>
@@ -118,7 +124,8 @@
 
 
         </Menu>
-    <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        
+    <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
         <StackPanel.Background >
             <ImageBrush  ImageSource="/UI/Feedback/feedback_paddle.png" />
         </StackPanel.Background>
