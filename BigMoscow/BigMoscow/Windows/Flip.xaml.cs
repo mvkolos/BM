@@ -23,14 +23,16 @@ namespace BigMoscow.Windows
     /// </summary>
     public partial class Flip : Window
     {
+        public Page2 carousel;
+        
         public Flip()
 
         {
             CultureInfo c = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Properties.Resources.Culture = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             InitializeComponent();
-           
-            frame.Content = new Page2(this);
+            carousel = new Page2(this);
+            frame.Content = carousel;
         }
     }
 }

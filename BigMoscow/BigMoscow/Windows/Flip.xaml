@@ -9,7 +9,7 @@
         xmlns:bornander="clr-namespace:Bornander.UI.TabCarousel;assembly=Bornander.UI.TabCarousel"  
         xmlns:viewmodels="bi"
         mc:Ignorable="d"
-        Title="Flip" Height="1080" Width="1920">
+        Title="Flip" Height="1080" Width="1920" WindowStyle = "None" WindowState = "Maximized">
     
     <Window.Background>
         <ImageBrush ImageSource="/UI/MainScreen/mainscreenMain.jpg"/>

@@ -104,6 +104,13 @@
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/info_button.png"/>
             </Button.Background>
         </Button>
+       
+        <Button x:Name="carousel_back_button" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Height="74" Width="100" Click="carousel_back_Click" Grid.Column="0" BorderBrush="#00707070" Margin="192,172,348,114">
+            <Button.Background>
+                <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 

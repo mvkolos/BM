@@ -31,3 +31,14 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabC
 D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.g.resources
 D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.dll
 D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.pdb
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.UI.TabCarousel.dll
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.UI.TabCarousel.pdb
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.Wpf.Meshes.dll
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\bin\Debug\Bornander.Wpf.Meshes.pdb
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.csprojResolveAssemblyReference.cache
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Carousel.baml
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Carousel.g.cs
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel_MarkupCompile.cache
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.g.resources
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.dll
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.UI.TabCarousel\obj\Debug\Bornander.UI.TabCarousel.pdb

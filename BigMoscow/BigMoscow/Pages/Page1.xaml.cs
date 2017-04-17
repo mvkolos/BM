@@ -155,5 +155,10 @@ namespace BigMoscow
         {
             _flip.frame.Content = new PageQuestion();
         }
+
+        private void carousel_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = _flip.carousel;
+        }
     }
 }
