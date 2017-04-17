@@ -132,16 +132,16 @@ namespace BigMoscow
             if (contents.Keys.Contains(MagazineDictionary.GetDictionary()[CurrentJournal.journal]))
             {
                 string[] cont = contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
-                foreach (var item in cont)
-                {
-                    Button b = new Button();
-                    b.Height = 50;
-                    b.Width = 140;
-                    b.Content = item.Split(';')[0];
-                    CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
-                    b.Click += B_Click;
-                    content_magaz.Children.Add(b);
-                }
+                //foreach (var item in cont)
+                //{
+                //    Button b = new Button();
+                //    b.Height = 50;
+                //    b.Width = 140;
+                //    b.Content = item.Split(';')[0];
+                //    CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                //    b.Click += B_Click;
+                //    content_magaz.Children.Add(b);
+                //}
             }
         }
 

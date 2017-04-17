@@ -4,19 +4,104 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
        xmlns:properties="clr-namespace:BigMoscow.Properties"
-      xmlns:local="clr-namespace:BigMoscow.Pages"
       mc:Ignorable="d" 
       DataContext="PageQuestion.xaml.cs"
       Height="1080" Width="1920"
       Title="PageQuestion" Loaded="Page_Loaded">
     <Page.Resources>
-        <Style x:Key="{x:Type ComboBox}" TargetType="ComboBox">
-          
-            <Setter Property="Background"
-                    Value="Black"></Setter>
-            <Setter Property="Foreground"
-                    Value="Black"></Setter>
 
+
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#99000000" />
+        <SolidColorBrush x:Key="WindowPaddleBrush" Color="#DB000000" />
+        <SolidColorBrush x:Key="WindowBorderBrush" Color="Gray" />
+
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Border x:Name="Border" Grid.ColumnSpan="2" 
+  Background="{StaticResource WindowBackgroundBrush}"/>
+                <Border   Grid.Column="0"
+  CornerRadius="2,0,0,2" 
+  Margin="1" 
+   
+  BorderThickness="0,0,0,0" BorderBrush="#FFD9D9D9" />
+                <Path 
+  x:Name="Arrow"
+  Grid.Column="1"     
+  HorizontalAlignment="Left"
+  VerticalAlignment="Center"
+  Data="M 0 0 L 4 4 L 8 0 Z" Fill="#FFB3B3B3"/>
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+            <Border x:Name="PART_ContentHost" Focusable="False" />
+        </ControlTemplate>
+
+
+        <Style x:Key="{x:Type ComboBox}" TargetType="ComboBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton 
+         Name="ToggleButton" 
+         Template="{StaticResource ComboBoxToggleButton}" 
+         Grid.Column="2" 
+                                
+         Focusable="false"
+         IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+         ClickMode="Press">
+                            </ToggleButton>
+                            <ContentPresenter
+        Name="ContentSite"
+        IsHitTestVisible="False" 
+        Margin="3,3,23,3"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Left" />
+                            
+                            <TextBox x:Name="PART_EditableTextBox"
+                                     Foreground="AliceBlue"
+                                     
+                                    
+         Style="{x:Null}" 
+         Template="{StaticResource ComboBoxTextBox}" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Center" 
+         Margin="3,3,23,3"
+         Focusable="True" 
+         Background="Transparent"
+         IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup 
+        Name="Popup"
+        Placement="Bottom"
+        IsOpen="{TemplateBinding IsDropDownOpen}"
+        AllowsTransparency="True" 
+        Focusable="False"
+        PopupAnimation="Slide">
+                                <Grid 
+          Name="DropDown"
+          SnapsToDevicePixels="True"                
+          MinWidth="{TemplateBinding ActualWidth}"
+          MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border 
+            x:Name="DropDownBorder"
+            Background="{StaticResource WindowPaddleBrush}"
+            BorderThickness="1"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
         </Style>
     </Page.Resources>
     <Page.Background>
@@ -33,7 +118,7 @@
 
 
         </Menu>
-    <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center" >
         <StackPanel.Background >
             <ImageBrush  ImageSource="/UI/Feedback/feedback_paddle.png" />
         </StackPanel.Background>
@@ -42,36 +127,39 @@
                 <Label HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="30" Foreground="#FFE7E7E7" Margin="0 40 0 0"/>
             <Label Content="{x:Static properties:Resources.You_are}" FontSize="20" Foreground="#FFE7E7E7" Margin="30 40 0 0"/>
 
-        
-            <ComboBox Name="combobox_you_are" IsEditable="True" Margin="40 10 40 10" Height="40"  >
-                
 
-                <ComboBoxItem Content="{x:Static properties:Resources.Investor}"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.hired_manager}"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.business_owner}"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.novice_businessman}"/>
+            <ComboBox Name="combobox_you_are" IsEditable="True" Margin="40 10 40 10" Height="50"  FontSize="18" Foreground="#FFE7E7E7">
+               
+
+
+                <ComboBoxItem Content="{x:Static properties:Resources.Investor}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.hired_manager}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.business_owner}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.novice_businessman}" Foreground="#FFE7E7E7" FontSize="18"/>
 
             </ComboBox>
 
 
             <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_country}" FontSize="20" Foreground="#FFE7E7E7"/>
-            <ComboBox  Loaded="combobox_country_Loaded" Name="combobox_country" IsEditable="True"  Margin="40 10 40 10" Height="40">
+            <ComboBox  Loaded="combobox_country_Loaded" Name="combobox_country" IsEditable="True"  Margin="40 10 40 10" Height="50" Foreground="#FFE7E7E7" FontSize="18">
            
         </ComboBox>
             <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_business_sector}" FontSize="20" Foreground="#FFE7E7E7"/>
-            <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 10 40 10" Height="40">
-            <ComboBoxItem Content="{x:Static properties:Resources.Display_category}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.Hall}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.Country}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.German_Chamber_of_Commerce}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.Federal_State}"/>
+            
+            <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 10 40 10" Height="50" FontSize="18" Foreground="#FFE7E7E7" >
+                
+                <ComboBoxItem Content="{x:Static properties:Resources.Display_category}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.Hall}"  Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.Country}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.German_Chamber_of_Commerce}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.Federal_State}" Foreground="#FFE7E7E7" FontSize="18"/>
         </ComboBox>
             <RadioButton Margin="30 10 30 0" Name="r1" Content="{x:Static properties:Resources.t1}" FontSize="15" Foreground="#FFE7E7E7"/>
             <RadioButton Margin="30 0 30 0" Name="r2" Content="{x:Static properties:Resources.t2}" FontSize="15" Foreground="#FFE7E7E7"/>
             <RadioButton Margin="30 0 30 0" Name="r3" Content="{x:Static properties:Resources.t3}" FontSize="15" Foreground="#FFE7E7E7"/>
             <RadioButton Margin="30 0 30 0" Name="r4" Content="{x:Static properties:Resources.t4}" FontSize="15" Foreground="#FFE7E7E7"/>
             <Label Content="{x:Static properties:Resources.Your_q}" Margin="40 40 30 10" Foreground="#FFE7E7E7" FontSize="20"/>
-        <TextBox Margin="40 10 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged"/>
+        <TextBox Margin="40 10 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged" Background="#CCFFFFFF"/>
         <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold" />
     </StackPanel>
     </Grid>

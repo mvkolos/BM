@@ -17,8 +17,8 @@
     <Grid x:Name="PageGrid" >
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="480" />
+            <ColumnDefinition Width="995"/>
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
@@ -27,8 +27,15 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 0">
+            <Button Width="170" Height="60" Margin="0 0 10 0" Background="#FF9F0A0A" Click="B_Click" BorderBrush="#00707070"/>
+            <Button Width="170" Height="60" Margin="0 0 10 0" Background="#FFF02E2E" Click="B_Click" BorderBrush="#00DA1C1C"/>
+            <Button Width="170" Height="60" Margin="0 0 10 0" Background="#FF303463" Click="B_Click" BorderBrush="#00707070"/>
+            <Button Width="170" Height="60" Margin="0 0 10 0" Background="#FFD4AFE7" Click="B_Click" BorderBrush="#00707070"/>
+            <Button Width="170" Height="60" Margin="0 0 10 0" Background="#FF818182" Click="B_Click" BorderBrush="#00707070"/>
+        </StackPanel>
 
-        <ScrollViewer Grid.Column="0" Width="186" Height="742" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="292,137,162,201" Grid.RowSpan="3" VerticalScrollBarVisibility="Hidden" >
+        <ScrollViewer Grid.Column="0" Width="186" Height="742" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="293,149,1,189" Grid.RowSpan="3" VerticalScrollBarVisibility="Hidden" >
             <StackPanel  x:Name="coversPanel"  Grid.RowSpan="3"></StackPanel>
         </ScrollViewer>
 
