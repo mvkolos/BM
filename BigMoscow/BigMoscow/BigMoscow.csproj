@@ -265,6 +265,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="UI\Feedback\feedback_paddle.png" />
     <Resource Include="UI\MainScreen\facebook_icon.png" />
     <Resource Include="UI\MainScreen\feedback_button.png" />
     <Resource Include="UI\MainScreen\info_button.png" />
@@ -278,7 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="UI\Feedback\button.png" />
-    <Resource Include="UI\Feedback\feedback_paddle.png" />
     <Resource Include="UI\Feedback\message_box_selected.png" />
     <Resource Include="UI\Feedback\message_box_unselected.png" />
     <Resource Include="UI\Feedback\name_box_selected.png" />

@@ -86,6 +86,11 @@ namespace BigMoscow.Pages
         {
             
         }
+
+        private void texbox_question_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
     public class Countries
     {

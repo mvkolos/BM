@@ -9,44 +9,70 @@
       DataContext="PageQuestion.xaml.cs"
       Height="1080" Width="1920"
       Title="PageQuestion" Loaded="Page_Loaded">
-    <Page.Background>
-        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
-    </Page.Background>
-    
+    <Page.Resources>
+        <Style x:Key="{x:Type ComboBox}" TargetType="ComboBox">
+          
+            <Setter Property="Background"
+                    Value="Black"></Setter>
+            <Setter Property="Foreground"
+                    Value="Black"></Setter>
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        
-        <Menu HorizontalAlignment="Center" FontSize="30" Background="{x:Null}">
-            <MenuItem Header="RU" Checked="RU_click" />
-            <MenuItem Header="EN" Click="en_click" />
+        </Style>
+    </Page.Resources>
+    <Page.Background>
+        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
+    </Page.Background>
+
+    <Grid>
+        <Menu Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" Padding="20" >
+
+            <MenuItem Header="RU" Click="RU_click" FontSize="28" Foreground="#FFD8D8D8"/>
+            <Image Source="/BigMoscow;component/UI/MainScreen/earth_icon.png" Width="40"/>
+
+            <MenuItem  Header="ENG" Click="en_click" FontSize="28" Foreground="#FFD8D8D8" />
+
+
         </Menu>
-        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="30"/>
-        <Label Grid.Row="2" Grid.Column="1" Content="{x:Static properties:Resources.You_are}" FontSize="20"/>
-        <ComboBox Name="combobox_you_are" Grid.Row="3" IsEditable="True" Grid.Column="1">
-            <ComboBoxItem Content="{x:Static properties:Resources.Investor}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.hired_manager}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.business_owner}"/>
-            <ComboBoxItem Content="{x:Static properties:Resources.novice_businessman}"/>
-        </ComboBox>
+    <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel.Background >
+            <ImageBrush  ImageSource="/UI/Feedback/feedback_paddle.png" />
+        </StackPanel.Background>
+
+            
+                <Label HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="30" Foreground="#FFE7E7E7" Margin="0 40 0 0"/>
+            <Label Content="{x:Static properties:Resources.You_are}" FontSize="20" Foreground="#FFE7E7E7" Margin="30 40 0 0"/>
+
         
-        <Label Grid.Row="4" Grid.Column="1" Content="{x:Static properties:Resources.Your_country}" FontSize="20"/>
-        <ComboBox  Loaded="combobox_country_Loaded" Name="combobox_country" IsEditable="True" Grid.Row="5" Grid.Column="1">
+            <ComboBox Name="combobox_you_are" IsEditable="True" Margin="40 10 40 10" Height="40"  >
+                
+
+                <ComboBoxItem Content="{x:Static properties:Resources.Investor}"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.hired_manager}"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.business_owner}"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.novice_businessman}"/>
+
+            </ComboBox>
+
+
+            <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_country}" FontSize="20" Foreground="#FFE7E7E7"/>
+            <ComboBox  Loaded="combobox_country_Loaded" Name="combobox_country" IsEditable="True"  Margin="40 10 40 10" Height="40">
            
         </ComboBox>
-        <Label Grid.Row="6" Grid.Column="1" Content="{x:Static properties:Resources.Your_business_sector}" FontSize="20"/>
-        <ComboBox Name="combobox_business"   Grid.Row="7" IsEditable="True" Grid.Column="1">
+            <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_business_sector}" FontSize="20" Foreground="#FFE7E7E7"/>
+            <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 10 40 10" Height="40">
             <ComboBoxItem Content="{x:Static properties:Resources.Display_category}"/>
             <ComboBoxItem Content="{x:Static properties:Resources.Hall}"/>
             <ComboBoxItem Content="{x:Static properties:Resources.Country}"/>
             <ComboBoxItem Content="{x:Static properties:Resources.German_Chamber_of_Commerce}"/>
             <ComboBoxItem Content="{x:Static properties:Resources.Federal_State}"/>
         </ComboBox>
-        <RadioButton Name="r1" Grid.Row="8" Grid.Column="1" Content="{x:Static properties:Resources.t1}" FontSize="15"/>
-        <RadioButton Name="r2" Grid.Row="9" Grid.Column="1" Content="{x:Static properties:Resources.t2}" FontSize="15"/>
-        <RadioButton Name="r3" Grid.Row="10" Grid.Column="1" Content="{x:Static properties:Resources.t3}" FontSize="15"/>
-        <RadioButton Name="r4" Grid.Row="11" Grid.Column="1" Content="{x:Static properties:Resources.t4}" FontSize="15"/>
-        <Label Grid.Row="12" Grid.Column="1" Content="{x:Static properties:Resources.Your_q}" />
-        <TextBox Name="texbox_question" Grid.Row="13" Grid.Column="1" Grid.RowSpan="3" Height="150"/>
+            <RadioButton Margin="30 10 30 0" Name="r1" Content="{x:Static properties:Resources.t1}" FontSize="15" Foreground="#FFE7E7E7"/>
+            <RadioButton Margin="30 0 30 0" Name="r2" Content="{x:Static properties:Resources.t2}" FontSize="15" Foreground="#FFE7E7E7"/>
+            <RadioButton Margin="30 0 30 0" Name="r3" Content="{x:Static properties:Resources.t3}" FontSize="15" Foreground="#FFE7E7E7"/>
+            <RadioButton Margin="30 0 30 0" Name="r4" Content="{x:Static properties:Resources.t4}" FontSize="15" Foreground="#FFE7E7E7"/>
+            <Label Content="{x:Static properties:Resources.Your_q}" Margin="40 40 30 10" Foreground="#FFE7E7E7" FontSize="20"/>
+        <TextBox Margin="40 10 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged"/>
         <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold" />
     </StackPanel>
+    </Grid>
 </Page>
