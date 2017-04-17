@@ -9,16 +9,17 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="PageSend" Loaded="Page_Loaded">
     <Page.Background>
-        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
+        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <StackPanel VerticalAlignment="Center" Width="600" Height="280">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/BigMoscow;component/UI/Feedback/feedback_paddle.png"/>
+        </StackPanel.Background>
 
-        <TextBox  Name="textbox_Email" Height="55" Width="500" Opacity="0.6" VerticalAlignment="Bottom" GotFocus="textbox_Email_GotFocus"/>
-        <Button Content="{x:Static properties:Resources.button_send_smth}" Name="button_send_smth" Grid.Row="1" Height="55" Width="200" VerticalAlignment="Top" Margin="405,50" Click="button_send_smth_Click"/>
-    </Grid>
+        <TextBox TextAlignment="Center" Padding="10" Name="textbox_Email" Height="65" Width="500" Opacity="0.7" Margin="50"
+                  VerticalAlignment="Center" GotFocus="textbox_Email_GotFocus" FontSize="28"/>
+        <Button Content="{x:Static properties:Resources.button_send_smth}" Name="button_send_smth" Height="60" Width="240" VerticalAlignment="Center" 
+                Click="button_send_smth_Click" FontSize="28" BorderBrush="#00707070" Background="#FFE21414" FontFamily="SegoeUI"/>
+    </StackPanel>
 </Page>
