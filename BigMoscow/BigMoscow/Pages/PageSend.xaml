@@ -33,12 +33,13 @@
             </Button>
 
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Height="280">
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Height="300">
         <StackPanel.Background>
             <ImageBrush ImageSource="/BigMoscow;component/UI/Feedback/feedback_paddle.png"/>
         </StackPanel.Background>
+            <Label Content="Get your copy of BIGMOSCOW" FontSize="28" Foreground="LightGray" HorizontalAlignment="Center" Margin="0 30 0 0"/>
 
-        <TextBox TextAlignment="Center" Padding="10" Name="textbox_Email" Height="65" Width="500" Opacity="0.7" Margin="50"
+            <TextBox TextAlignment="Center" Padding="10" Name="textbox_Email" Height="65" Width="500" Opacity="0.7" Margin="0 20 0 30"
                   VerticalAlignment="Center" GotFocus="textbox_Email_GotFocus" FontSize="28" GotTouchCapture="textbox_Email_GotTouchCapture"/>
         <Button Content="{x:Static properties:Resources.button_send_smth}" Name="button_send_smth" Height="60" Width="240" VerticalAlignment="Center" 
                 Click="button_send_smth_Click" FontSize="28" BorderBrush="#00707070" Background="#FFE21414" FontFamily="SegoeUI"/>

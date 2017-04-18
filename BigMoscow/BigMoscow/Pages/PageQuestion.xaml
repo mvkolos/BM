@@ -85,7 +85,7 @@
                                 <Grid 
           Name="DropDown"
           SnapsToDevicePixels="True"                
-          MinWidth="{TemplateBinding ActualWidth}"
+          Width="389"
           MaxHeight="{TemplateBinding MaxDropDownHeight}">
                                     <Border 
             x:Name="DropDownBorder"
@@ -164,9 +164,9 @@
             </ComboBox>
             <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_business_sector}" FontSize="20" Foreground="#FFE7E7E7"/>
 
-            <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 10 40 10" Height="50" FontSize="18" Foreground="#FFE7E7E7" >
-
-                <ComboBoxItem Content="{x:Static properties:Resources.Display_category}" Foreground="#FFE7E7E7" FontSize="18"/>
+            <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 10 40 10" Height="50" FontSize="18" Foreground="#FFE7E7E7"  >
+              
+                <ComboBoxItem  Content="{x:Static properties:Resources.Display_category}" Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.Hall}"  Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.Country}" Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.German_Chamber_of_Commerce}" Foreground="#FFE7E7E7" FontSize="18"/>

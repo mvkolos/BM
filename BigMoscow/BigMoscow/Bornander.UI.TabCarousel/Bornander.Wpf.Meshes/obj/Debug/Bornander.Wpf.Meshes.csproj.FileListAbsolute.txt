@@ -13,3 +13,8 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Mes
 D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.csprojResolveAssemblyReference.cache
 D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.dll
 D:\Users\Marya\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.pdb
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\bin\Debug\Bornander.Wpf.Meshes.dll
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\bin\Debug\Bornander.Wpf.Meshes.pdb
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.csprojResolveAssemblyReference.cache
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.dll
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\BigMoscow\Bornander.UI.TabCarousel\Bornander.Wpf.Meshes\obj\Debug\Bornander.Wpf.Meshes.pdb
