@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BigMoscow.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +22,12 @@ namespace BigMoscow.Pages
     public partial class PageMedia : Page
     {
         int currentSlide;
-        public PageMedia()
+        Flip _flip;
+        public PageMedia(Flip flip)
         {
             InitializeComponent();
+            _flip = flip;
+
         }
 
         private void click_left(object sender, RoutedEventArgs e)
@@ -68,6 +72,17 @@ namespace BigMoscow.Pages
                 SetBackGround("../../Images/Mediakit/0" + currentSlide + ".png");
                 
             }
+        }
+
+        private void magazines_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = new Page1(_flip);
+
+        }
+
+        private void carousel_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = _flip.carousel;
         }
     }
 }

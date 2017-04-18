@@ -16,20 +16,24 @@ using BigMoscow.Logic;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using BigMoscow.Windows;
 
 namespace BigMoscow.Pages
 {
+    
     /// <summary>
     /// Логика взаимодействия для PageSend.xaml
     /// </summary>
     public partial class PageSend : Page
     {
+        Flip _flip;
         FeedBackRepository feed;
-        public PageSend()
+        public PageSend(Flip flip)
         {
             feed = new FeedBackRepository();
             InitializeComponent();
             DisableWPFTabletSupport();
+            _flip = flip;
         }
 
         private void button_send_smth_Click(object sender, RoutedEventArgs e)
@@ -113,7 +117,15 @@ namespace BigMoscow.Pages
             }
         }
 
+        private void magazines_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = new Page1(_flip);
+        }
 
+        private void carousel_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = _flip.carousel;
+        }
     }
     [Guid("41C81592-514C-48BD-A22E-E6AF638521A6")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]

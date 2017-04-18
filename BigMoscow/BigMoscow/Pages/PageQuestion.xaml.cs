@@ -147,6 +147,16 @@ namespace BigMoscow.Pages
                 Button_Click(sender, null);
             }
         }
+
+        private void carousel_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = _flip.carousel;
+        }
+
+        private void magazines_back_Click(object sender, RoutedEventArgs e)
+        {
+            _flip.frame.Content = new Page1(_flip);
+        }
     }
     public class Countries
     {

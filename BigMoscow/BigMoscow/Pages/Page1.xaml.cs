@@ -70,12 +70,12 @@ namespace BigMoscow
         }
         private void mail_button_click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageSend();
+            _flip.frame.Content = new PageSend(_flip);
         }
 
         private void button_info_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageMedia();
+            _flip.frame.Content = new PageMedia(_flip);
         }
 
         private void MenuRuClick(object sender, RoutedEventArgs e)
@@ -134,6 +134,7 @@ namespace BigMoscow
             if (contents.Keys.Contains(MagazineDictionary.GetDictionary()[CurrentJournal.journal]))
             {
                 string[] cont = contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
+                int count = cont.Length;
                 //foreach (var item in cont)
                 //{
                 //    Button b = new Button();

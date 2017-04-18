@@ -15,6 +15,8 @@ using Bornander.UI.TabCarousel;
 using System.Globalization;
 using System.Configuration;
 using System.Windows.Threading;
+using BigMoscow.Logic;
+using System.IO;
 
 namespace BigMoscow.Windows
 {
@@ -25,18 +27,24 @@ namespace BigMoscow.Windows
     {
         public Page2 carousel;
         DispatcherTimer dispatchTimer;
+        
+
 
         int currentImageIndex = 0;
+        int slideLen = 4;
         String[] backgroundImagesURIs = { "D:/Users/Marya/BM/BigMoscow/BigMoscow/UI/MainScreen/mainscreenMain.jpg",
                                           "D:/Users/Marya/BM/BigMoscow/BigMoscow/UI/MainScreen/mainscreenMain.png" };
-
+        List<string> slides;
         public Flip()
         {
+            
             CultureInfo c = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Properties.Resources.Culture = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             InitializeComponent();
             carousel = new Page2(this);
             frame.Content = carousel;
+            String uri = "../../../../../Slides";
+            slides = DirSearch(uri);
 
             StartTimer();
         }
@@ -52,12 +60,45 @@ namespace BigMoscow.Windows
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            currentImageIndex = currentImageIndex + 1 >= backgroundImagesURIs.Length ? 0 : currentImageIndex + 1;
-            Uri imageUri = new Uri(backgroundImagesURIs[currentImageIndex]);
+            
+            currentImageIndex = currentImageIndex>= slideLen-1? 0 : currentImageIndex + 1;
+
+            // + String.Format("anim_slide{0}", currentImageIndex);
+            
+            Uri imageUri = new Uri(slides[currentImageIndex]);
             BitmapImage image = new BitmapImage(imageUri);
             ImageBrush brush = new ImageBrush(image);
 
             carousel.Background = brush;
         }
+        public List<string> DirSearch(string sDir)
+        {
+            List<string> pages = new List<string>();
+            DirectoryInfo item = new DirectoryInfo(sDir);
+            try
+            {
+                foreach (var f in item.GetFiles())
+                {
+                    if (f.Extension.Equals(".png"))
+                    {
+                        pages.Add(f.FullName);
+                    }
+                }
+                foreach (var f in item.GetDirectories())
+                {
+                    DirSearch(f.FullName);
+                }
+
+            }
+            catch
+            {
+
+            }
+
+
+            return pages;
+
+        }
+
     }
 }

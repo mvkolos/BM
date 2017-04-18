@@ -8,21 +8,41 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="PageMedia" Loaded="Page_Loaded">
     <Page.Background>
-        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
+        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="390"/>
             <ColumnDefinition/>
-            <ColumnDefinition />
+            <ColumnDefinition Width="390" />
         </Grid.ColumnDefinitions>
-        <Button  Margin="50,350,400,350" Click="click_left">
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 -450 0 0">
+
+            <Button Margin="0 0 0 10" x:Name="magazines_back_button" HorizontalAlignment="Right" VerticalAlignment="Center"
+                Height="74" Width="100" Click="magazines_back_Click" BorderBrush="#00707070" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/UI/MainScreen/mag_back_button.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="carousel_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Height="74" Width="100" Click="carousel_back_Click" BorderBrush="#00707070"  >
+                <Button.Background>
+                    <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+        <DockPanel Grid.Column="1" Width="1150" Height="900" HorizontalAlignment="Center">
+            <Image Source="/UI/MainScreen/main_paddle.png" Height="900"/>
+        </DockPanel>
+        
+        <Button   Click="click_left" Height="200" Width="120">
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/arrow_left.png"/>
             </Button.Background>
         </Button>
-        <Button Grid.Column="2"  Margin="400,350,50,350" Click="click_right" >
+        <Button Grid.Column="2"  Height="200" Width="120" Click="click_right" >
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/arrow_right.png"/>
             </Button.Background>

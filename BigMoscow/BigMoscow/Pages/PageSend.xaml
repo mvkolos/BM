@@ -11,8 +11,29 @@
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="660"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="660"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center"  >
+        
+        <Button Margin="0 0 0 10" x:Name="magazines_back_button" HorizontalAlignment="Right" VerticalAlignment="Center"
+                Height="74" Width="100" Click="magazines_back_Click" BorderBrush="#00707070" >
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/MainScreen/mag_back_button.png"/>
+            </Button.Background>
+        </Button>
+            <Button x:Name="carousel_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Height="74" Width="100" Click="carousel_back_Click" BorderBrush="#00707070"  >
+                <Button.Background>
+                    <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
+                </Button.Background>
+            </Button>
 
-    <StackPanel VerticalAlignment="Center" Width="600" Height="280">
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Height="280">
         <StackPanel.Background>
             <ImageBrush ImageSource="/BigMoscow;component/UI/Feedback/feedback_paddle.png"/>
         </StackPanel.Background>
@@ -22,4 +43,5 @@
         <Button Content="{x:Static properties:Resources.button_send_smth}" Name="button_send_smth" Height="60" Width="240" VerticalAlignment="Center" 
                 Click="button_send_smth_Click" FontSize="28" BorderBrush="#00707070" Background="#FFE21414" FontFamily="SegoeUI"/>
     </StackPanel>
+    </Grid>
 </Page>

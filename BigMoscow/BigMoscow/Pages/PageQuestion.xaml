@@ -62,7 +62,7 @@
         Margin="3,3,23,3"
         VerticalAlignment="Center"
         HorizontalAlignment="Left" />
-                            
+
                             <TextBox x:Name="PART_EditableTextBox"
                                      Foreground="AliceBlue"
                                      
@@ -104,14 +104,14 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
-    
+
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition />
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -124,19 +124,30 @@
 
 
         </Menu>
-        
-    <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
-        <StackPanel.Background >
-            <ImageBrush  ImageSource="/UI/Feedback/feedback_paddle.png" />
-        </StackPanel.Background>
+        <Button x:Name="carousel_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Height="74" Width="100" Click="carousel_back_Click" BorderBrush="#00707070" Grid.ColumnSpan="2" Margin="626,251,0,755" >
+            <Button.Background>
+                <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="magazines_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
+                Height="74" Width="100" Click="magazines_back_Click" BorderBrush="#00707070" Grid.ColumnSpan="2" Margin="626,142,0,864" >
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/MainScreen/mag_back_button.png"/>
+            </Button.Background>
+        </Button>
+        <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            <StackPanel.Background >
+                <ImageBrush  ImageSource="/UI/Feedback/feedback_paddle.png" />
+            </StackPanel.Background>
 
-            
-                <Label HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="30" Foreground="#FFE7E7E7" Margin="0 40 0 0"/>
+
+            <Label HorizontalAlignment="Center" Content="{x:Static properties:Resources.TextBlockFeedBack}" FontSize="30" Foreground="#FFE7E7E7" Margin="0 40 0 0"/>
             <Label Content="{x:Static properties:Resources.You_are}" FontSize="20" Foreground="#FFE7E7E7" Margin="30 40 0 0"/>
 
 
             <ComboBox Name="combobox_you_are" IsEditable="True" Margin="40 10 40 10" Height="50"  FontSize="18" Foreground="#FFE7E7E7">
-               
+
 
 
                 <ComboBoxItem Content="{x:Static properties:Resources.Investor}" Foreground="#FFE7E7E7" FontSize="18"/>
@@ -149,25 +160,25 @@
 
             <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_country}" FontSize="20" Foreground="#FFE7E7E7"/>
             <ComboBox  Loaded="combobox_country_Loaded" Name="combobox_country" IsEditable="True"  Margin="40 10 40 10" Height="50" Foreground="#FFE7E7E7" FontSize="18">
-           
-        </ComboBox>
+
+            </ComboBox>
             <Label Margin="30 0 0 0" Content="{x:Static properties:Resources.Your_business_sector}" FontSize="20" Foreground="#FFE7E7E7"/>
-            
+
             <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 10 40 10" Height="50" FontSize="18" Foreground="#FFE7E7E7" >
-                
+
                 <ComboBoxItem Content="{x:Static properties:Resources.Display_category}" Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.Hall}"  Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.Country}" Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.German_Chamber_of_Commerce}" Foreground="#FFE7E7E7" FontSize="18"/>
                 <ComboBoxItem Content="{x:Static properties:Resources.Federal_State}" Foreground="#FFE7E7E7" FontSize="18"/>
-        </ComboBox>
-            <RadioButton Margin="30 10 30 0" Name="r1" Content="{x:Static properties:Resources.t1}" FontSize="15" Foreground="#FFE7E7E7"/>
-            <RadioButton Margin="30 0 30 0" Name="r2" Content="{x:Static properties:Resources.t2}" FontSize="15" Foreground="#FFE7E7E7"/>
-            <RadioButton Margin="30 0 30 0" Name="r3" Content="{x:Static properties:Resources.t3}" FontSize="15" Foreground="#FFE7E7E7"/>
-            <RadioButton Margin="30 0 30 0" Name="r4" Content="{x:Static properties:Resources.t4}" FontSize="15" Foreground="#FFE7E7E7"/>
-            <Label Content="{x:Static properties:Resources.Your_q}" Margin="40 40 30 10" Foreground="#FFE7E7E7" FontSize="20"/>
-        <TextBox Margin="40 10 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged" Background="#CCFFFFFF"/>
-        <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold" />
-    </StackPanel>
+            </ComboBox>
+            <RadioButton Margin="30 10 30 0" Name="r1" Content="{x:Static properties:Resources.t1}" FontSize="18" Foreground="#FFE7E7E7"/>
+            <RadioButton Margin="30 0 30 0" Name="r2" Content="{x:Static properties:Resources.t2}" FontSize="18" Foreground="#FFE7E7E7"/>
+            <RadioButton Margin="30 0 30 0" Name="r3" Content="{x:Static properties:Resources.t3}" FontSize="18" Foreground="#FFE7E7E7"/>
+                <RadioButton Margin="30 0 30 0" Name="r4" Content="{x:Static properties:Resources.t4}" FontSize="18" Foreground="#FFE7E7E7"/>
+            <Label Content="{x:Static properties:Resources.Your_q}" Margin="40 20 30 10" Foreground="#FFE7E7E7" FontSize="20"/>
+            <TextBox Margin="40 0 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged" Background="#CCFFFFFF"/>
+            <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold" />
+        </StackPanel>
     </Grid>
 </Page>
