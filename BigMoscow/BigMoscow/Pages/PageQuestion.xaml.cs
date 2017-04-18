@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using System.IO;
 using System.Configuration;
+using BigMoscow.Logic;
+using BigMoscow.Windows;
 
 namespace BigMoscow.Pages
 {
@@ -23,10 +25,11 @@ namespace BigMoscow.Pages
     /// </summary>
     public partial class PageQuestion : Page
     {
-       
 
-        public PageQuestion()
+        Flip _flip;
+        public PageQuestion(Flip flip)
         {
+            _flip = flip;
             InitializeComponent();
         }
 
@@ -36,7 +39,7 @@ namespace BigMoscow.Pages
         }
         private void LoadCombobox()
         {
-            StreamReader sr = new StreamReader("../../../../../Countries/" + Properties.Resources.magazine + ".json", Encoding.GetEncoding(1251));
+            StreamReader sr = new StreamReader("../../../../../Countries/" + Properties.Resources.magazine + ".json", Encoding.UTF8);
             string s = sr.ReadToEnd();
             Countries[] objArr = null ;
             sr.Close();
@@ -62,13 +65,13 @@ namespace BigMoscow.Pages
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Dispatcher.Invoke(() =>
             {
-                combobox_country.Items.Clear();
-                LoadCombobox();
+                _flip.frame.Content = new PageQuestion(_flip);
+
             }
             );
 
         }
-
+      
         private void en_click(object sender, RoutedEventArgs e)
         {
             ConfigurationManager.AppSettings["Culture"] = "en-US";
@@ -76,20 +79,73 @@ namespace BigMoscow.Pages
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Dispatcher.Invoke(() =>
             {
-                combobox_country.Items.Clear();
-                LoadCombobox();
+                _flip.frame.Content = new PageQuestion(_flip);
             }
            );
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bool f1 = false, f2 = false, f3 = false, f4 = false;
+            List<string> questions = new List<string>(); ;
+            if (r1.IsChecked == true)
+            {
+                f1 = true;
+                questions.Add(r1.Content.ToString());
+            }
+            if (r2.IsChecked == true)
+            {
+                f2 = true;
+                questions.Add(r2.Content.ToString());
+            }
+            if (r3.IsChecked == true)
+            {
+                f3 = true;
+                questions.Add(r3.Content.ToString());
+            }
+            if (r4.IsChecked == true)
+            {
+                f4 = true;
+                questions.Add(r4.Content.ToString());
+            }
+
             
+            if (!string.IsNullOrEmpty(texbox_question.Text))
+            {
+                questions.Add(texbox_question.Text);
+            }
+            if (questions.Count==0 || string.IsNullOrEmpty(combobox_business.Text) || string.IsNullOrEmpty(combobox_country.Text) || string.IsNullOrEmpty(combobox_you_are.Text) || (string.IsNullOrEmpty(texbox_question.Text) && !f1 && !f2 && !f3 && !f4))
+            {
+                MessageBox.Show(Properties.Resources.warning);
+                return;
+            }
+
+            string q = Properties.Resources.Your_q + ":";
+            foreach (var item in questions)
+            {
+                q += item + Environment.NewLine;
+            }
+
+            string str = Properties.Resources.You_are + ":" + combobox_you_are.Text + Environment.NewLine + Properties.Resources.Your_country + ":" + combobox_country.Text + Environment.NewLine + Properties.Resources.Your_business_sector + ":" + combobox_business.Text + Environment.NewLine + q;//combobox_business.Text + " " + combobox_country.Text + " " + combobox_you_are.Text + " " + texbox_question.Text;
+            FeedBackRepository f = new FeedBackRepository();
+            f.SendMessage(str);
+            MessageBox.Show("ok");
+
         }
+
 
         private void texbox_question_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Page_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Enter)
+            {
+                Button_Click(sender, null);
+            }
         }
     }
     public class Countries

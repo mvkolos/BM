@@ -129,6 +129,15 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Check the internet connection and email adress.
+        /// </summary>
+        public static string exception {
+            get {
+                return ResourceManager.GetString("exception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Federal State.
         /// </summary>
         public static string Federal_State {
@@ -1695,6 +1704,15 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Success stories of foreign businessmen in Moscow..
+        /// </summary>
+        public static string t6 {
+            get {
+                return ResourceManager.GetString("t6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на FeedBack.
         /// </summary>
         public static string TextBlockFeedBack {
@@ -1709,6 +1727,15 @@ namespace BigMoscow.Properties {
         public static string topic {
             get {
                 return ResourceManager.GetString("topic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Please answer all the questions.
+        /// </summary>
+        public static string warning {
+            get {
+                return ResourceManager.GetString("warning", resourceCulture);
             }
         }
         

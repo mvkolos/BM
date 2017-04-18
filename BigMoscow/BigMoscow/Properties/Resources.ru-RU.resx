@@ -124,7 +124,7 @@
     <value>Предыдущий</value>
   </data>
   <data name="TextBlockFeedBack" xml:space="preserve">
-    <value>Feedback</value>
+    <value>Отзыв</value>
   </data>
   <data name="button_send_smth" xml:space="preserve">
     <value>Отправить</value>
@@ -623,7 +623,7 @@ BIGMOSCOW</value>
     <value>Экспозиция</value>
   </data>
   <data name="business_owner" xml:space="preserve">
-    <value>Business owner</value>
+    <value>Владелец бизнеса</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>Country</value>
@@ -635,7 +635,7 @@ BIGMOSCOW</value>
     <value>Federal State</value>
   </data>
   <data name="feedback" xml:space="preserve">
-    <value>Feedback</value>
+    <value>Обратная связь</value>
   </data>
   <data name="German_Chamber_of_Commerce" xml:space="preserve">
     <value>German Chamber of Commerce</value>
@@ -644,36 +644,48 @@ BIGMOSCOW</value>
     <value>Hall</value>
   </data>
   <data name="hired_manager" xml:space="preserve">
-    <value>Hired manager</value>
+    <value>Наемный менеджер</value>
   </data>
   <data name="Investor" xml:space="preserve">
-    <value>Investor</value>
+    <value>Инвестор</value>
   </data>
   <data name="novice_businessman" xml:space="preserve">
-    <value>Novice businessman</value>
+    <value>Начинающий бизнесмен</value>
   </data>
   <data name="t1" xml:space="preserve">
-    <value>How to start a business in Moscow? Where to find the financing for it?</value>
+    <value>Как начать свой бизнес в Москве? Где найти финансирование?</value>
   </data>
   <data name="t2" xml:space="preserve">
-    <value>How to rent an office or land lot in Moscow?</value>
+    <value>Как арендовать офис/земельный участок в Москве?</value>
   </data>
   <data name="t3" xml:space="preserve">
-    <value>How to localize your production in Moscow?</value>
+    <value>Как локализовать свое производство в Москве?</value>
   </data>
   <data name="t4" xml:space="preserve">
-    <value>Analytical data and economic indicators.</value>
+    <value>Аналитические данные и экономические показатели.</value>
   </data>
   <data name="t5" xml:space="preserve">
-    <value>Success stories of foreign businessmen in Moscow.</value>
+    <value>Прочитать истории успеха иностранных бизнесменов в Москве.</value>
   </data>
   <data name="Your_country" xml:space="preserve">
-    <value>Your country:</value>
+    <value>Ваша страна:</value>
   </data>
   <data name="Your_q" xml:space="preserve">
-    <value>Your question:</value>
+    <value>Ваш вопрос: </value>
   </data>
   <data name="You_are" xml:space="preserve">
-    <value>You are</value>
+    <value>Вы:</value>
+  </data>
+  <data name="t6" xml:space="preserve">
+    <value>Success stories of foreign businessmen in Moscow.</value>
+  </data>
+  <data name="Your_business_sector" xml:space="preserve">
+    <value>Отрасль Вашего бизнеса</value>
+  </data>
+  <data name="exception" xml:space="preserve">
+    <value>Проверьте соединение с интернетом, а также адрес указанной почты</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Пожалуйста, отвечайте на все вопросы!</value>
   </data>
 </root>

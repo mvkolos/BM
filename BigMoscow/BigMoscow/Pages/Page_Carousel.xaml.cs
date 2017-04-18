@@ -1,4 +1,5 @@
 ﻿using BigMoscow.Logic;
+using BigMoscow.Pages;
 using BigMoscow.Windows;
 using System;
 using System.Collections.Generic;

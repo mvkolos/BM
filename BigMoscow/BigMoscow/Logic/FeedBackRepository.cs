@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
+using System.Windows;
 
 namespace BigMoscow.Logic
 {
@@ -36,20 +37,24 @@ namespace BigMoscow.Logic
             return pages;
 
         }
-        public void SendMessage(string question, string email)
+        public void SendMessage(string question)
         {
             try
             {
-                MailMessage mailmess = new MailMessage();
-                mailmess.From = new MailAddress("Bigmoscow@3dday.ru");
-                mailmess.Subject = "PersonScheduler Notification";
-                mailmess.To.Add(new MailAddress(email));
-                mailmess.Body = string.Format("{0}", question);
-                SmtpClient smpt = new SmtpClient("smtp.rambler.ru", 25);
+                SmtpClient smpt = new SmtpClient("smtp.yandex.ru", 25);
+
                 smpt.EnableSsl = true;
-                smpt.Credentials = new NetworkCredential("Bigmoscow@3dday.ru".Split('@')[0], "bigmsc");
+                smpt.UseDefaultCredentials = false;
+                smpt.Credentials = new NetworkCredential("bigmoscow@3dday.ru"/*.Split('@')[0]*/, "bigmsc");
+
                 smpt.DeliveryMethod = SmtpDeliveryMethod.Network;
+                MailMessage mailmess = new MailMessage();
+                mailmess.From = new MailAddress("bigmoscow@3dday.ru");
+                mailmess.Subject = "BIGMOSCOW";
+                mailmess.To.Add(new MailAddress("bigmoscow@3dday.ru"));
+                mailmess.Body = question;
                 smpt.Send(mailmess);
+
                 smpt.Dispose();
 
 
@@ -57,26 +62,42 @@ namespace BigMoscow.Logic
             catch (Exception)
             {
 
-
+                MessageBox.Show(Properties.Resources.mail_ex);
             }
 
         }
         public void SendPDF(string email)
         {
-            MailMessage mailmess = new MailMessage();
-            mailmess.From = new MailAddress("Bigmoscow@3dday.ru");
-            mailmess.Subject = "BIGMOSCOW";
-            mailmess.To.Add(new MailAddress(email));
-            mailmess.Body = Properties.Resources.email;
-            //string.Format("{0}", "Здравствуйте!/n Во вложении - ваша копия журнала./nBIGMOSCOW");
-            // Attachment attach = new Attachment(@"..\..\Files\SALT.pdf");
-            // mailmess.Attachments.Add(attach);
-            SmtpClient smpt = new SmtpClient("smtp.yandex.ru", 25);
-            smpt.EnableSsl = true;
-            smpt.Credentials = new NetworkCredential("Bigmoscow@3dday.ru".Split('@')[0], "bigmsc");
-            smpt.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smpt.Send(mailmess);
-            smpt.Dispose();
+            try
+            {
+                SmtpClient smpt = new SmtpClient("smtp.yandex.ru", 25);
+
+                smpt.EnableSsl = true;
+                smpt.UseDefaultCredentials = false;
+                smpt.Credentials = new NetworkCredential("bigmoscow@3dday.ru"/*.Split('@')[0]*/, "bigmsc");
+
+                smpt.DeliveryMethod = SmtpDeliveryMethod.Network;
+                MailMessage mailmess = new MailMessage();
+                mailmess.From = new MailAddress("bigmoscow@3dday.ru");
+                mailmess.Subject = "BIGMOSCOW";
+                mailmess.To.Add(new MailAddress(email));
+                mailmess.Body = Properties.Resources.email;
+
+                Attachment attach = new Attachment(string.Format("../../../../../Files/{0}{1}.pdf", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
+                mailmess.Attachments.Add(attach);
+
+
+
+                smpt.Send(mailmess);
+
+                smpt.Dispose();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(Properties.Resources.exception);
+            }
+
         }
     }
 }

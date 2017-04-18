@@ -153,7 +153,7 @@ namespace BigMoscow
 
         private void Feedback_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageQuestion();
+            _flip.frame.Content = new PageQuestion(_flip);
         }
 
         private void carousel_back_Click(object sender, RoutedEventArgs e)

@@ -683,4 +683,13 @@ BIGMOSCOW</value>
   <data name="Your_q" xml:space="preserve">
     <value>Your question:</value>
   </data>
+  <data name="t6" xml:space="preserve">
+    <value>Success stories of foreign businessmen in Moscow.</value>
+  </data>
+  <data name="exception" xml:space="preserve">
+    <value>Check the internet connection and email adress</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Please answer all the questions</value>
+  </data>
 </root>

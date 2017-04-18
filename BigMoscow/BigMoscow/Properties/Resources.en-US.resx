@@ -669,4 +669,10 @@
   <data name="You_are" xml:space="preserve">
     <value>You are</value>
   </data>
+  <data name="t6" xml:space="preserve">
+    <value>Success stories of foreign businessmen in Moscow.</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Please answer all the questions</value>
+  </data>
 </root>
