@@ -11,6 +11,7 @@ using BigMoscow.Windows;
 using BigMoscow.Pages;
 using BigMoscow.Controls.en12;
 using System.Configuration;
+using System.Windows.Threading;
 
 namespace BigMoscow
 {
@@ -33,13 +34,14 @@ namespace BigMoscow
             myBook.ItemsSource = _p1Collection;
         }
 
+
         private void OnLoad(object sender, RoutedEventArgs e)
         {
             BookAdd();
             CoversAdd();
             ContentAdd();
         }
-
+        
 
         private void BookAdd()
         {
@@ -59,7 +61,7 @@ namespace BigMoscow
                 b.UriSource = new Uri(item);
                 b.EndInit();
                 ImageBrush content = new ImageBrush();
-                
+
                 content.ImageSource = b;
                 p1 page = new p1(content);
                 _p1Collection.Add(page);
@@ -144,6 +146,8 @@ namespace BigMoscow
                 //}
             }
         }
+
+        
 
         private void B_Click(object sender, RoutedEventArgs e)
         {

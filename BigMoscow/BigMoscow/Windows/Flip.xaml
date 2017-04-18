@@ -12,9 +12,9 @@
         mc:Ignorable="d"
         Title="Flip" Height="1080" Width="1920" WindowStyle = "None" WindowState = "Maximized">
     
-    <Window.Background>
+    <!--<Window.Background>
         <ImageBrush ImageSource="/UI/MainScreen/mainscreenMain.jpg"/>
-    </Window.Background>
+    </Window.Background>-->
     
    
     <Grid>

@@ -57,7 +57,7 @@ namespace WPFMitsuControls
         }
 
         internal CornerOrigin origin = CornerOrigin.BottomRight;
-        private const double gripSize = 30;
+        private const double gripSize = 500;
         private PageStatus _status = PageStatus.None;
         internal Action<PageStatus> SetStatus = null;
         internal Read<PageStatus> GetStatus = null;

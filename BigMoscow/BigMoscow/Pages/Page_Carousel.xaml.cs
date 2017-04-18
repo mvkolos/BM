@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Windows.Threading;
 
 namespace BigMoscow
 {
@@ -25,11 +25,14 @@ namespace BigMoscow
     public partial class Page_Carousel : Page
     { Flip _flip;
         public string BackGroundURL;
+
         public Page_Carousel(Flip flip)
         {
             InitializeComponent();
             _flip = flip;
+
         }
+
 
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {

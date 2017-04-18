@@ -76,7 +76,7 @@ namespace BigMoscow.Pages
 
         private void textbox_Email_GotFocus(object sender, RoutedEventArgs e)
         {
-           
+            startKeyboard();
         }
         //Bigmoscow@3dday.ru
         //bigmsc
@@ -87,6 +87,33 @@ namespace BigMoscow.Pages
             if (icp != null)
                 icp.EnableFocusTracking();
         }
+
+        private void textbox_Email_GotTouchCapture(object sender, TouchEventArgs e)
+        {
+            startKeyboard();
+        }
+
+        private Process _touchKeyboardProcess = null;
+
+        private void startKeyboard()
+        {
+            if (_touchKeyboardProcess == null )
+            {
+                String touchKeyboardPath = @"C:\Program Files\Common Files\Microsoft Shared\Ink\TabTip.exe";
+                _touchKeyboardProcess = Process.Start(touchKeyboardPath);
+            }
+        }
+
+        private void removeKeyboard()
+        {
+            if (_touchKeyboardProcess != null)
+            {
+                _touchKeyboardProcess.Kill();
+                _touchKeyboardProcess = null;
+            }
+        }
+
+
     }
     [Guid("41C81592-514C-48BD-A22E-E6AF638521A6")]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]

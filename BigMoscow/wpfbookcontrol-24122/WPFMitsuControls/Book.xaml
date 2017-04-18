@@ -15,8 +15,8 @@
         <ControlTemplate TargetType="{x:Type local:Book}">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50*" />
-                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="500*" />
+                    <ColumnDefinition Width="500*" />
                 </Grid.ColumnDefinitions>
                 <local:BookPage Grid.Column="0" x:Name="sheet0" IsTopRightCornerEnabled="false" IsBottomRightCornerEnabled="false"
                                 MouseDown="OnLeftMouseDown" PageTurned="OnLeftPageTurned" />
