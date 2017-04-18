@@ -58,7 +58,7 @@
         </Button>
         <Button Name="button_next" HorizontalAlignment="Right"  Grid.Row="1" Grid.Column="2" Width="70" Click= "HandlePrevious" Background="Transparent" Margin="0,0,65,0">
             <Grid>
-                <Image Source="/BigMoscow;component/UI/MainScreen/arrow_right.png"/>
+                <Image Width="60" Source="/BigMoscow;component/UI/MainScreen/arrow_right.png"/>
             </Grid>
             <Button.Style>
                 <Style TargetType="{x:Type Button}">

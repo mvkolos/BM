@@ -149,10 +149,18 @@ namespace BigMoscow
                     b.BorderBrush = borderColors[0];
                     Thickness margin = b.Margin;
                     margin.Top = 10;
+                    margin.Right = 10;
+                    //margin.Left = 20;
+                    b.Margin = margin;
+                    b.Foreground= backgroundColors[1];
+                    b.VerticalAlignment = VerticalAlignment.Center;
+                    b.HorizontalAlignment = HorizontalAlignment.Center;
                     i += 1;
 
-                    b.Height = 50;
-                    b.Width = 140;
+                    b.Height = 70;
+                    b.Width = 180;
+                    b.FontSize = 14;
+                    b.FontFamily= new FontFamily("Segoe Ui");
                     b.Content = item.Split(';')[0];
                     CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
                     b.Click += B_Click;
@@ -166,7 +174,7 @@ namespace BigMoscow
         {
             SolidColorBrush[] colors = {
                 getColorFromHex("#7F000000"),
-                getColorFromHex("#FFF02E2E"),
+                getColorFromHex("#FFDCDCDC"),
                 getColorFromHex("#FF303463"),
                 getColorFromHex("#FFD4AFE7"),
                 getColorFromHex("#FF818182")

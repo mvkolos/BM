@@ -93,16 +93,54 @@
 
 
         </Menu>
-        <StackPanel Name="content_magaz" Grid.Row="0" Orientation="Horizontal" Height="50" Width="700" Grid.Column="1" HorizontalAlignment="Center"/>
+        <StackPanel Name="content_magaz" Grid.Row="0" Orientation="Horizontal" Height="50" Width="990" Grid.Column="1" HorizontalAlignment="Center"/>
         <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100"  Click="mail_button_click" BorderBrush="#00707070" Margin="0,172,345,114">
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mail_button.png"/>
             </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
         </Button>
         <Button x:Name="button_info" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100"  Click="button_info_Click" Grid.Column="2" BorderBrush="#00707070" Margin="0,286,345,0">
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/info_button.png"/>
             </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
         </Button>
         
 
@@ -111,6 +149,25 @@
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
             </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
         </Button>
 
     </Grid>
