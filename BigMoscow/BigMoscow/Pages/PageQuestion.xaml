@@ -177,7 +177,7 @@
             <RadioButton Margin="30 0 30 0" Name="r3" Content="{x:Static properties:Resources.t3}" FontSize="18" Foreground="#FFE7E7E7"/>
                 <RadioButton Margin="30 0 30 0" Name="r4" Content="{x:Static properties:Resources.t4}" FontSize="18" Foreground="#FFE7E7E7"/>
             <Label Content="{x:Static properties:Resources.Your_q}" Margin="40 20 30 10" Foreground="#FFE7E7E7" FontSize="20"/>
-            <TextBox Margin="40 0 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged" Background="#CCFFFFFF"/>
+            <TextBox Margin="40 0 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged" Background="#CCFFFFFF" GotTouchCapture="texbox_question_GotTouchCapture"/>
             <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold" />
         </StackPanel>
     </Grid>

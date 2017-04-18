@@ -76,13 +76,13 @@ namespace BigMoscow.Pages
 
         private void magazines_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new Page1(_flip);
+            _flip.showJournalsPage();
 
         }
 
         private void carousel_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = _flip.carousel;
+            _flip.showCarouselPage();
         }
     }
 }

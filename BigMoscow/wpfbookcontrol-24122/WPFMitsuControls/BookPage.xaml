@@ -2,9 +2,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Loaded="OnLoaded" BorderBrush="Red" BorderThickness="1"
-    MouseDoubleClick="OnMouseDoubleClick"
+    MouseDoubleClick="OnMouseDoubleClick" PreviewMouseDown="OnMouseDown"
     MouseMove="OnMouseMove" MouseDown="OnMouseDown"
-		MouseUp="OnMouseUp" MouseLeave="OnMouseLeave" Unloaded="BookPageUnloaded" >
+		MouseUp="OnMouseUp" MouseLeave="OnMouseLeave" Unloaded="BookPageUnloaded" GotStylusCapture="ContentControl_GotStylusCapture">
   <Grid x:Name="mainGrid">
 		<!--Page 2 begin-->
 			<ContentPresenter x:Name="page2" />

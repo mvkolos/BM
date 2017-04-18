@@ -57,7 +57,7 @@ namespace WPFMitsuControls
         }
 
         internal CornerOrigin origin = CornerOrigin.BottomRight;
-        private const double gripSize = 500;
+        private const double gripSize = 50;
         private PageStatus _status = PageStatus.None;
         internal Action<PageStatus> SetStatus = null;
         internal Read<PageStatus> GetStatus = null;
@@ -198,8 +198,10 @@ namespace WPFMitsuControls
         {
             int? result = null;
 
-            Rect leftSideRectangle = new Rect(0, 0, gripSize, source.RenderSize.Height);
-            Rect rightSideRectangle = new Rect(source.RenderSize.Width - gripSize, 0, gripSize, source.RenderSize.Height);
+            double sideWidth = source.RenderSize.Width / 2;
+
+            Rect leftSideRectangle = new Rect(gripSize, gripSize, sideWidth, source.RenderSize.Height - 2 * gripSize );
+            Rect rightSideRectangle = new Rect(source.RenderSize.Width - sideWidth, gripSize, sideWidth, source.RenderSize.Height - 2 * gripSize);
 
             if (leftSideRectangle.Contains(position))
                 return 0;
@@ -458,6 +460,40 @@ namespace WPFMitsuControls
             {
                 SetStatus -= (Action<PageStatus>)i;
             }
+        }
+
+        private void ContentControl_GotStylusCapture(object sender, StylusEventArgs e)
+        {
+            if ((Status == PageStatus.DropAnimation) || (Status == PageStatus.TurnAnimation))
+                return;
+
+            UIElement source = sender as UIElement;
+            Point p = e.GetPosition(source);
+
+            CornerOrigin? tmp = GetCorner(source, p);
+            int? side = GetSide(source, p);
+
+            if (side.HasValue && side == 1 && IsBottomRightCornerEnabled)
+            {
+                AutoTurnPage(CornerOrigin.BottomRight, 500);
+                return;
+            }
+
+            if (side.HasValue && side == 0 && IsBottomLeftCornerEnabled)
+            {
+                AutoTurnPage(CornerOrigin.BottomLeft, 500);
+                return;
+            }
+
+            if (tmp.HasValue)
+            {
+                origin = tmp.Value;
+                this.CaptureMouse();
+            }
+            else
+                return;
+
+            Status = PageStatus.Dragging;
         }
     }
 

@@ -103,7 +103,7 @@ namespace BigMoscow.Pages
         {
             if (_touchKeyboardProcess == null )
             {
-                String touchKeyboardPath = @"C:\Program Files\Common Files\Microsoft Shared\Ink\TabTip.exe";
+                String touchKeyboardPath = @"C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe";
                 _touchKeyboardProcess = Process.Start(touchKeyboardPath);
             }
         }
@@ -119,12 +119,32 @@ namespace BigMoscow.Pages
 
         private void magazines_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new Page1(_flip);
+            _flip.showJournalsPage();
         }
 
         private void carousel_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = _flip.carousel;
+            _flip.showCarouselPage();
+        }
+
+        private void StackPanel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.OriginalSource is Button)
+            {
+                Button button = (Button)e.OriginalSource;
+                if (button == carousel_back_button)
+                {
+                    _flip.showCarouselPage();
+                }
+            }
+        }
+
+        private void StackPanel_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            if (e.OriginalSource is Button)
+            {
+
+            }
         }
     }
     [Guid("41C81592-514C-48BD-A22E-E6AF638521A6")]

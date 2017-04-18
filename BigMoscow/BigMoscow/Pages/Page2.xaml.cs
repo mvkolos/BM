@@ -20,13 +20,13 @@ namespace BigMoscow
     /// <summary>
     /// Логика взаимодействия для Page2.xaml
     /// </summary>
-    public partial class Page2 : Page
+    public partial class CarouselPage : Page
     {
         Flip _flip;
         string language = "en";
         int width = 267;
         int height = 356;
-        public Page2(Flip flip)
+        public CarouselPage(Flip flip)
         {
             InitializeComponent();
             DataContext = TabControl;
@@ -95,16 +95,16 @@ namespace BigMoscow
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
-            _flip.frame.Content = new Page2(_flip);
+            _flip.showCarouselPage(true);
         }
 
         private void MenuItenEngclick(object sender, RoutedEventArgs e)
         {
             language = "en";
-          
-            ConfigurationManager.AppSettings["Culture"] = "en-US";        
+
+            ConfigurationManager.AppSettings["Culture"] = "en-US";
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
-            _flip.frame.Content = new Page2(_flip);
+            _flip.showCarouselPage(true);
         }
 
         private void MenuDeutschclick(object sender, RoutedEventArgs e)

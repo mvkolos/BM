@@ -17,6 +17,7 @@ using System.Configuration;
 using System.Windows.Threading;
 using BigMoscow.Logic;
 using System.IO;
+using BigMoscow.Pages;
 
 namespace BigMoscow.Windows
 {
@@ -25,10 +26,73 @@ namespace BigMoscow.Windows
     /// </summary>
     public partial class Flip : Window
     {
-        public Page2 carousel;
-        DispatcherTimer dispatchTimer;
-        
+        public CarouselPage carousel;
+        public FeedBackWindow feedback;
+        public PageQuestion question;
+        public JournalsPage journalsPage;
+        public PageMedia mediaPage;
+        public PageSend sendPage;
 
+        //SHOWS
+
+        public void showQuestionPage(bool reload = false)
+        {
+            if (question == null || reload)
+                question = new PageQuestion(this);
+
+            Content = question;
+            question.InitializeComponent();
+        }
+
+        public void showJournalsPage(bool reload = false)
+        {
+            if (journalsPage == null || reload)
+                journalsPage = new JournalsPage(this);
+
+            Content = journalsPage;
+            journalsPage.InitializeComponent();
+        }
+
+        public void showCarouselPage(bool reload = false)
+        {
+            if (carousel == null || reload)
+                carousel = new CarouselPage(this);
+
+            Content = carousel;
+            carousel.InitializeComponent();
+        }
+
+
+        public void showPageMedia(bool reload = false)
+        {
+            if (mediaPage == null || reload)
+                mediaPage = new PageMedia(this);
+
+            Content = mediaPage;
+            mediaPage.InitializeComponent();
+        }
+
+        public void showSendPage(bool reload = false)
+        {
+            if (sendPage == null || reload)
+                sendPage = new PageSend(this);
+
+            Content = sendPage;
+            sendPage.InitializeComponent();
+        }
+
+        public void reloadAllPages()
+        {
+            question = new PageQuestion(this);
+            journalsPage = new JournalsPage(this);
+            carousel = new CarouselPage(this);
+            mediaPage = new PageMedia(this);
+            sendPage = new PageSend(this);
+        }
+
+        //MAIN LOGICS
+
+        DispatcherTimer dispatchTimer;
 
         int currentImageIndex = 0;
         int slideLen = 4;
@@ -41,7 +105,7 @@ namespace BigMoscow.Windows
             CultureInfo c = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Properties.Resources.Culture = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             InitializeComponent();
-            carousel = new Page2(this);
+            carousel = new CarouselPage(this);
             frame.Content = carousel;
             String uri = "../../../../../Slides";
             slides = DirSearch(uri);

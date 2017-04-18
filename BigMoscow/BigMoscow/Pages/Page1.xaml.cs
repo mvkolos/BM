@@ -18,12 +18,12 @@ namespace BigMoscow
     /// <summary>
     /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class JournalsPage : Page
     {
         FeedBackRepository f;
         Flip _flip;
         private static ObservableCollection<UserControl> _p1Collection = new ObservableCollection<UserControl>();
-        public Page1(Flip flip)
+        public JournalsPage(Flip flip)
         {
             f = new FeedBackRepository();
 
@@ -70,12 +70,12 @@ namespace BigMoscow
         }
         private void mail_button_click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageSend(_flip);
+            _flip.showSendPage();
         }
 
         private void button_info_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageMedia(_flip);
+            _flip.showPageMedia();
         }
 
         private void MenuRuClick(object sender, RoutedEventArgs e)
@@ -83,7 +83,8 @@ namespace BigMoscow
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
-            _flip.frame.Content = new Page1(_flip);
+            
+            _flip.showJournalsPage(true);
         }
 
         private void MenuengClick(object sender, RoutedEventArgs e)
@@ -91,7 +92,8 @@ namespace BigMoscow
             ConfigurationManager.AppSettings["Culture"] = "en-US";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
-            _flip.frame.Content = new Page1(_flip);
+            
+            _flip.showJournalsPage(true);
         }
 
         private static List<string> _covers;
@@ -126,6 +128,7 @@ namespace BigMoscow
                 p.Background = content;
             }
         }
+
         private void ContentAdd()
         {
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
@@ -135,19 +138,60 @@ namespace BigMoscow
             {
                 string[] cont = contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
                 int count = cont.Length;
-                //foreach (var item in cont)
-                //{
-                //    Button b = new Button();
-                //    b.Height = 50;
-                //    b.Width = 140;
-                //    b.Content = item.Split(';')[0];
-                //    CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
-                //    b.Click += B_Click;
-                //    content_magaz.Children.Add(b);
-                //}
+
+                int i = 0;
+                SolidColorBrush[] backgroundColors = getBackgroundBrushes();
+                SolidColorBrush[] borderColors = getBorderBrushes();
+                foreach (var item in cont)
+                {
+                    Button b = new Button();
+                    b.Background = backgroundColors[0];
+                    b.BorderBrush = borderColors[0];
+                    Thickness margin = b.Margin;
+                    margin.Top = 10;
+                    i += 1;
+
+                    b.Height = 50;
+                    b.Width = 140;
+                    b.Content = item.Split(';')[0];
+                    CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                    b.Click += B_Click;
+                    content_magaz.Children.Add(b);
+                }
             }
         }
 
+
+        private SolidColorBrush[] getBackgroundBrushes()
+        {
+            SolidColorBrush[] colors = {
+                getColorFromHex("#7F000000"),
+                getColorFromHex("#FFF02E2E"),
+                getColorFromHex("#FF303463"),
+                getColorFromHex("#FFD4AFE7"),
+                getColorFromHex("#FF818182")
+            };
+
+            return colors;
+        }
+
+        private SolidColorBrush[] getBorderBrushes()
+        {
+            SolidColorBrush[] colors = {
+                getColorFromHex("#00707070"),
+                getColorFromHex("#FFF02E2E"),
+                getColorFromHex("#00707070"),
+                getColorFromHex("#00707070"),
+                getColorFromHex("#00707070")
+            };
+
+            return colors;
+        }
+
+        private SolidColorBrush getColorFromHex(String hex)
+        {
+            return (SolidColorBrush)(new BrushConverter().ConvertFrom(hex));
+        }
         
 
         private void B_Click(object sender, RoutedEventArgs e)
@@ -158,12 +202,12 @@ namespace BigMoscow
 
         private void Feedback_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new PageQuestion(_flip);
+            _flip.showQuestionPage();
         }
 
         private void carousel_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = _flip.carousel;
+            _flip.showCarouselPage();
         }
     }
 }

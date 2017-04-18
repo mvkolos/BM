@@ -17,6 +17,7 @@ using System.IO;
 using System.Configuration;
 using BigMoscow.Logic;
 using BigMoscow.Windows;
+using System.Diagnostics;
 
 namespace BigMoscow.Pages
 {
@@ -26,10 +27,16 @@ namespace BigMoscow.Pages
     public partial class PageQuestion : Page
     {
 
-        Flip _flip;
+        public Flip flip;
+
+        public PageQuestion()
+        {
+            InitializeComponent();
+        }
+
         public PageQuestion(Flip flip)
         {
-            _flip = flip;
+            this.flip = flip;
             InitializeComponent();
         }
 
@@ -65,7 +72,7 @@ namespace BigMoscow.Pages
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Dispatcher.Invoke(() =>
             {
-                _flip.frame.Content = new PageQuestion(_flip);
+                flip.frame.Content = new PageQuestion(flip);
 
             }
             );
@@ -79,7 +86,7 @@ namespace BigMoscow.Pages
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Dispatcher.Invoke(() =>
             {
-                _flip.frame.Content = new PageQuestion(_flip);
+                flip.frame.Content = new PageQuestion(flip);
             }
            );
         }
@@ -150,12 +157,38 @@ namespace BigMoscow.Pages
 
         private void carousel_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = _flip.carousel;
+            flip.showCarouselPage();
         }
 
         private void magazines_back_Click(object sender, RoutedEventArgs e)
         {
-            _flip.frame.Content = new Page1(_flip);
+            flip.showJournalsPage();
+        }
+
+        private Process _touchKeyboardProcess = null;
+
+        private void startKeyboard()
+        {
+            if (_touchKeyboardProcess == null)
+            {
+                String touchKeyboardPath = @"C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe";
+                _touchKeyboardProcess = Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.System) + System.IO.Path.DirectorySeparatorChar + "osk.exe");
+            }
+        }
+
+        private void removeKeyboard()
+        {
+            if (_touchKeyboardProcess != null)
+            {
+                _touchKeyboardProcess.Kill();
+                _touchKeyboardProcess = null;
+            }
+        }
+
+        private void texbox_question_GotTouchCapture(object sender, TouchEventArgs e)
+        {
+            //startKeyboard();
+            
         }
     }
     public class Countries
