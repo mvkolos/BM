@@ -13,7 +13,6 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\LaunchScreenWindow.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\MainWindow.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page1.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page2.g.cs
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageFeedBack.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageInfo.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageSend.g.cs
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page_Carousel.g.cs
@@ -34,7 +33,6 @@ D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\LaunchScreenWindow.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\MainWindow.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page1.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page2.baml
-D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageFeedBack.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageInfo.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\PageSend.baml
 D:\Users\Marya\BM\BigMoscow\BigMoscow\obj\Debug\Pages\Page_Carousel.baml

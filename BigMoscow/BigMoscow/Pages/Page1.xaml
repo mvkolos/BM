@@ -11,32 +11,34 @@
       Height="1080" Width="1920"
       Title="Page1" >
     <Page.Background>
-        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.jpg"/>
+        <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
 
     <Grid x:Name="PageGrid" >
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="480" />
-            <ColumnDefinition Width="995"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="320"/>
+
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="5.5*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Image Grid.Column="1" Width="1350" Grid.Row="1" Source="/UI/MainScreen/main_paddle.png"/>
 
-        <ScrollViewer Grid.Column="0" Width="186" Height="742" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="293,149,1,189" Grid.RowSpan="3" VerticalScrollBarVisibility="Hidden" >
+        <ScrollViewer Grid.Column="0" Width="186" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="164,0,0,0" VerticalScrollBarVisibility="Hidden" Grid.Row="1" >
             <StackPanel  x:Name="coversPanel" Grid.ColumnSpan="20"  Grid.RowSpan="3"></StackPanel>
         </ScrollViewer>
 
 
-        <DockPanel x:Name="BookDock" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="906" Height="600">
+        <DockPanel x:Name="BookDock" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="1300" Height="861">
 
 
-            <controls:Book x:Name="myBook"  Width="906" Height="Auto" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <controls:Book x:Name="myBook"  Width="1300" Height="Auto" >
                 <controls:Book.ItemTemplate>
                     <DataTemplate>
                         <Border BorderThickness="0" BorderBrush="Gray" Background="Transparent">
@@ -93,62 +95,58 @@
 
 
         </Menu>
-        <StackPanel Name="content_magaz" Grid.Row="0" Orientation="Horizontal" Height="50" Width="990" Grid.Column="1" HorizontalAlignment="Center"/>
-        <Button Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100"  Click="mail_button_click" BorderBrush="#00707070" Margin="0,172,345,114">
-            <Button.Background>
-                <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mail_button.png"/>
-            </Button.Background>
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="Transparent"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
-        <Button x:Name="button_info" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100"  Click="button_info_Click" Grid.Column="2" BorderBrush="#00707070" Margin="0,286,345,0">
-            <Button.Background>
-                <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/info_button.png"/>
-            </Button.Background>
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="Transparent"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
-        
+        <StackPanel Name="content_magaz" Width="146" Height="626" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,74,0,92"/>
+        <Button Grid.Column="1" HorizontalAlignment="Center" Height="74" Width="100" 
+                Click="mail_button_click" BorderBrush="#00707070" Margin="300 0 0 0" Content="GET LINK" FontSize="20" >
 
-        <Button x:Name="carousel_back_button" HorizontalAlignment="Center" VerticalAlignment="Center"
-                Height="74" Width="100" Click="carousel_back_Click" Grid.Column="0" BorderBrush="#00707070" >
-            <Button.Background>
-                <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
-            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="button_info" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100" 
+                Click="button_info_Click" Grid.Column="1" BorderBrush="#00707070"  >
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+
+        <Button x:Name="carousel_back_button" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-300 0 0 0" FontSize="20"
+                Height="74" Width="100" Click="carousel_back_Click" Grid.Column="1" BorderBrush="#00707070" Content="BACK">
+
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Transparent"/>
