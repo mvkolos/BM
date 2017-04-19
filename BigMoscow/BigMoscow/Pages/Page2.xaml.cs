@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
+using System.Windows.Threading;
 
 namespace BigMoscow
 {
@@ -26,6 +27,8 @@ namespace BigMoscow
         string language = "en";
         int width = 267;
         int height = 356;
+        DispatcherTimer dispatchTimer;
+
         public CarouselPage(Flip flip)
         {
             InitializeComponent();
@@ -36,8 +39,24 @@ namespace BigMoscow
             CreateTabs();
 
             TabControl.NumberOfTabs = 18;
-            TabControl.AnimationDuration = 2000;
+            TabControl.AnimationDuration = 1000;
+            
+            StartTimer();
         }
+
+        private void StartTimer()
+        {
+            dispatchTimer = new DispatcherTimer();
+            dispatchTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatchTimer.Interval = new TimeSpan(0, 0, 10);
+            dispatchTimer.Start();
+        }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            TabControl.SpinToNext();
+        }
+
         private void CreateTabs()
         {
             String baseString = "../../../../../";

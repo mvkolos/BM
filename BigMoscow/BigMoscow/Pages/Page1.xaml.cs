@@ -99,7 +99,7 @@ namespace BigMoscow
         private static List<string> _covers;
         private void CoversAdd()
         {
-            List<string> covers = _covers ?? (_covers = f.DirSearch(string.Format("../../../../../Covers")));
+            List<string> covers = _covers ?? (_covers = f.DirSearch(string.Format("../../../../../SmallCovers")));
             List<UserControl> c = new List<UserControl>();
             List<string> covers_new = covers.Where(e => e.Contains("m" + Properties.Resources.magazine.ToLower())).ToList();
             coversPanel.Children.Clear();
@@ -116,7 +116,7 @@ namespace BigMoscow
                 p.BackGroundURL = item;
                 Frame fr = new Frame();
                 fr.Width = 186;
-                fr.Height = 260;
+                fr.Height = 248;
                 Thickness th = fr.Padding;
                 th.Left = 10;
                 th.Right = 5;
