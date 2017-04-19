@@ -12,6 +12,7 @@ using BigMoscow.Pages;
 using BigMoscow.Controls.en12;
 using System.Configuration;
 using System.Windows.Threading;
+using BigMoscow.Controls;
 
 namespace BigMoscow
 {
@@ -129,7 +130,7 @@ namespace BigMoscow
             }
         }
 
-        private void ContentAdd()
+        public void ContentAdd()
         {
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
             var contents = MagazineDictionary.GetContent.Value;
@@ -145,6 +146,8 @@ namespace BigMoscow
                 foreach (var item in cont)
                 {
                     Button b = new Button();
+                    b.Style = this.FindResource("NonSelectableButton") as Style;
+
                     b.Background = backgroundColors[0];
                     b.BorderBrush = borderColors[0];
                     Thickness margin = b.Margin;
@@ -161,6 +164,7 @@ namespace BigMoscow
                     b.FontSize = 14;
                     b.FontFamily= new FontFamily("Segoe Ui");
                     b.Content = item.Split(';')[0];
+                    
                     b.HorizontalAlignment = HorizontalAlignment.Left;
                     CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
                     b.Click += B_Click;

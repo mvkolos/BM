@@ -10,6 +10,27 @@
       xmlns:properties="clr-namespace:BigMoscow.Properties"
       Height="1080" Width="1920"
       Title="Page1" >
+
+    <Page.Resources>
+        <Style x:Key="NonSelectableButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFDCDCDC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    
     <Page.Background>
         <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>

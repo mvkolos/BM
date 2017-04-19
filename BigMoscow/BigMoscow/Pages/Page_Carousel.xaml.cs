@@ -48,6 +48,7 @@ namespace BigMoscow
             if (page != null)
             {
                 page.BookAdd();
+                page.ContentAdd();
             } else if (flip != null)
             {
                 flip.showJournalsPage();
