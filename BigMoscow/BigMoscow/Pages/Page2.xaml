@@ -18,9 +18,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition MaxHeight="207"/>
+            <RowDefinition />
             <RowDefinition/>
-            <RowDefinition Height="80" />
+            <RowDefinition  />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

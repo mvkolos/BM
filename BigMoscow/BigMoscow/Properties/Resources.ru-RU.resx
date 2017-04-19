@@ -135,13 +135,6 @@
   <data name="magazine" xml:space="preserve">
     <value>RU</value>
   </data>
-  <data name="email" xml:space="preserve">
-    <value>Здравствуйте!
-
-Во вложении - ваша копия журнала.
-
-BIGMOSCOW</value>
-  </data>
   <data name="filenotfound" xml:space="preserve">
     <value>Файл, который вы хотите отправить по почте, не существует</value>
   </data>
@@ -685,7 +678,7 @@ BIGMOSCOW</value>
   <data name="exception" xml:space="preserve">
     <value>Проверьте соединение с интернетом, а также адрес указанной почты</value>
   </data>
-  <data name="warning" xml:space="preserve">
-    <value>Пожалуйста, отвечайте на все вопросы!</value>
+  <data name="SendPageText" xml:space="preserve">
+    <value>Узнать больше</value>
   </data>
 </root>

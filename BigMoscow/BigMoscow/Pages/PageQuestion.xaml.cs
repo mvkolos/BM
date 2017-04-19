@@ -121,11 +121,11 @@ namespace BigMoscow.Pages
             {
                 questions.Add(texbox_question.Text);
             }
-            if (questions.Count==0 || string.IsNullOrEmpty(combobox_business.Text) || string.IsNullOrEmpty(combobox_country.Text) || string.IsNullOrEmpty(combobox_you_are.Text) || (string.IsNullOrEmpty(texbox_question.Text) && !f1 && !f2 && !f3 && !f4))
-            {
-                MessageBox.Show(Properties.Resources.warning);
-                return;
-            }
+            //if (questions.Count==0 || string.IsNullOrEmpty(combobox_business.Text) || string.IsNullOrEmpty(combobox_country.Text) || string.IsNullOrEmpty(combobox_you_are.Text) || (string.IsNullOrEmpty(texbox_question.Text) && !f1 && !f2 && !f3 && !f4))
+            //{
+            //    MessageBox.Show(Properties.Resources.warning);
+            //    return;
+            //}
 
             string q = Properties.Resources.Your_q + ":";
             foreach (var item in questions)
@@ -136,7 +136,7 @@ namespace BigMoscow.Pages
             string str = Properties.Resources.You_are + ":" + combobox_you_are.Text + Environment.NewLine + Properties.Resources.Your_country + ":" + combobox_country.Text + Environment.NewLine + Properties.Resources.Your_business_sector + ":" + combobox_business.Text + Environment.NewLine + q;//combobox_business.Text + " " + combobox_country.Text + " " + combobox_you_are.Text + " " + texbox_question.Text;
             FeedBackRepository f = new FeedBackRepository();
             f.SendMessage(str);
-            MessageBox.Show("ok");
+            flip.showJournalsPage();
 
         }
 

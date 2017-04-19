@@ -17,10 +17,14 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using BigMoscow.Windows;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 
 namespace BigMoscow.Pages
 {
-    
+   
+
     /// <summary>
     /// Логика взаимодействия для PageSend.xaml
     /// </summary>
@@ -41,7 +45,8 @@ namespace BigMoscow.Pages
             if (!string.IsNullOrEmpty(textbox_Email.Text))
             {
                 feed.SendPDF(textbox_Email.Text);
-                MessageBox.Show(Properties.Resources.message);
+                //MessageBox.Show(Properties.Resources.message);
+                _flip.showJournalsPage();
             }
 
         }
@@ -132,10 +137,10 @@ namespace BigMoscow.Pages
             if (e.OriginalSource is Button)
             {
                 Button button = (Button)e.OriginalSource;
-                if (button == carousel_back_button)
-                {
-                    _flip.showCarouselPage();
-                }
+                //if (button == carousel_back_button)
+                //{
+                //    _flip.showCarouselPage();
+                //}
             }
         }
 

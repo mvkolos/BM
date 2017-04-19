@@ -124,17 +124,55 @@
 
 
         </Menu>
-        <Button x:Name="carousel_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
+        <!--<Button x:Name="carousel_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
                 Height="74" Width="100" Click="carousel_back_Click" BorderBrush="#00707070" Grid.ColumnSpan="2" Margin="626,251,0,755" >
             <Button.Background>
                 <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
             </Button.Background>
-        </Button>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>-->
         <Button x:Name="magazines_back_button" HorizontalAlignment="Left" VerticalAlignment="Center"
                 Height="74" Width="100" Click="magazines_back_Click" BorderBrush="#00707070" Grid.ColumnSpan="2" Margin="626,142,0,864" >
             <Button.Background>
                 <ImageBrush ImageSource="/UI/MainScreen/mag_back_button.png"/>
             </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
         </Button>
         <StackPanel Width="468" Height="870" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
             <StackPanel.Background >
@@ -178,7 +216,28 @@
                 <RadioButton Margin="30 0 30 0" Name="r4" Content="{x:Static properties:Resources.t4}" FontSize="18" Foreground="#FFE7E7E7"/>
             <Label Content="{x:Static properties:Resources.Your_q}" Margin="40 20 30 10" Foreground="#FFE7E7E7" FontSize="20"/>
             <TextBox Margin="40 0 40 10" Name="texbox_question" Height="150" TextChanged="texbox_question_TextChanged" Background="#CCFFFFFF" GotTouchCapture="texbox_question_GotTouchCapture"/>
-            <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}" Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold" />
+            <Button Margin="10"  Grid.Row="16" Grid.Column="1"  Content="{x:Static properties:Resources.button_send_smth}"
+                    Height="50" Width="180" Click="Button_Click" Background="#FFE22828" BorderBrush="#00707070" FontSize="18" FontFamily="Segoe UI Semibold">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

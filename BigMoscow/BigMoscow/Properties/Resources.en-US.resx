@@ -675,4 +675,7 @@
   <data name="warning" xml:space="preserve">
     <value>Please answer all the questions</value>
   </data>
+  <data name="SendPageText" xml:space="preserve">
+    <value>Know more</value>
+  </data>
 </root>

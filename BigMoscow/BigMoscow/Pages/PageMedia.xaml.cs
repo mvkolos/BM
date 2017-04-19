@@ -59,7 +59,7 @@ namespace BigMoscow.Pages
             currentSlide = 1;
         }
 
-        private void click_right(object sender, RoutedEventArgs e)
+        private void click_right(object sender, RoutedEventArgs e)//
         {
             if (currentSlide==8)
             {

@@ -30,7 +30,6 @@ C:\Users\Stepan\Desktop\Shit\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\
 C:\Users\Stepan\Desktop\Shit\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMitsuControls.pdb
 E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\bin\Debug\WPFMitsuControls.dll
 E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\bin\Debug\WPFMitsuControls.pdb
-E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMitsuControls.csprojResolveAssemblyReference.cache
 E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\BookPage.baml
 E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\Book.g.cs
 E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\BookPage.g.cs
