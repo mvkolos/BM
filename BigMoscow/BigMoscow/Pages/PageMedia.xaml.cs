@@ -23,10 +23,12 @@ namespace BigMoscow.Pages
     {
         int currentSlide;
         Flip _flip;
+
         public PageMedia(Flip flip)
         {
             InitializeComponent();
             _flip = flip;
+
 
         }
 

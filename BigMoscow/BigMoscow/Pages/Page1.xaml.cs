@@ -37,6 +37,7 @@ namespace BigMoscow
 
         private void OnLoad(object sender, RoutedEventArgs e)
         {
+            ConfigurationManager.AppSettings["Culture"] = "en-US";
             BookAdd();
             CoversAdd();
             ContentAdd();
@@ -149,7 +150,7 @@ namespace BigMoscow
                     b.BorderBrush = borderColors[0];
                     Thickness margin = b.Margin;
                     margin.Top = 10;
-                    //margin.Left = 20;
+                    margin.Right = 20;
                     b.Margin = margin;
                     b.Foreground= backgroundColors[1];
                     b.VerticalAlignment = VerticalAlignment.Center;

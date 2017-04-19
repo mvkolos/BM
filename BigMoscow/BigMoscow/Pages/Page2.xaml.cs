@@ -31,8 +31,8 @@ namespace BigMoscow
             InitializeComponent();
             DataContext = TabControl;
             _flip = flip;
+            ConfigurationManager.AppSettings["Culture"] = "en-US";
 
-            
             CreateTabs();
 
             TabControl.NumberOfTabs = 18;

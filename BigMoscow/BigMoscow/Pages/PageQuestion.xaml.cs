@@ -117,10 +117,10 @@ namespace BigMoscow.Pages
             }
 
             
-            if (!string.IsNullOrEmpty(texbox_question.Text))
-            {
-                questions.Add(texbox_question.Text);
-            }
+            //if (!string.IsNullOrEmpty(texbox_question.Text))
+            //{
+            //    questions.Add(texbox_question.Text);
+            //}
             //if (questions.Count==0 || string.IsNullOrEmpty(combobox_business.Text) || string.IsNullOrEmpty(combobox_country.Text) || string.IsNullOrEmpty(combobox_you_are.Text) || (string.IsNullOrEmpty(texbox_question.Text) && !f1 && !f2 && !f3 && !f4))
             //{
             //    MessageBox.Show(Properties.Resources.warning);
