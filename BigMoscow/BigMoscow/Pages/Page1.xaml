@@ -19,26 +19,34 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350" />
             <ColumnDefinition />
-            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="310"/>
 
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="5.5*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Grid.Column="1" Width="1350" Grid.Row="1" Source="/UI/MainScreen/main_paddle.png"/>
+        <!--<Image Grid.Column="1" Width="1350" Grid.Row="1" Source="/UI/MainScreen/main_paddle.png"/>-->
 
-        <ScrollViewer Grid.Column="0" Width="186" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="164,0,0,0" VerticalScrollBarVisibility="Hidden" Grid.Row="1" >
+        <ScrollViewer Grid.Column="0" Width="186" PanningMode="VerticalOnly" HorizontalAlignment="Center" Margin="119,110,45,110" VerticalScrollBarVisibility="Hidden" Grid.RowSpan="3" >
+            <ScrollViewer.Background>
+                <ImageBrush ImageSource="/UI/MainScreen/scroll_paddle.png"/>
+            </ScrollViewer.Background>
             <StackPanel  x:Name="coversPanel" Grid.ColumnSpan="20"  Grid.RowSpan="3"></StackPanel>
         </ScrollViewer>
 
+        <DockPanel Grid.ColumnSpan="3" Grid.RowSpan="3" Width="1300" Height="861">
+            <DockPanel.Background>
+                <ImageBrush ImageSource="/UI/MainScreen/main_paddle.png" />
+            </DockPanel.Background>
 
-        <DockPanel x:Name="BookDock" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="1300" Height="861">
+        </DockPanel>
+        <DockPanel x:Name="BookDock" Grid.ColumnSpan="3" Grid.RowSpan="3" Width="1200" Height="829">
 
 
-            <controls:Book x:Name="myBook"  Width="1300" Height="Auto" >
+            <controls:Book x:Name="myBook"  Width="1200" Height="Auto" >
                 <controls:Book.ItemTemplate>
                     <DataTemplate>
                         <Border BorderThickness="0" BorderBrush="Gray" Background="Transparent">
@@ -53,18 +61,11 @@
 
 
         </DockPanel>
-        <Button Grid.Column="9" Grid.Row="0" Grid.RowSpan="3" Background="Transparent" Margin="0,300" HorizontalAlignment="Right" Click="Feedback_Click">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="/BigMoscow;component/UI/MainScreen/feedback_button.png" />
-                <TextBlock x:Name="TextBlockFeedBack" Text="{x:Static properties:Resources.TextBlockFeedBack}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="-100,120,-50, 0" FontSize="28" Foreground="Gainsboro" >
-                    <TextBlock.RenderTransform>
-                        <TransformGroup>
-                            <RotateTransform Angle="-90"/>
-                        </TransformGroup>
-                    </TextBlock.RenderTransform>
-
-                </TextBlock>
-            </StackPanel>
+        <Button Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" Click="Feedback_Click" Width="400" Height="100" FontSize="28"
+                Background="#A5000000" Content="{x:Static properties:Resources.TextBlockFeedBack}" Foreground="#FFC8C8C8" BorderBrush="#00707070" FontFamily="Segoe UI Light" >
+            <Button.LayoutTransform>
+                <RotateTransform Angle="-90" />
+            </Button.LayoutTransform>
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Transparent"/>
@@ -95,9 +96,37 @@
 
 
         </Menu>
-        <StackPanel Name="content_magaz" Width="146" Height="626" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,74,0,92"/>
-        <Button Grid.Column="1" HorizontalAlignment="Center" Height="74" Width="100" 
-                Click="mail_button_click" BorderBrush="#00707070" Margin="300 0 0 0" Content="GET LINK" FontSize="20" >
+        <StackPanel Name="content_magaz" Width="188" Height="744" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,140,0,0"/>
+        <Button Grid.Column="1" HorizontalAlignment="Right" Height="74" Width="100" VerticalAlignment="Bottom"
+                Click="mail_button_click" BorderBrush="#00707070" Margin="0,0,150,863" Grid.RowSpan="2"  >
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/MainScreen/mail_button.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="button_info" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="74" Width="100" 
+                Click="button_info_Click" Grid.Column="1" BorderBrush="#00707070"  Margin="0 0 20 0" >
+            <Button.Background>
+                <ImageBrush ImageSource="/UI/MainScreen/info_button.png"/>
+            </Button.Background>
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -119,33 +148,14 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="button_info" HorizontalAlignment="Center" VerticalAlignment="Center" Height="74" Width="100" 
-                Click="button_info_Click" Grid.Column="1" BorderBrush="#00707070"  >
-
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="Transparent"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
 
 
-        <Button x:Name="carousel_back_button" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-300 0 0 0" FontSize="20"
-                Height="74" Width="100" Click="carousel_back_Click" Grid.Column="1" BorderBrush="#00707070" Content="BACK">
+        <Button x:Name="carousel_back_button" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="19,72,231,0"
+                Height="74" Width="100" Click="carousel_back_Click" BorderBrush="#00707070" Grid.Row="1"  >
+            <Button.Background>
+                <ImageBrush ImageSource="/BigMoscow;component/UI/MainScreen/carousel_back_button.png"/>
+            </Button.Background>
+
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">

@@ -124,7 +124,7 @@
     <value>Предыдущий</value>
   </data>
   <data name="TextBlockFeedBack" xml:space="preserve">
-    <value>Отзыв</value>
+    <value>Обратная связь</value>
   </data>
   <data name="button_send_smth" xml:space="preserve">
     <value>Отправить</value>
