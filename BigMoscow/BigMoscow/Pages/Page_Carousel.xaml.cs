@@ -23,21 +23,37 @@ namespace BigMoscow
     /// Логика взаимодействия для Page_Carousel.xaml
     /// </summary>
     public partial class Page_Carousel : Page
-    { Flip _flip;
+    {
+        JournalsPage page;
+        Flip flip;
         public string BackGroundURL;
+
+        public Page_Carousel(JournalsPage page)
+        {
+            InitializeComponent();
+            this.page = page;
+        }
 
         public Page_Carousel(Flip flip)
         {
             InitializeComponent();
-            _flip = flip;
-
+            this.flip = flip;
         }
         
         private void button_pattern_Click(object sender, RoutedEventArgs e)
         {
            string[] new_url = BackGroundURL.Split(new char[] { '.' });
            CurrentJournal.journal = "."+new_url[new_url.Length - 2];
-            _flip.showJournalsPage(true);
+
+            if (page != null)
+            {
+                page.BookAdd();
+            } else if (flip != null)
+            {
+                flip.showJournalsPage();
+            }
+
+            
         }
     }
 }

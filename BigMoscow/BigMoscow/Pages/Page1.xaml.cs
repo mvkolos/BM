@@ -42,9 +42,8 @@ namespace BigMoscow
             CoversAdd();
             ContentAdd();
         }
-        
 
-        private void BookAdd()
+        public void BookAdd()
         {
             while (_p1Collection.Any())
             {
@@ -113,7 +112,7 @@ namespace BigMoscow
                 b.EndInit();
                 ImageBrush content = new ImageBrush();
                 content.ImageSource = b;
-                Page_Carousel p = new Page_Carousel(_flip);
+                Page_Carousel p = new Page_Carousel(this);
                 p.BackGroundURL = item;
                 Frame fr = new Frame();
                 fr.Width = 186;
