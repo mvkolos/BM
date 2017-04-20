@@ -10,8 +10,17 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page2">
 
+    <!--<Storyboard x:Name="pulseAnimation" AutoReverse="True">
+        <DoubleAnimation
+        <ColorAnimation x:Name="animateLatitudeTextBoxBorderColour" Storyboard.TargetName="textBoxLatitude" From="{StaticResource PhoneTextBoxColor}" To="Green" Storyboard.TargetProperty="(TextBox.BorderBrush).(SolidColorBrush.Color)" Duration="0:0:0.4" />
+    </Storyboard>-->
+
+    
+    
+    
+
     <Page.Background>
-        <ImageBrush ImageSource="/UI/MainScreen/mainscreenMain.png"/>
+        <ImageBrush x:Name="backgroundImage" ImageSource="/UI/MainScreen/mainscreenMain.png"/>
     </Page.Background>
 
 

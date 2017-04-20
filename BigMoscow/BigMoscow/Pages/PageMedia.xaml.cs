@@ -21,8 +21,11 @@ namespace BigMoscow.Pages
     /// </summary>
     public partial class PageMedia : Page
     {
-        int currentSlide;
+        int currentSlide =0;
         Flip _flip;
+        string localized_folder = "en";
+        int len_eng = 6;
+        int len_ru = 7;
 
         public PageMedia(Flip flip)
         {
@@ -34,20 +37,17 @@ namespace BigMoscow.Pages
 
         private void click_left(object sender, RoutedEventArgs e)
         {
-            if (currentSlide == 1)
+            if (currentSlide > 0)
             {
-                SetBackGround("../../Images/Mediakit/08.png");
-                currentSlide = 8;
+                currentSlide--;
             }
-            else
-            {
-                currentSlide -= 1;
-                SetBackGround("../../Images/Mediakit/0" + currentSlide + ".png");
+            SetBackGround();
 
-            }
+            
         }
-        private void SetBackGround(string url)
+        private void SetBackGround()
         {
+            string url = "../../Images/Mediakit/" + localized_folder + "/" + currentSlide.ToString() + ".jpg";
             BitmapImage b = new BitmapImage(new Uri(url, UriKind.Relative));
 
             ImageBrush content = new ImageBrush();
@@ -57,23 +57,27 @@ namespace BigMoscow.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            SetBackGround("../../Images/Mediakit/01.png");
-            currentSlide = 1;
+            SetBackGround();
         }
 
         private void click_right(object sender, RoutedEventArgs e)//
         {
-            if (currentSlide==8)
+            if(localized_folder=="en")
             {
-                SetBackGround("../../Images/Mediakit/01.png");
-                currentSlide = 1;
+                if(currentSlide<len_eng)
+                {
+                    currentSlide++;
+                }
+                
             }
             else
             {
-                currentSlide += 1;
-                SetBackGround("../../Images/Mediakit/0" + currentSlide + ".png");
-                
+                if (currentSlide < len_ru)
+                {
+                    currentSlide++;
+                }
             }
+            SetBackGround();
         }
 
         private void magazines_back_Click(object sender, RoutedEventArgs e)
@@ -85,6 +89,21 @@ namespace BigMoscow.Pages
         private void carousel_back_Click(object sender, RoutedEventArgs e)
         {
             _flip.showCarouselPage();
+        }
+
+        private void RU_click(object sender, RoutedEventArgs e)
+        {
+            currentSlide = 0;
+            localized_folder = "ru";
+            SetBackGround();
+        }
+
+        private void en_click(object sender, RoutedEventArgs e)
+        {
+            currentSlide = 0;
+            
+            localized_folder = "en";
+            SetBackGround();
         }
     }
 }

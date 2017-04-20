@@ -15,6 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
 using System.Windows.Threading;
+using System.IO;
+using System.Windows.Media.Animation;
 
 namespace BigMoscow
 {
@@ -29,6 +31,10 @@ namespace BigMoscow
         int height = 356;
         DispatcherTimer dispatchTimer;
 
+        int currentImageIndex = 0;
+        int slideLen = 4;
+        List<string> slides;
+
         public CarouselPage(Flip flip)
         {
             InitializeComponent();
@@ -40,7 +46,10 @@ namespace BigMoscow
 
             TabControl.NumberOfTabs = 18;
             TabControl.AnimationDuration = 1000;
-            
+
+            String uri = "../../../../../Slides";
+            slides = DirSearch(uri);
+
             StartTimer();
         }
 
@@ -55,6 +64,27 @@ namespace BigMoscow
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
             TabControl.SpinToNext();
+
+            DoubleAnimation animation = new DoubleAnimation(1.0, 0.8, new TimeSpan(0, 0, 1));
+            animation.AutoReverse = true;
+            backgroundImage.BeginAnimation(ImageBrush.OpacityProperty, animation);
+
+            shortTimer = new DispatcherTimer();
+            shortTimer.Tick += new EventHandler(shortTimer_Tick);
+            shortTimer.Interval = new TimeSpan(0, 0, 1);
+            shortTimer.Start();
+
+
+        }
+
+        DispatcherTimer shortTimer;
+        private void shortTimer_Tick(object sender, EventArgs e)
+        {
+            currentImageIndex = currentImageIndex >= slideLen - 1 ? 0 : currentImageIndex + 1;
+            backgroundImage.ImageSource = (ImageSource)(new ImageSourceConverter()).ConvertFromString(slides[currentImageIndex]);
+
+            shortTimer.Stop();
+            shortTimer = null;
         }
 
         private void CreateTabs()
@@ -132,6 +162,35 @@ namespace BigMoscow
             TabControl.RemoveTabs();
             CreateTabs();
             UpdateLayout();
+        }
+
+        public List<string> DirSearch(string sDir)
+        {
+            List<string> pages = new List<string>();
+            DirectoryInfo item = new DirectoryInfo(sDir);
+            try
+            {
+                foreach (var f in item.GetFiles())
+                {
+                    if (f.Extension.Equals(".png"))
+                    {
+                        pages.Add(f.FullName);
+                    }
+                }
+                foreach (var f in item.GetDirectories())
+                {
+                    DirSearch(f.FullName);
+                }
+
+            }
+            catch
+            {
+
+            }
+
+
+            return pages;
+
         }
     }
 }

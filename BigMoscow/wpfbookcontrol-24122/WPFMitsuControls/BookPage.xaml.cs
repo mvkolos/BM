@@ -200,7 +200,7 @@ namespace WPFMitsuControls
 
             double sideWidth = source.RenderSize.Width / 2;
 
-            Rect leftSideRectangle = new Rect(gripSize, gripSize, sideWidth, source.RenderSize.Height - 2 * gripSize );
+            Rect leftSideRectangle = new Rect(0, gripSize, sideWidth, source.RenderSize.Height - 2 * gripSize );
             Rect rightSideRectangle = new Rect(source.RenderSize.Width - sideWidth, gripSize, sideWidth, source.RenderSize.Height - 2 * gripSize);
 
             if (leftSideRectangle.Contains(position))
