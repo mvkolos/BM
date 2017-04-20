@@ -124,7 +124,7 @@
     <value>Previous</value>
   </data>
   <data name="TextBlockFeedBack" xml:space="preserve">
-    <value>FeedBack</value>
+    <value>Feedback</value>
   </data>
   <data name="button_send_smth" xml:space="preserve">
     <value>Send</value>
@@ -646,7 +646,7 @@
     <value>Novice businessman</value>
   </data>
   <data name="t1" xml:space="preserve">
-    <value>How to start a business in Moscow? Where to find the financing for it?</value>
+    <value>How to start a business in Moscow? Where to find the financing?</value>
   </data>
   <data name="t2" xml:space="preserve">
     <value>How to rent an office or land lot in Moscow?</value>
@@ -677,5 +677,25 @@
   </data>
   <data name="SendPageText" xml:space="preserve">
     <value>Know more</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Dear visitor!
+
+Allow us to introduce BIGMOSCOW (Business Investment Guide to Moscow), a multimedia magazine available for you to download for free on the App Store and Google Play.
+
+BIGMOSCOW features:
+- objective information about the economy and promising segments of Moscow market,
+- success stories from foreign entrepreneurs, who have been working in Moscow,
+- current business and cultural events, and the Moscow expat community news,
+- expert consultations about various practical business aspects in Moscow, lifehacks from Moscow expats about life in the Russian capital
+- and much more.
+
+
+The central topic of the new BIGMOSCOW issue (April-June 2017) is about how foreigners feed Muscovites.
+More information about BIGMOSCOW is now available here: http://big-moscow.com/
+on the App Store: https://appsto.re/us/ROoAib.i 
+and on the Google Play: https://play.google.com/store/apps/details?id=ru.bigmoscow
+
+BIGMOSCOW</value>
   </data>
 </root>

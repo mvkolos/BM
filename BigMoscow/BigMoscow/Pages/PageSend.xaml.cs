@@ -20,6 +20,7 @@ using BigMoscow.Windows;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Configuration;
 
 namespace BigMoscow.Pages
 {
@@ -150,6 +151,22 @@ namespace BigMoscow.Pages
             {
 
             }
+        }
+
+        private void en_click(object sender, RoutedEventArgs e)
+        {
+            ConfigurationManager.AppSettings["Culture"] = "en-US";
+
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
+            _flip.showSendPage(true);
+        }
+
+        private void RU_click(object sender, RoutedEventArgs e)
+        {
+            ConfigurationManager.AppSettings["Culture"] = "ru-RU";
+
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
+            _flip.showSendPage(true);
         }
     }
     [Guid("41C81592-514C-48BD-A22E-E6AF638521A6")]

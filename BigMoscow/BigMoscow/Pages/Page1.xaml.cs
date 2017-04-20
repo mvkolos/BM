@@ -24,6 +24,7 @@ namespace BigMoscow
         FeedBackRepository f;
         Flip _flip;
         private static ObservableCollection<UserControl> _p1Collection = new ObservableCollection<UserControl>();
+        static bool eng_local = true;
         public JournalsPage(Flip flip)
         {
             f = new FeedBackRepository();
@@ -38,7 +39,8 @@ namespace BigMoscow
 
         private void OnLoad(object sender, RoutedEventArgs e)
         {
-            ConfigurationManager.AppSettings["Culture"] = "en-US";
+            //ConfigurationManager.AppSettings["Culture"] = "ru_RU";
+           // ConfigurationManager.AppSettings["Culture"] = eng_local ? "en-US" : "ru-RU";
             BookAdd();
             CoversAdd();
             ContentAdd();
@@ -81,25 +83,30 @@ namespace BigMoscow
 
         private void MenuRuClick(object sender, RoutedEventArgs e)
         {
+            eng_local = false;
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             
             _flip.showJournalsPage(true);
+           // ContentAdd();
         }
 
         private void MenuengClick(object sender, RoutedEventArgs e)
         {
+            eng_local = true;
             ConfigurationManager.AppSettings["Culture"] = "en-US";
 
-            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
+             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             
             _flip.showJournalsPage(true);
+           // ContentAdd();
         }
 
         private static List<string> _covers;
         private void CoversAdd()
         {
+            
             List<string> covers = _covers ?? (_covers = f.DirSearch(string.Format("../../../../../SmallCovers")));
             List<UserControl> c = new List<UserControl>();
             List<string> covers_new = covers.Where(e => e.Contains("m" + Properties.Resources.magazine.ToLower())).ToList();
@@ -132,8 +139,17 @@ namespace BigMoscow
 
         public void ContentAdd()
         {
+           
+
+            //ConfigurationManager.AppSettings["Culture"] = "ru-RU";
+            //Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
+
+            //Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
+
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
-            var contents = MagazineDictionary.GetContent.Value;
+            var contents = MagazineDictionary.GetDContent();// MagazineDictionary.GetContent.Value;
+
+            System.Diagnostics.Debug.WriteLine(contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]][0]);
             content_magaz.Children.Clear();
             if (contents.Keys.Contains(MagazineDictionary.GetDictionary()[CurrentJournal.journal]))
             {
@@ -161,8 +177,8 @@ namespace BigMoscow
 
                     b.Height = 45;
                     b.Width = 180;
-                    b.FontSize = 14;
-                    b.FontFamily= new FontFamily("Segoe Ui");
+                    b.FontSize = 13;
+                    b.FontFamily= new FontFamily("Segoe UI");
                     b.Content = item.Split(';')[0];
                     
                     b.HorizontalAlignment = HorizontalAlignment.Left;

@@ -26,7 +26,7 @@ namespace BigMoscow
     public partial class CarouselPage : Page
     {
         Flip _flip;
-        string language = "en";
+        static string language = "en";
         int width = 267;
         int height = 356;
         DispatcherTimer dispatchTimer;
@@ -40,7 +40,7 @@ namespace BigMoscow
             InitializeComponent();
             DataContext = TabControl;
             _flip = flip;
-            ConfigurationManager.AppSettings["Culture"] = "en-US";
+            //ConfigurationManager.AppSettings["Culture"] = "en-US";
 
             CreateTabs();
 

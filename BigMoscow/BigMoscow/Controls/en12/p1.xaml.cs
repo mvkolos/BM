@@ -23,7 +23,7 @@ namespace BigMoscow.Controls.en12
         ImageBrush _b;
         public p1(ImageBrush b)
         {
-            System.Diagnostics.Debug.WriteLine("constr");
+            //System.Diagnostics.Debug.WriteLine("constr");
             _b = b;
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace BigMoscow.Controls.en12
         }
         ~p1()
         {
-            System.Diagnostics.Debug.WriteLine("destr");
+            //System.Diagnostics.Debug.WriteLine("destr");
            _b = null;
         }
     }

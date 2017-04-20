@@ -42,8 +42,9 @@ namespace BigMoscow.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
+           
         }
+        
         private void LoadCombobox()
         {
             StreamReader sr = new StreamReader("../../../../../Countries/" + Properties.Resources.magazine + ".json", Encoding.UTF8);
@@ -68,27 +69,17 @@ namespace BigMoscow.Pages
         private void RU_click(object sender, RoutedEventArgs e)
         {
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
-
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
-            Dispatcher.Invoke(() =>
-            {
-                flip.frame.Content = new PageQuestion(flip);
-
-            }
-            );
+            flip.showQuestionPage(true);
 
         }
       
         private void en_click(object sender, RoutedEventArgs e)
         {
             ConfigurationManager.AppSettings["Culture"] = "en-US";
-
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
-            Dispatcher.Invoke(() =>
-            {
-                flip.frame.Content = new PageQuestion(flip);
-            }
-           );
+            flip.showQuestionPage(true);
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

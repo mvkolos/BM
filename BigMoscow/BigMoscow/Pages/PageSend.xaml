@@ -17,8 +17,16 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="660"/>
         </Grid.ColumnDefinitions>
-       
-        
+
+        <Menu Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" Padding="20" >
+
+            <MenuItem Header="RU" Click="RU_click" FontSize="28" Foreground="#FFD8D8D8"/>
+            <Image Source="/BigMoscow;component/UI/MainScreen/earth_icon.png" Width="40"/>
+
+            <MenuItem  Header="ENG" Click="en_click" FontSize="28" Foreground="#FFD8D8D8" />
+
+
+        </Menu>
         <Button Margin="0 0 0 10" x:Name="magazines_back_button" HorizontalAlignment="Right" VerticalAlignment="Center"
                 Height="74" Width="100" Click="magazines_back_Click" TouchDown="magazines_back_Click" BorderBrush="#00707070" >
             <Button.Background>

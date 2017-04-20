@@ -57,3 +57,4 @@ C:\Олеся\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMi
 C:\Олеся\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMitsuControls.csproj.GenerateResource.Cache
 C:\Олеся\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMitsuControls.dll
 C:\Олеся\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMitsuControls.pdb
+E:\Users\Masha\Documents\GitHub\BM\BigMoscow\wpfbookcontrol-24122\WPFMitsuControls\obj\Debug\WPFMitsuControls.csprojResolveAssemblyReference.cache
