@@ -15,9 +15,9 @@
     <!--<Window.Background>
         <ImageBrush ImageSource="/UI/MainScreen/mainscreenMain.jpg"/>
     </Window.Background>-->
-    
-   
-    <Grid>
+
+
+    <Grid x:Name="swipeGrid"  IsManipulationEnabled="true">
         <Frame x:Name="frame" NavigationUIVisibility="Hidden" />
         
     </Grid>

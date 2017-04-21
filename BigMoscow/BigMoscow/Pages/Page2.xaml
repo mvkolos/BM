@@ -8,7 +8,7 @@
       xmlns:properties="clr-namespace:BigMoscow.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Title="Page2">
+      Title="Page2" IsManipulationEnabled="True">
     
 
     <!--<Storyboard x:Name="pulseAnimation" AutoReverse="True">
@@ -26,7 +26,7 @@
 
 
 
-    <Grid x:Name="SwipeGrid" IsManipulationEnabled="true" >
+    <Grid IsManipulationEnabled="True" >
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition/>
@@ -37,12 +37,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        
-        <bornander:Carousel x:Name="TabControl" Margin="-200" Depth="0.1" Grid.ColumnSpan="3" Grid.Row="1">
 
 
-        </bornander:Carousel>
+        <bornander:Carousel x:Name="TabControl" Margin="-200" Depth="0.1" Grid.ColumnSpan="3" Grid.Row="1" IsManipulationEnabled="True" 
+                            TouchDown="TabControl_TouchDown"/>
+
+        
         <Button  Background="Transparent" HorizontalAlignment="Left" Name="button_previous" Grid.Row="1" Width="70" Click="HandleNext" BorderBrush="#00707070" Margin="65,0,0,0" >
             <StackPanel>
                 <Image Width="60" Source="/UI/MainScreen/arrow_left.png"/>
@@ -102,5 +102,8 @@
 
 
         </Menu>
+        <Grid x:Name="SwipeGrid" IsManipulationEnabled="true">
+
+        </Grid>
     </Grid>
 </Page>

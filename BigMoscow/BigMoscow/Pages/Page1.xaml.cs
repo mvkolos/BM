@@ -233,7 +233,7 @@ namespace BigMoscow
             Button b = sender as Button;
            
             myBook.CurrentSheetIndex = (int.Parse(CurrentJournal.Content_page_dictionary[b.Content.ToString()]))/ 2;
-            System.Diagnostics.Debug.WriteLine(String.Format("page {0}", myBook.CurrentSheetIndex));
+           // System.Diagnostics.Debug.WriteLine(String.Format("page {0}", myBook.CurrentSheetIndex));
             //myBook.
         }
 

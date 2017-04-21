@@ -34,7 +34,7 @@ namespace BigMoscow
         int currentImageIndex = 0;
         int slideLen = 4;
         List<string> slides;
-
+        bool touchMove = false;
         private Point initialpoint;
 
         public CarouselPage(Flip flip)
@@ -52,19 +52,53 @@ namespace BigMoscow
             String uri = "../../../../../Slides";
             slides = DirSearch(uri);
 
-            SwipeGrid.ManipulationStarted += GridMovementStarting;
-            
-            
+            ManipulationStarted += GridMovementStarting;
+            ManipulationDelta += GridMovementDelta;
+            TouchDown+= TouchMovementStarting;
 
+            TabControl.ManipulationStarted += GridMovementStarting;
+            TabControl.ManipulationDelta += GridMovementDelta;
+
+            TouchMove += DetectMovement;
+            TouchUp += CheckGesture;
             StartTimer();
+        }
+        void DetectMovement(object sender, TouchEventArgs e)
+        {
+            touchMove= true;
+        }
+        void CheckGesture(object sender, TouchEventArgs e)
+        {
+            TouchDevice c = e.TouchDevice;
+            initialpoint = c.GetTouchPoint(this).Position;
         }
         void GridMovementStarting(object sender, ManipulationStartedEventArgs e)
         {
             initialpoint = e.ManipulationOrigin;
+           // System.Diagnostics.Debug.WriteLine("GridMovementStarting");
+        }
+        void TouchMovementStarting(object sender, TouchEventArgs e)
+        {
+            TouchDevice c = e.TouchDevice;
+            //c.GetTouchPoint(this).Position;
+            Point currentpoint = c.GetTouchPoint(this).Position;
+            if (currentpoint.X - initialpoint.X >= 500)//500 is the threshold value, where you want to trigger the swipe right event
+            {
+                System.Diagnostics.Debug.WriteLine("Swipe Right");
+                TabControl.SpinToPrevious();
+                //e.Complete();
+            }
+            if (currentpoint.X - initialpoint.X <=-500)//500 is the threshold value, where you want to trigger the swipe right event
+            {
+                System.Diagnostics.Debug.WriteLine("Swipe Left");
+                TabControl.SpinToNext();
+                //e.Complete();
+            }
         }
 
         void GridMovementDelta(object sender, ManipulationDeltaEventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("GridMovementDelta");
             if (e.IsInertial)
             {
                 Point currentpoint = e.ManipulationOrigin;
@@ -72,6 +106,12 @@ namespace BigMoscow
                 {
                     System.Diagnostics.Debug.WriteLine("Swipe Right");
                     TabControl.SpinToPrevious();
+                    e.Complete();
+                }
+                if (currentpoint.X - initialpoint.X <= 500)//500 is the threshold value, where you want to trigger the swipe right event
+                {
+                    System.Diagnostics.Debug.WriteLine("Swipe Left");
+                    TabControl.SpinToNext();
                     e.Complete();
                 }
             }
@@ -217,6 +257,11 @@ namespace BigMoscow
 
 
             return pages;
+
+        }
+
+        private void TabControl_TouchDown(object sender, TouchEventArgs e)
+        {
 
         }
     }

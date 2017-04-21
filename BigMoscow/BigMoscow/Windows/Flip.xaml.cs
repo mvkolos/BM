@@ -36,6 +36,7 @@ namespace BigMoscow.Windows
         public PageMedia mediaPage;
         public PageSend sendPage;
         ulong time = 0;
+        private Point initialpoint;
 
         //SHOWS
 
@@ -82,7 +83,7 @@ namespace BigMoscow.Windows
                 sendPage = new PageSend(this);
 
             Content = sendPage;
-            sendPage.InitializeComponent();
+            //sendPage.InitializeComponent();
         }
 
         public void reloadAllPages()
@@ -118,8 +119,37 @@ namespace BigMoscow.Windows
             carousel = new CarouselPage(this);
             frame.Content = carousel;
             String uri = "../../../../../Slides";
+            swipeGrid.ManipulationStarted += GridMovementStarting;
+            swipeGrid.ManipulationDelta += GridMovementDelta;
 
         }
+        void GridMovementStarting(object sender, ManipulationStartedEventArgs e)
+        {
+            initialpoint = e.ManipulationOrigin;
+            //System.Diagnostics.Debug.WriteLine("GridMovementStarting");
+        }
+        void GridMovementDelta(object sender, ManipulationDeltaEventArgs e)
+        {
+            Point currentpoint = e.ManipulationOrigin;
+            System.Diagnostics.Debug.WriteLine(currentpoint.X - initialpoint.X);
+           
+              
+                if (currentpoint.X - initialpoint.X >= 500)//500 is the threshold value, where you want to trigger the swipe right event
+                {
+                    System.Diagnostics.Debug.WriteLine("Swipe Right");
+                    //TabControl.SpinToPrevious();
+                    e.Complete();
+                }
+            if (currentpoint.X - initialpoint.X <= -500)
+            {
+                System.Diagnostics.Debug.WriteLine("Swipe Left");
+                //TabControl.SpinToPrevious();
+                e.Complete();
+            }
+
+
+        }
+
         void Counter(object sender, EventArgs e)
         {
             time++;
@@ -127,7 +157,7 @@ namespace BigMoscow.Windows
             {
                 showCarouselPage();
             }
-            System.Diagnostics.Debug.WriteLine(String.Format("time {0}", time));
+           // System.Diagnostics.Debug.WriteLine(String.Format("time {0}", time));
         }
         public void DetectTouch(object sender, EventArgs e)
         {

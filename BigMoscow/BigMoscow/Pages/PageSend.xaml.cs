@@ -37,7 +37,7 @@ namespace BigMoscow.Pages
         {
             feed = new FeedBackRepository();
             InitializeComponent();
-            DisableWPFTabletSupport();
+            //DisableWPFTabletSupport();
             _flip = flip;
         }
 
