@@ -9,47 +9,55 @@ namespace BigMoscow.Logic
 {
     class MagazineDictionary
     {
-        public static Dictionary<string, string> GetDictionary()
-        {
-            Dictionary<string, string> dictionary = new Dictionary<string, string>();
-            dictionary.Add(".01_2012-v", "_01");
-            dictionary.Add(".01_2013-v", "_03");
-            dictionary.Add(".01_2014-v", "_07");
-            dictionary.Add(".01_2015-v", "_10");
-            dictionary.Add(".01_2016-v", "_14");
-            dictionary.Add(".02_2012-v", "_02");
-            dictionary.Add(".02_2013-v", "_04");
-            dictionary.Add(".02_2014-v", "_08");
-            dictionary.Add(".02_2015-v", "_11");
-            dictionary.Add(".02_2016-v", "_15");
-            dictionary.Add(".03_2013-v", "_05");
-            dictionary.Add(".03_2014-v", "_09");
-            dictionary.Add(".03_2015-v", "_12");
-            dictionary.Add(".03_2016-v", "_16");
-            dictionary.Add(".04_2013-v", "_06");
-            dictionary.Add(".04_2015-v", "_13");
-            dictionary.Add(".04_2016-v", "_17");
-            dictionary.Add(".00_2017-v", "_18");
-            dictionary.Add(".01_2017-v", "_19");
+        public static Dictionary<string, string> magazinesDictionary;
+        public static Dictionary<string, string[]> contentDictionary;
 
-            return dictionary;
-        }
-        public static Dictionary<string, string[]> GetDContent()
+        static MagazineDictionary()
         {
-            Dictionary<string, string[]> dictionary =
-                    new Dictionary<string, string[]>();
-            dictionary.Add("_01", new string[]
+            AddMagazines();
+            AddContent();
+            
+        }
+
+       
+        public static void AddMagazines()
+        {
+            magazinesDictionary = new Dictionary<string, string>();
+            magazinesDictionary.Add(".01_2012-v", "_01");
+            magazinesDictionary.Add(".01_2013-v", "_03");
+            magazinesDictionary.Add(".01_2014-v", "_07");
+            magazinesDictionary.Add(".01_2015-v", "_10");
+            magazinesDictionary.Add(".01_2016-v", "_14");
+            magazinesDictionary.Add(".02_2012-v", "_02");
+            magazinesDictionary.Add(".02_2013-v", "_04");
+            magazinesDictionary.Add(".02_2014-v", "_08");
+            magazinesDictionary.Add(".02_2015-v", "_11");
+            magazinesDictionary.Add(".02_2016-v", "_15");
+            magazinesDictionary.Add(".03_2013-v", "_05");
+            magazinesDictionary.Add(".03_2014-v", "_09");
+            magazinesDictionary.Add(".03_2015-v", "_12");
+            magazinesDictionary.Add(".03_2016-v", "_16");
+            magazinesDictionary.Add(".04_2013-v", "_06");
+            magazinesDictionary.Add(".04_2015-v", "_13");
+            magazinesDictionary.Add(".04_2016-v", "_17");
+            magazinesDictionary.Add(".00_2017-v", "_18");
+            magazinesDictionary.Add(".01_2017-v", "_19");
+        }
+        public static void AddContent()
+        {
+            contentDictionary=new Dictionary<string, string[]>();
+            contentDictionary.Add("_01", new string[]
             {
                     Properties.Resources.m1_1 + ";" + "3",
                     Properties.Resources.m1_2 + ";" + "10",
                     Properties.Resources.m1_3 + ";" + "19",
-                    Properties.Resources.m1_4 + ";" + "31",
-                    Properties.Resources.m1_5 + ";" + "63",
-                    Properties.Resources.m1_6 + ";" + "72",
-                    Properties.Resources.m1_7 + ";" + "81",
+                    Properties.Resources.m1_4 + ";" + "48",
+                    Properties.Resources.m1_5 + ";" + "57",
+                    Properties.Resources.m1_6 + ";" + "64",
+                    Properties.Resources.m1_7 + ";" + "72",
 
             });
-            dictionary.Add("_02", new string[] {
+            contentDictionary.Add("_02", new string[] {
                 Properties.Resources.m2_1+";"+"3",
                 Properties.Resources.m2_2+";"+"12",
                 Properties.Resources.m2_3+";"+"39",
@@ -57,7 +65,7 @@ namespace BigMoscow.Logic
                 Properties.Resources.m2_5+";"+"58",
                 Properties.Resources.m2_6+";"+"64"
             });
-            dictionary.Add("_03", new string[] {
+            contentDictionary.Add("_03", new string[] {
                 Properties.Resources.m3_1+";"+"3",
                 Properties.Resources.m3_2+";"+"14",
                 Properties.Resources.m3_3+";"+"43",
@@ -70,7 +78,7 @@ namespace BigMoscow.Logic
                 Properties.Resources.m3_10+";"+"97",
 
             });
-            dictionary.Add("_04", new string[] {
+            contentDictionary.Add("_04", new string[] {
                 Properties.Resources.m4_1+";"+"3",
                 Properties.Resources.m4_2+";"+"14",
                 Properties.Resources.m4_3+";"+"48",
@@ -83,7 +91,7 @@ namespace BigMoscow.Logic
                 Properties.Resources.m4_10+";"+"108",
 
             });
-            dictionary.Add("_05", new string[] {
+            contentDictionary.Add("_05", new string[] {
                 Properties.Resources.m5_1+";"+"3",
                 Properties.Resources.m5_2+";"+"13",
                 Properties.Resources.m5_3+";"+"44",
@@ -96,7 +104,7 @@ namespace BigMoscow.Logic
                 Properties.Resources.m5_10+";"+"91",
                 Properties.Resources.m5_11+";"+"97",
             });
-            dictionary.Add("_06", new string[] {
+            contentDictionary.Add("_06", new string[] {
                 Properties.Resources.m6_1+";"+"3",
                 Properties.Resources.m6_2+";"+"15",
                 Properties.Resources.m6_3+";"+"47",
@@ -111,7 +119,7 @@ namespace BigMoscow.Logic
                 Properties.Resources.m6_12+";"+"106"
 
             });
-            dictionary.Add("_07", new string[] {
+            contentDictionary.Add("_07", new string[] {
                 Properties.Resources.m7_1+";"+"3",
                 Properties.Resources.m7_2+";"+"17",
                 Properties.Resources.m7_3+";"+"47",
@@ -126,7 +134,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_08", new string[] {
+            contentDictionary.Add("_08", new string[] {
                 Properties.Resources.m8_1+";"+"3",
                 Properties.Resources.m8_2+";"+"19",
                 Properties.Resources.m8_3+";"+"51",
@@ -141,7 +149,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_09", new string[] {
+            contentDictionary.Add("_09", new string[] {
                 Properties.Resources.m9_1+";"+"3",
                 Properties.Resources.m9_2+";"+"19",
                 Properties.Resources.m9_3+";"+"50",
@@ -156,7 +164,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_10", new string[] {
+            contentDictionary.Add("_10", new string[] {
                 Properties.Resources.m10_1+";"+"4",
                 Properties.Resources.m10_2+";"+"19",
                 Properties.Resources.m10_3+";"+"53",
@@ -171,7 +179,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_11", new string[] {
+            contentDictionary.Add("_11", new string[] {
                 Properties.Resources.m11_1+";"+"4",
                 Properties.Resources.m11_2+";"+"23",
                 Properties.Resources.m11_3+";"+"63",
@@ -187,7 +195,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_12", new string[] {
+            contentDictionary.Add("_12", new string[] {
                 Properties.Resources.m12_1+";"+"4",
                 Properties.Resources.m12_2+";"+"20",
                 Properties.Resources.m12_3+";"+"56",
@@ -203,7 +211,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_13", new string[] {
+            contentDictionary.Add("_13", new string[] {
                 Properties.Resources.m13_1+";"+"4",
                 Properties.Resources.m13_2+";"+"20",
                 Properties.Resources.m13_3+";"+"59",
@@ -219,7 +227,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_14", new string[] {
+            contentDictionary.Add("_14", new string[] {
                 Properties.Resources.m14_1+";"+"4",
                 Properties.Resources.m14_2+";"+"20",
                 Properties.Resources.m14_3+";"+"59",
@@ -235,7 +243,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_15", new string[] {
+            contentDictionary.Add("_15", new string[] {
                 Properties.Resources.m15_1+";"+"4",
                 Properties.Resources.m15_2+";"+"22",
                 Properties.Resources.m15_3+";"+"63",
@@ -251,7 +259,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_16", new string[] {
+            contentDictionary.Add("_16", new string[] {
                 Properties.Resources.m15_1+";"+"4",
                 Properties.Resources.m15_2+";"+"22",
                 Properties.Resources.m15_3+";"+"62",
@@ -267,7 +275,7 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_17", new string[] {
+            contentDictionary.Add("_17", new string[] {
                 Properties.Resources.m15_1+";"+"4",
                 Properties.Resources.m15_2+";"+"21",
                 Properties.Resources.m15_3+";"+"61",
@@ -283,23 +291,23 @@ namespace BigMoscow.Logic
 
 
             });
-            dictionary.Add("_18", new string[] {
-                Properties.Resources.m15_1+";"+"4",
-                Properties.Resources.m15_2+";"+"21",
-                Properties.Resources.m15_3+";"+"61",
-                Properties.Resources.m15_4+";"+"73",
-                Properties.Resources.m15_5+";"+"83",
-                Properties.Resources.m15_6+";"+"95",
-                Properties.Resources.m15_7+";"+"102",
-                Properties.Resources.m15_8+";"+"109",
-                Properties.Resources.m15_9+";"+"114",
-                Properties.Resources.m15_10+";"+"121",
-                Properties.Resources.m15_11+";"+"132"
+            contentDictionary.Add("_18", new string[] {
+                Properties.Resources.m12_1+";"+"4",
+                Properties.Resources.m12_2+";"+"16",
+                Properties.Resources.m12_3+";"+"61",
+                Properties.Resources.m12_4+";"+"73",
+                Properties.Resources.m12_5+";"+"83",
+                Properties.Resources.m12_7+";"+"95",
+                Properties.Resources.m3_6+";"+"102",
+                Properties.Resources.m14_8+";"+"111",
+                Properties.Resources.m15_9+";"+"116",
+                Properties.Resources.m15_11+";"+"121",
+                Properties.Resources.m15_10+";"+"134"
 
 
 
             });
-            dictionary.Add("_19", new string[] {
+            contentDictionary.Add("_19", new string[] {
                 Properties.Resources.m19_0+";"+"6",
                 Properties.Resources.m19_1+";"+"44",
                 Properties.Resources.m19_2+";"+"11",
@@ -310,7 +318,6 @@ namespace BigMoscow.Logic
 
 
             });
-            return dictionary;
         }
         //public static Lazy<Dictionary<string, string[]>> GetContent =
         //    new Lazy<Dictionary<string, string[]>>(() =>

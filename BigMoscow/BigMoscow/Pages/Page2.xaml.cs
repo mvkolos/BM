@@ -35,6 +35,8 @@ namespace BigMoscow
         int slideLen = 4;
         List<string> slides;
 
+        private Point initialpoint;
+
         public CarouselPage(Flip flip)
         {
             InitializeComponent();
@@ -50,8 +52,31 @@ namespace BigMoscow
             String uri = "../../../../../Slides";
             slides = DirSearch(uri);
 
+            SwipeGrid.ManipulationStarted += GridMovementStarting;
+            
+            
+
             StartTimer();
         }
+        void GridMovementStarting(object sender, ManipulationStartedEventArgs e)
+        {
+            initialpoint = e.ManipulationOrigin;
+        }
+
+        void GridMovementDelta(object sender, ManipulationDeltaEventArgs e)
+        {
+            if (e.IsInertial)
+            {
+                Point currentpoint = e.ManipulationOrigin;
+                if (currentpoint.X - initialpoint.X >= 500)//500 is the threshold value, where you want to trigger the swipe right event
+                {
+                    System.Diagnostics.Debug.WriteLine("Swipe Right");
+                    TabControl.SpinToPrevious();
+                    e.Complete();
+                }
+            }
+        }
+
 
         private void StartTimer()
         {

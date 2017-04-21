@@ -25,8 +25,10 @@ namespace BigMoscow
         Flip _flip;
         private static ObservableCollection<UserControl> _p1Collection = new ObservableCollection<UserControl>();
         static bool eng_local = true;
+        MagazineDictionary d;
         public JournalsPage(Flip flip)
         {
+           
             f = new FeedBackRepository();
 
             _flip = flip;
@@ -53,7 +55,7 @@ namespace BigMoscow
                 _p1Collection.RemoveAt(0);
             }
 
-            List<string> pages = f.DirSearch(string.Format("../../../../../Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
+            List<string> pages = f.DirSearch(string.Format("../../../../../Magazines/{0}{1}", Properties.Resources.magazine, MagazineDictionary.magazinesDictionary[CurrentJournal.journal]));//язык ресурсы
 
             foreach (var item in pages)
             {
@@ -147,13 +149,13 @@ namespace BigMoscow
             //Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
 
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
-            var contents = MagazineDictionary.GetDContent();// MagazineDictionary.GetContent.Value;
+            var contents = MagazineDictionary.contentDictionary;// MagazineDictionary.GetContent.Value;
 
             //System.Diagnostics.Debug.WriteLine(contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]]);
             content_magaz.Children.Clear();
-            if (contents.Keys.Contains(MagazineDictionary.GetDictionary()[CurrentJournal.journal]))
+            if (contents.Keys.Contains(MagazineDictionary.magazinesDictionary[CurrentJournal.journal]))
             {
-                string[] cont = contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]];
+                string[] cont = contents[MagazineDictionary.magazinesDictionary[CurrentJournal.journal]];
                 int count = cont.Length;
 
                 int i = 0;
@@ -182,11 +184,11 @@ namespace BigMoscow
                     b.Content = item.Split(';')[0];
                     
                     b.HorizontalAlignment = HorizontalAlignment.Left;
-                    if(!CurrentJournal.Content_page_dictionary.ContainsKey(item.Split(';')[0]))
+                    if (!CurrentJournal.Content_page_dictionary.ContainsKey(item.Split(';')[0]))
                     {
                         CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
                     }
-                   // 
+                    // 
                     b.Click += B_Click;
                     content_magaz.Children.Add(b);
                 }
@@ -229,7 +231,10 @@ namespace BigMoscow
         private void B_Click(object sender, RoutedEventArgs e)
         {
             Button b = sender as Button;
-            myBook.CurrentSheetIndex = int.Parse(CurrentJournal.Content_page_dictionary[b.Content.ToString()]) / 2;
+           
+            myBook.CurrentSheetIndex = (int.Parse(CurrentJournal.Content_page_dictionary[b.Content.ToString()]))/ 2;
+            System.Diagnostics.Debug.WriteLine(String.Format("page {0}", myBook.CurrentSheetIndex));
+            //myBook.
         }
 
         private void Feedback_Click(object sender, RoutedEventArgs e)

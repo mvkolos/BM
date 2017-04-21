@@ -83,7 +83,7 @@ namespace BigMoscow.Logic
                 mailmess.To.Add(new MailAddress(email));
                 mailmess.Body = Properties.Resources.email;
 
-                Attachment attach = new Attachment(string.Format("../../../../../Files/{0}{1}.pdf", Properties.Resources.magazine, MagazineDictionary.GetDictionary()[CurrentJournal.journal]));//язык ресурсы
+                Attachment attach = new Attachment(string.Format("../../../../../Files/{0}{1}.pdf", Properties.Resources.magazine, MagazineDictionary.magazinesDictionary[CurrentJournal.journal]));//язык ресурсы
                 //mailmess.Attachments.Add(attach);
 
 
