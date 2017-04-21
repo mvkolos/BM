@@ -149,7 +149,7 @@ namespace BigMoscow
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
             var contents = MagazineDictionary.GetDContent();// MagazineDictionary.GetContent.Value;
 
-            System.Diagnostics.Debug.WriteLine(contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]][0]);
+            //System.Diagnostics.Debug.WriteLine(contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]]);
             content_magaz.Children.Clear();
             if (contents.Keys.Contains(MagazineDictionary.GetDictionary()[CurrentJournal.journal]))
             {
@@ -162,7 +162,7 @@ namespace BigMoscow
                 foreach (var item in cont)
                 {
                     Button b = new Button();
-                    b.Style = this.FindResource("NonSelectableButton") as Style;
+                    b.Style = FindResource("NonSelectableButton") as Style;
 
                     b.Background = backgroundColors[0];
                     b.BorderBrush = borderColors[0];
@@ -182,7 +182,11 @@ namespace BigMoscow
                     b.Content = item.Split(';')[0];
                     
                     b.HorizontalAlignment = HorizontalAlignment.Left;
-                    CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                    if(!CurrentJournal.Content_page_dictionary.ContainsKey(item.Split(';')[0]))
+                    {
+                        CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                    }
+                   // 
                     b.Click += B_Click;
                     content_magaz.Children.Add(b);
                 }

@@ -879,6 +879,60 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to От редактора.
+        /// </summary>
+        public static string m19_0 {
+            get {
+                return ResourceManager.GetString("m19_0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Место действия - Москва.
+        /// </summary>
+        public static string m19_1 {
+            get {
+                return ResourceManager.GetString("m19_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В фокусе.
+        /// </summary>
+        public static string m19_2 {
+            get {
+                return ResourceManager.GetString("m19_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Действующие лица.
+        /// </summary>
+        public static string m19_3 {
+            get {
+                return ResourceManager.GetString("m19_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Образ действия.
+        /// </summary>
+        public static string m19_4 {
+            get {
+                return ResourceManager.GetString("m19_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Образ жизни.
+        /// </summary>
+        public static string m19_5 {
+            get {
+                return ResourceManager.GetString("m19_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Persona.
         /// </summary>
         public static string m2_1 {

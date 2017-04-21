@@ -44,7 +44,7 @@ namespace BigMoscow
 
             CreateTabs();
 
-            TabControl.NumberOfTabs = 18;
+            TabControl.NumberOfTabs = 19;
             TabControl.AnimationDuration = 1000;
 
             String uri = "../../../../../Slides";
@@ -90,23 +90,25 @@ namespace BigMoscow
         private void CreateTabs()
         {
             String baseString = "../../../../../";
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2012-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2012-v.jpg", language), new Size(height, width)));//1
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2013-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2014-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2015-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2016-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2016-v.jpg", language), new Size(height, width)));//5
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2012-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2013-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2014-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2015-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2016-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.02_2016-v.jpg", language), new Size(height, width)));//10
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2013-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2014-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2015-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.03_2016-v.jpg", language), new Size(height, width)));
-            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2013-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2013-v.jpg", language), new Size(height, width)));//15
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2015-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.04_2016-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.00_2017-v.jpg", language), new Size(height, width)));
+            TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2017-v.jpg", language), new Size(height, width)));
 
 
         }

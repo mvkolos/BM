@@ -698,4 +698,22 @@ and on the Google Play: https://play.google.com/store/apps/details?id=ru.bigmosc
 
 BIGMOSCOW</value>
   </data>
+  <data name="m19_0" xml:space="preserve">
+    <value>Editorial</value>
+  </data>
+  <data name="m19_1" xml:space="preserve">
+    <value>Place of action - Moscow</value>
+  </data>
+  <data name="m19_2" xml:space="preserve">
+    <value>In focus</value>
+  </data>
+  <data name="m19_3" xml:space="preserve">
+    <value>Persona</value>
+  </data>
+  <data name="m19_4" xml:space="preserve">
+    <value>Modus operandi</value>
+  </data>
+  <data name="m19_5" xml:space="preserve">
+    <value>Modus vivendi</value>
+  </data>
 </root>

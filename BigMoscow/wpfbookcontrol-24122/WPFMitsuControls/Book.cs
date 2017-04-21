@@ -151,6 +151,7 @@ namespace WPFMitsuControls
 
         public int CurrentSheetIndex
         {
+
             get { return _currentSheetIndex; }
             set 
             {
@@ -163,8 +164,7 @@ namespace WPFMitsuControls
                         _currentSheetIndex = value;
                         RefreshSheetsContent();
                     }
-                    else
-                        throw new Exception("Index out of bounds");
+                    
                 }
             }
         }

@@ -701,4 +701,22 @@ and on the Google Play: https://play.google.com/store/apps/details?id=ru.bigmosc
 
 BIGMOSCOW</value>
   </data>
+  <data name="m19_0" xml:space="preserve">
+    <value>От редактора</value>
+  </data>
+  <data name="m19_1" xml:space="preserve">
+    <value>Действующие лица</value>
+  </data>
+  <data name="m19_2" xml:space="preserve">
+    <value>В фокусе</value>
+  </data>
+  <data name="m19_3" xml:space="preserve">
+    <value>Место действия - Москва</value>
+  </data>
+  <data name="m19_4" xml:space="preserve">
+    <value>Образ действия</value>
+  </data>
+  <data name="m19_5" xml:space="preserve">
+    <value>Образ жизни</value>
+  </data>
 </root>

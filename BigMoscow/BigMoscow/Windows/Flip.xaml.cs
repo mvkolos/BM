@@ -27,12 +27,15 @@ namespace BigMoscow.Windows
     /// </summary>
     public partial class Flip : Window
     {
+        static public bool Activity = false;
+
         public CarouselPage carousel;
         public FeedBackWindow feedback;
         public PageQuestion question;
         public JournalsPage journalsPage;
         public PageMedia mediaPage;
         public PageSend sendPage;
+        ulong time = 0;
 
         //SHOWS
 
@@ -94,6 +97,7 @@ namespace BigMoscow.Windows
         //MAIN LOGICS
 
         DispatcherTimer dispatchTimer;
+        DispatcherTimer activityTimer;
 
         int currentImageIndex = 0;
         int slideLen = 4;
@@ -102,21 +106,39 @@ namespace BigMoscow.Windows
         List<string> slides;
         public Flip()
         {
-            
+            activityTimer = new DispatcherTimer();
+            activityTimer.Tick += new EventHandler(Counter);
+            activityTimer.Interval = new TimeSpan(0, 0, 1);
+            activityTimer.Start();
+
+
             CultureInfo c = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             Properties.Resources.Culture = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             InitializeComponent();
             carousel = new CarouselPage(this);
             frame.Content = carousel;
             String uri = "../../../../../Slides";
-            
+
+        }
+        void Counter(object sender, EventArgs e)
+        {
+            time++;
+            if (time > 120 )
+            {
+                showCarouselPage();
+            }
+            System.Diagnostics.Debug.WriteLine(String.Format("time {0}", time));
+        }
+        public void DetectTouch(object sender, EventArgs e)
+        {
+            time = 0;
+            //System.Diagnostics.Debug.WriteLine(" DetectTouch");
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            
-            
 
+            
             Storyboard st = new Storyboard();
             DoubleAnimation animation = new DoubleAnimation(1.0, 0.0, new TimeSpan(0, 0, 4));
             Storyboard.SetTargetName(animation, "Background");
@@ -150,5 +172,9 @@ namespace BigMoscow.Windows
             shortTimer = null;
         }
 
+        private void Window_TouchMove(object sender, TouchEventArgs e)
+        {
+
+        }
     }
 }
