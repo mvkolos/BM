@@ -70,7 +70,9 @@ namespace BigMoscow
                 content.ImageSource = b;
                 p1 page = new p1(content);
                 _p1Collection.Add(page);
+                
             }
+            System.Diagnostics.Debug.WriteLine("BOOK SIZE {0}",_p1Collection.Count);
 
         }
         private void mail_button_click(object sender, RoutedEventArgs e)
@@ -85,7 +87,7 @@ namespace BigMoscow
 
         private void MenuRuClick(object sender, RoutedEventArgs e)
         {
-            eng_local = false;
+            Flip.Local = false;
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
@@ -96,7 +98,7 @@ namespace BigMoscow
 
         private void MenuengClick(object sender, RoutedEventArgs e)
         {
-            eng_local = true;
+            Flip.Local = true;
             ConfigurationManager.AppSettings["Culture"] = "en-US";
 
              Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
@@ -141,20 +143,22 @@ namespace BigMoscow
 
         public void ContentAdd()
         {
-           
-
+          
             //ConfigurationManager.AppSettings["Culture"] = "ru-RU";
             //Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
 
             //Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
 
             CurrentJournal.Content_page_dictionary = new Dictionary<string, string>();
+            MagazineDictionary.AddContent();
             var contents = MagazineDictionary.contentDictionary;// MagazineDictionary.GetContent.Value;
 
             //System.Diagnostics.Debug.WriteLine(contents[MagazineDictionary.GetDictionary()[CurrentJournal.journal]]);
+            
             content_magaz.Children.Clear();
             if (contents.Keys.Contains(MagazineDictionary.magazinesDictionary[CurrentJournal.journal]))
             {
+                
                 string[] cont = contents[MagazineDictionary.magazinesDictionary[CurrentJournal.journal]];
                 int count = cont.Length;
 
@@ -186,7 +190,8 @@ namespace BigMoscow
                     b.HorizontalAlignment = HorizontalAlignment.Left;
                     if (!CurrentJournal.Content_page_dictionary.ContainsKey(item.Split(';')[0]))
                     {
-                        CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[1]);
+                        int idx = Flip.Local ? 2 : 1;
+                        CurrentJournal.Content_page_dictionary.Add(item.Split(';')[0], item.Split(';')[idx]);
                     }
                     // 
                     b.Click += B_Click;
@@ -233,7 +238,7 @@ namespace BigMoscow
             Button b = sender as Button;
            
             myBook.CurrentSheetIndex = (int.Parse(CurrentJournal.Content_page_dictionary[b.Content.ToString()]))/ 2;
-           // System.Diagnostics.Debug.WriteLine(String.Format("page {0}", myBook.CurrentSheetIndex));
+            System.Diagnostics.Debug.WriteLine(String.Format("page {0}", myBook.CurrentSheetIndex));
             //myBook.
         }
 

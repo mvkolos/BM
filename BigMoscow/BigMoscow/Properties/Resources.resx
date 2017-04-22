@@ -726,4 +726,7 @@ BIGMOSCOW
   <data name="m19_5" xml:space="preserve">
     <value>Образ жизни</value>
   </data>
+  <data name="m2_8" xml:space="preserve">
+    <value>Exhibitions</value>
+  </data>
 </root>

@@ -987,6 +987,15 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exhibitions.
+        /// </summary>
+        public static string m2_8 {
+            get {
+                return ResourceManager.GetString("m2_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Persona.
         /// </summary>
         public static string m3_1 {

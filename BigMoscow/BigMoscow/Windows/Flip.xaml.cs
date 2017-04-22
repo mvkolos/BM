@@ -28,6 +28,7 @@ namespace BigMoscow.Windows
     public partial class Flip : Window
     {
         static public bool Activity = false;
+        static public bool Local = true;
 
         public CarouselPage carousel;
         public FeedBackWindow feedback;
@@ -112,8 +113,10 @@ namespace BigMoscow.Windows
             activityTimer.Interval = new TimeSpan(0, 0, 1);
             activityTimer.Start();
 
-
+            
             CultureInfo c = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
+            ConfigurationManager.AppSettings["Culture"] = "en-US";
+            Local = true;
             Properties.Resources.Culture = new CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             InitializeComponent();
             carousel = new CarouselPage(this);

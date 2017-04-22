@@ -187,7 +187,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m10_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m10_7" xml:space="preserve">
     <value>Консультации</value>
@@ -214,7 +214,7 @@
     <value>Личный опыт</value>
   </data>
   <data name="m11_3" xml:space="preserve">
-    <value>События</value>
+    <value>Событие</value>
   </data>
   <data name="m11_4" xml:space="preserve">
     <value>На работу в Москву</value>
@@ -226,7 +226,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m11_7" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m11_8" xml:space="preserve">
     <value>Консультации</value>
@@ -256,7 +256,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m12_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m12_7" xml:space="preserve">
     <value>Консультации</value>
@@ -289,7 +289,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m13_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m13_7" xml:space="preserve">
     <value>Консультации</value>
@@ -322,7 +322,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m14_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m14_7" xml:space="preserve">
     <value>Консультации</value>
@@ -355,7 +355,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m15_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m15_7" xml:space="preserve">
     <value>Консультации</value>
@@ -436,7 +436,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m4_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m4_7" xml:space="preserve">
     <value>Консультации</value>
@@ -469,7 +469,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m5_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m5_7" xml:space="preserve">
     <value>Консультации</value>
@@ -505,7 +505,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m6_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m6_7" xml:space="preserve">
     <value>Консультации</value>
@@ -538,7 +538,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m7_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m7_7" xml:space="preserve">
     <value>Консультации</value>
@@ -571,7 +571,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m8_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m8_7" xml:space="preserve">
     <value>Консультации</value>
@@ -604,7 +604,7 @@
     <value>Стартап и венчур</value>
   </data>
   <data name="m9_6" xml:space="preserve">
-    <value>Тренды</value>
+    <value>Тенденции</value>
   </data>
   <data name="m9_7" xml:space="preserve">
     <value>Консультации</value>
@@ -718,5 +718,8 @@ BIGMOSCOW</value>
   </data>
   <data name="m19_5" xml:space="preserve">
     <value>Образ жизни</value>
+  </data>
+  <data name="m2_8" xml:space="preserve">
+    <value>Выставки</value>
   </data>
 </root>
