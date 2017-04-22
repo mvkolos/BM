@@ -881,15 +881,6 @@ namespace BigMoscow.Properties {
         /// <summary>
         ///   Looks up a localized string similar to От редактора.
         /// </summary>
-        public static string m19_0 {
-            get {
-                return ResourceManager.GetString("m19_0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Место действия - Москва.
-        /// </summary>
         public static string m19_1 {
             get {
                 return ResourceManager.GetString("m19_1", resourceCulture);
@@ -897,7 +888,7 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to В фокусе.
+        ///   Looks up a localized string similar to Макроэкономика.
         /// </summary>
         public static string m19_2 {
             get {
@@ -906,7 +897,7 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Действующие лица.
+        ///   Looks up a localized string similar to В фокусе.
         /// </summary>
         public static string m19_3 {
             get {
@@ -915,7 +906,7 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Образ действия.
+        ///   Looks up a localized string similar to Действующие лица.
         /// </summary>
         public static string m19_4 {
             get {
@@ -924,7 +915,7 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Образ жизни.
+        ///   Looks up a localized string similar to Глобализация.
         /// </summary>
         public static string m19_5 {
             get {
@@ -933,7 +924,34 @@ namespace BigMoscow.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Persona.
+        ///   Looks up a localized string similar to Образ действия.
+        /// </summary>
+        public static string m19_6 {
+            get {
+                return ResourceManager.GetString("m19_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рейтинги.
+        /// </summary>
+        public static string m19_7 {
+            get {
+                return ResourceManager.GetString("m19_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Образ жизни.
+        /// </summary>
+        public static string m19_8 {
+            get {
+                return ResourceManager.GetString("m19_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Persona grata.
         /// </summary>
         public static string m2_1 {
             get {
@@ -1802,6 +1820,69 @@ namespace BigMoscow.Properties {
         public static string topic {
             get {
                 return ResourceManager.GetString("topic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Industial Automation.
+        /// </summary>
+        public static string v1 {
+            get {
+                return ResourceManager.GetString("v1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motion&amp;Automation.
+        /// </summary>
+        public static string v2 {
+            get {
+                return ResourceManager.GetString("v2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Digital factory.
+        /// </summary>
+        public static string v3 {
+            get {
+                return ResourceManager.GetString("v3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Energy.
+        /// </summary>
+        public static string v4 {
+            get {
+                return ResourceManager.GetString("v4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Industial Supply.
+        /// </summary>
+        public static string v5 {
+            get {
+                return ResourceManager.GetString("v5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Global Business&amp;Markets.
+        /// </summary>
+        public static string v6 {
+            get {
+                return ResourceManager.GetString("v6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Research&amp;Technology.
+        /// </summary>
+        public static string v7 {
+            get {
+                return ResourceManager.GetString("v7", resourceCulture);
             }
         }
         

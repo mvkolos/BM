@@ -187,7 +187,7 @@ BIGMOSCOW
     <value>Consultations</value>
   </data>
   <data name="m2_1" xml:space="preserve">
-    <value>Persona</value>
+    <value>Persona grata</value>
   </data>
   <data name="m2_2" xml:space="preserve">
     <value>Personal Experience</value>
@@ -708,25 +708,52 @@ BIGMOSCOW
   <data name="SendPageText" xml:space="preserve">
     <value>Know more</value>
   </data>
-  <data name="m19_0" xml:space="preserve">
+  <data name="m19_1" xml:space="preserve">
     <value>От редактора</value>
   </data>
-  <data name="m19_1" xml:space="preserve">
-    <value>Место действия - Москва</value>
-  </data>
   <data name="m19_2" xml:space="preserve">
-    <value>В фокусе</value>
+    <value>Макроэкономика</value>
   </data>
   <data name="m19_3" xml:space="preserve">
-    <value>Действующие лица</value>
+    <value>В фокусе</value>
   </data>
   <data name="m19_4" xml:space="preserve">
-    <value>Образ действия</value>
+    <value>Действующие лица</value>
   </data>
   <data name="m19_5" xml:space="preserve">
+    <value>Глобализация</value>
+  </data>
+  <data name="m19_6" xml:space="preserve">
+    <value>Образ действия</value>
+  </data>
+  <data name="m19_7" xml:space="preserve">
+    <value>Рейтинги</value>
+  </data>
+  <data name="m19_8" xml:space="preserve">
     <value>Образ жизни</value>
   </data>
   <data name="m2_8" xml:space="preserve">
     <value>Exhibitions</value>
+  </data>
+  <data name="v1" xml:space="preserve">
+    <value>Industial Automation</value>
+  </data>
+  <data name="v2" xml:space="preserve">
+    <value>Motion&amp;Automation</value>
+  </data>
+  <data name="v3" xml:space="preserve">
+    <value>Digital factory</value>
+  </data>
+  <data name="v4" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="v5" xml:space="preserve">
+    <value>Industial Supply</value>
+  </data>
+  <data name="v6" xml:space="preserve">
+    <value>Global Business&amp;Markets</value>
+  </data>
+  <data name="v7" xml:space="preserve">
+    <value>Research&amp;Technology</value>
   </data>
 </root>

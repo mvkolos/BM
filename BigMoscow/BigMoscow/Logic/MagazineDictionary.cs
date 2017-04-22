@@ -154,79 +154,79 @@ namespace BigMoscow.Logic
 
             });
             contentDictionary.Add("_09", new string[] {
-                Properties.Resources.m9_1+";"+"3",
-                Properties.Resources.m9_2+";"+"19",
-                Properties.Resources.m9_3+";"+"50",
-                Properties.Resources.m9_4+";"+"60",
-                Properties.Resources.m9_5+";"+"68",
-                Properties.Resources.m9_6+";"+"76",
-                Properties.Resources.m9_7+";"+"80",
-                Properties.Resources.m9_8+";"+"85",
-                Properties.Resources.m9_9+";"+"89",
-                Properties.Resources.m9_10+";"+"94",
-                Properties.Resources.m9_11+";"+"99"
+                Properties.Resources.m9_1+";"+"3"+";"+"3",
+                Properties.Resources.m9_2+";"+"19"+";"+"19",
+                Properties.Resources.m9_3+";"+"49"+";"+"50",
+                Properties.Resources.m9_4+";"+"59"+";"+"60",
+                Properties.Resources.m9_5+";"+"68"+";"+"68",
+                Properties.Resources.m9_6+";"+"76"+";"+"76",
+                Properties.Resources.m9_7+";"+"80"+";"+"80",
+                Properties.Resources.m9_8+";"+"85"+";"+"85",
+                Properties.Resources.m9_9+";"+"89"+";"+"89",
+                Properties.Resources.m9_10+";"+"94"+";"+"94",
+                Properties.Resources.m9_11+";"+"99"+";"+"99"
 
 
             });
             contentDictionary.Add("_10", new string[] {
-                Properties.Resources.m10_1+";"+"4",
-                Properties.Resources.m10_2+";"+"19",
-                Properties.Resources.m10_3+";"+"53",
-                Properties.Resources.m10_4+";"+"62",
-                Properties.Resources.m10_5+";"+"71",
-                Properties.Resources.m3_6+";"+"81",
-                Properties.Resources.m10_7+";"+"85",
-                Properties.Resources.m10_8+";"+"91",
-                Properties.Resources.m10_9+";"+"95",
-                Properties.Resources.m10_10+";"+"100",
-                Properties.Resources.m10_11+";"+"106"
+                Properties.Resources.m10_1+";"+"4"+";"+"4",
+                Properties.Resources.m10_2+";"+"19"+";"+"19",
+                Properties.Resources.m10_3+";"+"53"+";"+"53",
+                Properties.Resources.m10_4+";"+"62"+";"+"62",
+                Properties.Resources.m10_5+";"+"71"+";"+"71",
+                Properties.Resources.m3_6+";"+"81"+";"+"81",
+                Properties.Resources.m10_7+";"+"85"+";"+"85",
+                Properties.Resources.m10_8+";"+"91"+";"+"91",
+                Properties.Resources.m10_9+";"+"95"+";"+"95",
+                Properties.Resources.m10_10+";"+"100"+";"+"100",
+                Properties.Resources.m10_11+";"+"106"+";"+"106"
 
 
             });
             contentDictionary.Add("_11", new string[] {
-                Properties.Resources.m11_1+";"+"4",
-                Properties.Resources.m11_2+";"+"23",
-                Properties.Resources.m11_3+";"+"63",
-                Properties.Resources.m11_4+";"+"72",
-                Properties.Resources.m11_5+";"+"84",
-                Properties.Resources.m11_6+";"+"96",
-                Properties.Resources.m11_7+";"+"108",
-                Properties.Resources.m11_8+";"+"112",
-                Properties.Resources.m11_9+";"+"118",
-                Properties.Resources.m11_10+";"+"122",
-                Properties.Resources.m11_11+";"+"127",
-                Properties.Resources.m11_12+";"+"133"
+                Properties.Resources.m11_1+";"+"4"+";"+"4",
+                Properties.Resources.m11_2+";"+"23"+";"+"23",
+                Properties.Resources.m11_3+";"+"63"+";"+"63",
+                Properties.Resources.m11_4+";"+"72"+";"+"72",
+                Properties.Resources.m11_5+";"+"84"+";"+"84",
+                Properties.Resources.m11_6+";"+"96"+";"+"96",
+                Properties.Resources.m11_7+";"+"108"+";"+"108",
+                Properties.Resources.m11_8+";"+"112"+";"+"112",
+                Properties.Resources.m11_9+";"+"118"+";"+"118",
+                Properties.Resources.m11_10+";"+"122"+";"+"122",
+                Properties.Resources.m11_11+";"+"127"+";"+"127",
+                Properties.Resources.m11_12+";"+"133"+";"+"133"
 
 
             });
             contentDictionary.Add("_12", new string[] {
                 Properties.Resources.m12_1+";"+"4",
-                Properties.Resources.m12_2+";"+"20",
-                Properties.Resources.m12_3+";"+"56",
-                Properties.Resources.m12_4+";"+"67",
-                Properties.Resources.m12_5+";"+"77",
-                Properties.Resources.m12_6+";"+"86",
-                Properties.Resources.m12_7+";"+"92",
-                Properties.Resources.m12_8+";"+"98",
-                Properties.Resources.m12_9+";"+"102",
-                Properties.Resources.m12_10+";"+"107",
-                Properties.Resources.m12_11+";"+"113"
+                Properties.Resources.m12_2+";"+"21"+";"+"20",
+                Properties.Resources.m12_3+";"+"59"+";"+"56",
+                Properties.Resources.m12_4+";"+"70"+";"+"67",
+                Properties.Resources.m12_5+";"+"80"+";"+"77",
+                Properties.Resources.m12_6+";"+"89"+";"+"86",
+                Properties.Resources.m12_7+";"+"95"+";"+"92",
+                Properties.Resources.m12_8+";"+"101"+";"+"98",
+                Properties.Resources.m12_9+";"+"105"+";"+"102",
+                Properties.Resources.m12_10+";"+"110"+";"+"107",
+                Properties.Resources.m12_11+";"+"116"+";"+"113"
 
 
 
             });
             contentDictionary.Add("_13", new string[] {
-                Properties.Resources.m13_1+";"+"4",
-                Properties.Resources.m13_2+";"+"20",
-                Properties.Resources.m13_3+";"+"59",
-                Properties.Resources.m13_4+";"+"70",
-                Properties.Resources.m13_5+";"+"81",
-                Properties.Resources.m13_6+";"+"90",
-                Properties.Resources.m13_7+";"+"97",
-                Properties.Resources.m13_8+";"+"107",
-                Properties.Resources.m13_9+";"+"111",
-                Properties.Resources.m13_10+";"+"115",
-                Properties.Resources.m13_11+";"+"121"
+                Properties.Resources.m13_1+";"+"4"+";"+"4",
+                Properties.Resources.m13_2+";"+"20"+";"+"20",
+                Properties.Resources.m13_3+";"+"59"+";"+"59",
+                Properties.Resources.m13_4+";"+"70"+";"+"70",
+                Properties.Resources.m13_5+";"+"81"+";"+"81",
+                Properties.Resources.m13_6+";"+"90"+";"+"90",
+                Properties.Resources.m13_7+";"+"97"+";"+"97",
+                Properties.Resources.m13_8+";"+"107"+";"+"107",
+                Properties.Resources.m13_9+";"+"111"+";"+"111",
+                Properties.Resources.m13_10+";"+"115"+";"+"115",
+                Properties.Resources.m13_11+";"+"121"+";"+"121"
 
 
 
@@ -234,90 +234,92 @@ namespace BigMoscow.Logic
             contentDictionary.Add("_14", new string[] {
                 Properties.Resources.m14_1+";"+"4",
                 Properties.Resources.m14_2+";"+"20",
-                Properties.Resources.m14_3+";"+"60",
-                Properties.Resources.m14_4+";"+"72",
-                Properties.Resources.m14_5+";"+"83",
-                Properties.Resources.m14_6+";"+"92",
-                Properties.Resources.m14_7+";"+"99",
-                Properties.Resources.m14_8+";"+"105",
-                Properties.Resources.m14_9+";"+"110",
-                Properties.Resources.m14_10+";"+"115",
-                Properties.Resources.m14_11+";"+"121"
+                Properties.Resources.m14_3+";"+"60"+";"+"59",
+                Properties.Resources.m14_4+";"+"72"+";"+"71",
+                Properties.Resources.m14_5+";"+"83"+";"+"82",
+                Properties.Resources.m14_6+";"+"92"+";"+"91",
+                Properties.Resources.m14_7+";"+"99"+";"+"98",
+                Properties.Resources.m14_8+";"+"105"+";"+"104",
+                Properties.Resources.m14_9+";"+"110"+";"+"109",
+                Properties.Resources.m14_10+";"+"115"+";"+"114",
+                Properties.Resources.m14_11+";"+"121"+";"+"120"
 
 
 
             });
             contentDictionary.Add("_15", new string[] {
-                Properties.Resources.m15_1+";"+"4",
-                Properties.Resources.m15_2+";"+"22",
-                Properties.Resources.m15_3+";"+"63",
-                Properties.Resources.m15_4+";"+"75",
-                Properties.Resources.m15_5+";"+"88",
-                Properties.Resources.m15_6+";"+"97",
-                Properties.Resources.m15_7+";"+"105",
-                Properties.Resources.m15_8+";"+"112",
-                Properties.Resources.m15_9+";"+"117",
-                Properties.Resources.m15_11+";"+"123",
-                Properties.Resources.m15_10+";"+"134"
+                Properties.Resources.m15_1+";"+"4"+";"+"4",
+                Properties.Resources.m15_2+";"+"22"+";"+"22",
+                Properties.Resources.m15_3+";"+"63"+";"+"63",
+                Properties.Resources.m15_4+";"+"75"+";"+"75",
+                Properties.Resources.m15_5+";"+"88"+";"+"88",
+                Properties.Resources.m15_6+";"+"97"+";"+"97",
+                Properties.Resources.m15_7+";"+"105"+";"+"105",
+                Properties.Resources.m15_8+";"+"112"+";"+"112",
+                Properties.Resources.m15_9+";"+"117"+";"+"117",
+                Properties.Resources.m15_11+";"+"123"+";"+"123",
+                Properties.Resources.m15_10+";"+"134"+";"+"134"
 
 
 
             });
             contentDictionary.Add("_16", new string[] {
-                Properties.Resources.m15_1+";"+"4",
-                Properties.Resources.m15_2+";"+"22",
-                Properties.Resources.m15_3+";"+"62",
-                Properties.Resources.m15_4+";"+"74",
-                Properties.Resources.m15_5+";"+"85",
-                Properties.Resources.m15_6+";"+"95",
-                Properties.Resources.m15_7+";"+"103",
-                Properties.Resources.m15_8+";"+"109",
-                Properties.Resources.m15_9+";"+"114",
-                Properties.Resources.m15_10+";"+"120",
-                Properties.Resources.m15_11+";"+"135"
+                Properties.Resources.m15_1+";"+"4"+";"+"4",
+                Properties.Resources.m15_2+";"+"22"+";"+"22",
+                Properties.Resources.m15_3+";"+"62"+";"+"62",
+                Properties.Resources.m15_4+";"+"74"+";"+"74",
+                Properties.Resources.m15_5+";"+"86"+";"+"85",
+                Properties.Resources.m15_6+";"+"96"+";"+"95",
+                Properties.Resources.m15_7+";"+"105"+";"+"103",
+                Properties.Resources.m15_8+";"+"110"+";"+"109",
+                Properties.Resources.m15_9+";"+"115"+";"+"114",
+                Properties.Resources.m15_10+";"+"136"+";"+"120",
+                Properties.Resources.m15_11+";"+"121"+";"+"135"
 
 
 
             });
             contentDictionary.Add("_17", new string[] {
-                Properties.Resources.m15_1+";"+"4",
-                Properties.Resources.m15_2+";"+"21",
-                Properties.Resources.m15_3+";"+"61",
-                Properties.Resources.m15_4+";"+"73",
-                Properties.Resources.m15_5+";"+"86",
-                Properties.Resources.m15_6+";"+"97",
-                Properties.Resources.m15_7+";"+"103",
-                Properties.Resources.m15_8+";"+"109",
-                Properties.Resources.m15_9+";"+"114",
-                Properties.Resources.m15_10+";"+"120",
-                Properties.Resources.m15_11+";"+"129"
+                Properties.Resources.m15_1+";"+"4"+";"+"4",
+                Properties.Resources.m15_2+";"+"21"+";"+"21",
+                Properties.Resources.m15_3+";"+"62"+";"+"61",
+                Properties.Resources.m15_4+";"+"74"+";"+"73",
+                Properties.Resources.m15_5+";"+"87"+";"+"86",
+                Properties.Resources.m15_6+";"+"98"+";"+"97",
+                Properties.Resources.m15_7+";"+"104"+";"+"103",
+                Properties.Resources.m15_8+";"+"110"+";"+"109",
+                Properties.Resources.m15_9+";"+"115"+";"+"114",
+                Properties.Resources.m15_10+";"+"130"+";"+"120",
+                Properties.Resources.m15_11+";"+"121"+";"+"129"
 
 
 
             });
             contentDictionary.Add("_18", new string[] {
-                Properties.Resources.m12_1+";"+"4",
-                Properties.Resources.m12_2+";"+"21",
-                Properties.Resources.m12_3+";"+"60",
-                Properties.Resources.m12_4+";"+"74",
-                Properties.Resources.m12_5+";"+"85",
-                Properties.Resources.m12_7+";"+"97",
-                Properties.Resources.m3_6+";"+"104",
-                Properties.Resources.m14_8+";"+"111",
-                Properties.Resources.m15_9+";"+"116",
-                Properties.Resources.m15_11+";"+"123",
-                Properties.Resources.m15_10+";"+"134"
+                Properties.Resources.m12_1+";"+"4"+";"+"4",
+                Properties.Resources.m12_2+";"+"21"+";"+"21",
+                Properties.Resources.m12_3+";"+"60"+";"+"61",
+                Properties.Resources.m12_4+";"+"74"+";"+"73",
+                Properties.Resources.m12_5+";"+"85"+";"+"83",
+                Properties.Resources.m12_7+";"+"97"+";"+"102",
+                Properties.Resources.m3_6+";"+"104"+";"+"95",
+                Properties.Resources.m14_8+";"+"111"+";"+"109",
+                Properties.Resources.m15_9+";"+"116"+";"+"114",
+                Properties.Resources.m15_11+";"+"123"+";"+"132",
+                Properties.Resources.m15_10+";"+"134"+";"+"121"
 
 
 
             });
             contentDictionary.Add("_19", new string[] {
-                Properties.Resources.m19_0+";"+"6",
-                Properties.Resources.m19_1+";"+"44",
-                Properties.Resources.m19_2+";"+"11",
-                Properties.Resources.m19_3+";"+"62",
-                Properties.Resources.m19_4+";"+"65",
-                Properties.Resources.m19_5+";"+"93",
+                Properties.Resources.m19_1+";"+"6"+";"+"3",
+                Properties.Resources.m19_2+";"+"7"+";"+"6",
+                Properties.Resources.m19_3+";"+"11"+";"+"10",
+                Properties.Resources.m19_4+";"+"44"+";"+"41",
+                Properties.Resources.m19_5+";"+"62"+";"+"57",
+                Properties.Resources.m19_6+";"+"65"+";"+"60",
+                Properties.Resources.m19_7+";"+"90"+";"+"81",
+                Properties.Resources.m19_8+";"+"93"+";"+"84",
 
 
 

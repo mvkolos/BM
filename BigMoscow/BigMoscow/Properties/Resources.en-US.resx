@@ -403,7 +403,7 @@
     <value>Start up and venture</value>
   </data>
   <data name="m3_6" xml:space="preserve">
-    <value>Tendencies</value>
+    <value>Trends</value>
   </data>
   <data name="m3_7" xml:space="preserve">
     <value>Consultations</value>
@@ -702,18 +702,48 @@ BIGMOSCOW</value>
     <value>Editorial</value>
   </data>
   <data name="m19_1" xml:space="preserve">
-    <value>Place of action - Moscow</value>
+    <value>Editorial</value>
   </data>
   <data name="m19_2" xml:space="preserve">
-    <value>In focus</value>
+    <value>Macroeconomics</value>
   </data>
   <data name="m19_3" xml:space="preserve">
-    <value>Persona</value>
+    <value>In focus</value>
   </data>
   <data name="m19_4" xml:space="preserve">
-    <value>Modus operandi</value>
+    <value>Persona grata</value>
   </data>
   <data name="m19_5" xml:space="preserve">
+    <value>Globalization</value>
+  </data>
+  <data name="m19_6" xml:space="preserve">
+    <value>Modus operandi</value>
+  </data>
+  <data name="m19_7" xml:space="preserve">
+    <value>Rankings</value>
+  </data>
+  <data name="m19_8" xml:space="preserve">
     <value>Modus vivendi</value>
+  </data>
+  <data name="v1" xml:space="preserve">
+    <value>Industrial Automation</value>
+  </data>
+  <data name="v2" xml:space="preserve">
+    <value>Motion&amp;Automation</value>
+  </data>
+  <data name="v3" xml:space="preserve">
+    <value>Digital factory</value>
+  </data>
+  <data name="v4" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="v5" xml:space="preserve">
+    <value>Industrial Supply</value>
+  </data>
+  <data name="v6" xml:space="preserve">
+    <value>Global Business&amp;Markets</value>
+  </data>
+  <data name="v7" xml:space="preserve">
+    <value>Research&amp;Technology</value>
   </data>
 </root>

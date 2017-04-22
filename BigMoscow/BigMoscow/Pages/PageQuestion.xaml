@@ -91,7 +91,7 @@
             x:Name="DropDownBorder"
             Background="{StaticResource WindowPaddleBrush}"
             BorderThickness="1"/>
-                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
                                         <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
                                     </ScrollViewer>
                                 </Grid>
@@ -204,11 +204,14 @@
 
             <ComboBox Name="combobox_business"  IsEditable="True"  Margin="40 5 40 10" Height="50" FontSize="18" Foreground="#FFE7E7E7"  >
 
-                <ComboBoxItem  Content="{x:Static properties:Resources.Display_category}" Foreground="#FFE7E7E7" FontSize="18"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.Hall}"  Foreground="#FFE7E7E7" FontSize="18"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.Country}" Foreground="#FFE7E7E7" FontSize="18"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.German_Chamber_of_Commerce}" Foreground="#FFE7E7E7" FontSize="18"/>
-                <ComboBoxItem Content="{x:Static properties:Resources.Federal_State}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <!--<ComboBoxItem  Content="{x:Static properties:Resources.Display_category}" Foreground="#FFE7E7E7" FontSize="18"/>-->
+                <ComboBoxItem Content="{x:Static properties:Resources.v1}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.v2}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.v3}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.v4}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.v5}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.v6}" Foreground="#FFE7E7E7" FontSize="18"/>
+                <ComboBoxItem Content="{x:Static properties:Resources.v7}" Foreground="#FFE7E7E7" FontSize="18"/>
             </ComboBox>
             <RadioButton Margin="30 10 30 0" Name="r1" Content="{x:Static properties:Resources.t1}" FontSize="18" Foreground="#FFE7E7E7"/>
             <RadioButton Margin="30 5 30 0" Name="r2" Content="{x:Static properties:Resources.t2}" FontSize="18" Foreground="#FFE7E7E7"/>
