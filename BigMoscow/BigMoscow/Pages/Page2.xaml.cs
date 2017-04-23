@@ -52,16 +52,23 @@ namespace BigMoscow
             String uri = "../../../../../Slides";
             slides = DirSearch(uri);
 
-            ManipulationStarted += GridMovementStarting;
-            ManipulationDelta += GridMovementDelta;
-            TouchDown+= TouchMovementStarting;
+            //ManipulationStarted += GridMovementStarting;
+            //ManipulationDelta += GridMovementDelta;
+            TouchDown += TouchMovementStarting;
 
-            TabControl.ManipulationStarted += GridMovementStarting;
-            TabControl.ManipulationDelta += GridMovementDelta;
+            //TabControl.ManipulationStarted += GridMovementStarting;
+            //TabControl.ManipulationDelta += GridMovementDelta;
 
-            TouchMove += DetectMovement;
-            TouchUp += CheckGesture;
+            //TouchMove += DetectMovement;
+            TouchMove += CheckGesture;
+            //TouchUp += CheckGesture;
+            Loaded += OnLoad;
             StartTimer();
+        }
+        void OnLoad(object sender, RoutedEventArgs e)
+        {
+            ConfigurationManager.AppSettings["Culture"] = Flip.Local?"en-US":"ru-RU";
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
         }
         void DetectMovement(object sender, TouchEventArgs e)
         {
@@ -69,8 +76,22 @@ namespace BigMoscow
         }
         void CheckGesture(object sender, TouchEventArgs e)
         {
+            touchMove = true;
             TouchDevice c = e.TouchDevice;
-            initialpoint = c.GetTouchPoint(this).Position;
+            //c.GetTouchPoint(this).Position;
+            Point currentpoint = c.GetTouchPoint(this).Position;
+            if (currentpoint.X - initialpoint.X >= 500)//500 is the threshold value, where you want to trigger the swipe right event
+            {
+                System.Diagnostics.Debug.WriteLine("Swipe Right");
+                TabControl.SpinToNext();
+                //e.Complete();
+            }
+            if (currentpoint.X - initialpoint.X <= -500)//500 is the threshold value, where you want to trigger the swipe right event
+            {
+                System.Diagnostics.Debug.WriteLine("Swipe Left");
+                TabControl.SpinToPrevious();
+                //e.Complete();
+            }
         }
         void GridMovementStarting(object sender, ManipulationStartedEventArgs e)
         {
@@ -80,20 +101,7 @@ namespace BigMoscow
         void TouchMovementStarting(object sender, TouchEventArgs e)
         {
             TouchDevice c = e.TouchDevice;
-            //c.GetTouchPoint(this).Position;
-            Point currentpoint = c.GetTouchPoint(this).Position;
-            if (currentpoint.X - initialpoint.X >= 500)//500 is the threshold value, where you want to trigger the swipe right event
-            {
-                System.Diagnostics.Debug.WriteLine("Swipe Right");
-                TabControl.SpinToPrevious();
-                //e.Complete();
-            }
-            if (currentpoint.X - initialpoint.X <=-500)//500 is the threshold value, where you want to trigger the swipe right event
-            {
-                System.Diagnostics.Debug.WriteLine("Swipe Left");
-                TabControl.SpinToNext();
-                //e.Complete();
-            }
+            initialpoint = c.GetTouchPoint(this).Position;
         }
 
         void GridMovementDelta(object sender, ManipulationDeltaEventArgs e)
@@ -155,6 +163,7 @@ namespace BigMoscow
         private void CreateTabs()
         {
             String baseString = "../../../../../";
+            language = Flip.Local ? "en" : "ru";
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2012-v.jpg", language), new Size(height, width)));//1
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2013-v.jpg", language), new Size(height, width)));
             TabControl.AddTab(CreateFixedSizeLabel(string.Format(baseString + "Covers/ru.bigrussia.bgm{0}.01_2014-v.jpg", language), new Size(height, width)));
@@ -205,19 +214,21 @@ namespace BigMoscow
             TabControl.SpinToNext();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuRuClick(object sender, RoutedEventArgs e)
         {
             language = "ru";
+            Flip.Local = false;
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             _flip.showCarouselPage(true);
         }
 
-        private void MenuItenEngclick(object sender, RoutedEventArgs e)
+        private void MenuEngclick(object sender, RoutedEventArgs e)
         {
             language = "en";
-
+            Flip.Local = true;
+            System.Diagnostics.Debug.WriteLine("alive");
             ConfigurationManager.AppSettings["Culture"] = "en-US";
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             _flip.showCarouselPage(true);

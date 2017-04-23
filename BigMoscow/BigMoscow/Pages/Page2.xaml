@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:BigMoscow"
       xmlns:properties="clr-namespace:BigMoscow.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920"
+      Height="1080" Width="1920"
       Title="Page2" IsManipulationEnabled="True">
     
 
@@ -17,8 +17,6 @@
     </Storyboard>-->
 
     
-    
-    
 
     <Page.Background>
         <ImageBrush x:Name="backgroundImage" ImageSource="/UI/MainScreen/mainscreenMain.png"/>
@@ -26,7 +24,7 @@
 
 
 
-    <Grid IsManipulationEnabled="True" >
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition/>
@@ -37,13 +35,21 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        
 
-
-        <bornander:Carousel x:Name="TabControl" Margin="-200" Depth="0.1" Grid.ColumnSpan="3" Grid.Row="1" IsManipulationEnabled="True" 
+        <bornander:Carousel x:Name="TabControl" Margin="0 -200 0 -200" Depth="0.1" Grid.ColumnSpan="3" Grid.Row="1" IsManipulationEnabled="True" 
                             TouchDown="TabControl_TouchDown"/>
 
-        
-        <Button  Background="Transparent" HorizontalAlignment="Left" Name="button_previous" Grid.Row="1" Width="70" Click="HandleNext" BorderBrush="#00707070" Margin="65,0,0,0" >
+        <Menu Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" Padding="20" >
+
+            <MenuItem Header="RU" Click="MenuRuClick" TouchDown="MenuRuClick" FontSize="28" Foreground="#FFD8D8D8"/>
+            <Image Source="/BigMoscow;component/UI/MainScreen/earth_icon.png" Width="40"/>
+
+            <MenuItem  Header="ENG" Click="MenuEngclick" TouchDown="MenuEngclick" FontSize="28" Foreground="#FFD8D8D8" />
+
+
+        </Menu>
+        <Button  Background="Transparent" HorizontalAlignment="Left" Name="button_previous" Grid.Row="1" Width="70" Click="HandleNext" TouchDown="HandleNext" BorderBrush="#00707070" Margin="65,0,0,0" >
             <StackPanel>
                 <Image Width="60" Source="/UI/MainScreen/arrow_left.png"/>
             </StackPanel>
@@ -67,7 +73,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Name="button_next" HorizontalAlignment="Right"  Grid.Row="1" Grid.Column="2" Width="70" Click= "HandlePrevious" Background="Transparent" Margin="0,0,65,0">
+        <Button Name="button_next" HorizontalAlignment="Right"  Grid.Row="1" Grid.Column="2" Width="70" Click= "HandlePrevious" TouchDown="HandlePrevious" Background="Transparent" Margin="0,0,65,0">
             <Grid>
                 <Image Width="60" Source="/BigMoscow;component/UI/MainScreen/arrow_right.png" HorizontalAlignment="Right" Margin="0,0,0,0.31"/>
             </Grid>
@@ -93,17 +99,5 @@
 
         </Button>
 
-        <Menu Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" Padding="20" >
-
-            <MenuItem Header="RU" Click="MenuItem_Click" FontSize="28" Foreground="#FFD8D8D8"/>
-            <Image Source="/BigMoscow;component/UI/MainScreen/earth_icon.png" Width="40"/>
-
-            <MenuItem  Header="ENG" Click="MenuItenEngclick" FontSize="28" Foreground="#FFD8D8D8" />
-
-
-        </Menu>
-        <Grid x:Name="SwipeGrid" IsManipulationEnabled="true">
-
-        </Grid>
     </Grid>
 </Page>

@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       DataContext="PageQuestion.xaml.cs"
       Height="1080" Width="1920"
-      Title="PageQuestion" Loaded="Page_Loaded" KeyDown="Page_KeyDown_1">
+      Title="PageQuestion" Loaded="Page_Loaded" KeyDown="Page_KeyDown_1" >
     <Page.Resources>
 
 

@@ -41,13 +41,13 @@ namespace BigMoscow
 
         private void OnLoad(object sender, RoutedEventArgs e)
         {
-            //ConfigurationManager.AppSettings["Culture"] = "ru_RU";
-           // ConfigurationManager.AppSettings["Culture"] = eng_local ? "en-US" : "ru-RU";
+            ConfigurationManager.AppSettings["Culture"] = Flip.Local ? "en-US" : "ru-RU";
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             BookAdd();
             CoversAdd();
             ContentAdd();
         }
-
+        
         public void BookAdd()
         {
             while (_p1Collection.Any())
@@ -250,6 +250,11 @@ namespace BigMoscow
         private void carousel_back_Click(object sender, RoutedEventArgs e)
         {
             _flip.showCarouselPage();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

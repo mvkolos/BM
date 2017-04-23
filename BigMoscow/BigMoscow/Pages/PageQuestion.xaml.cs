@@ -42,7 +42,8 @@ namespace BigMoscow.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-           
+            ConfigurationManager.AppSettings["Culture"] = Flip.Local ? "en-US" : "ru-RU";
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
         }
         
         private void LoadCombobox()
@@ -68,6 +69,7 @@ namespace BigMoscow.Pages
 
         private void RU_click(object sender, RoutedEventArgs e)
         {
+            Flip.Local = false;
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             flip.showQuestionPage(true);
@@ -76,6 +78,7 @@ namespace BigMoscow.Pages
       
         private void en_click(object sender, RoutedEventArgs e)
         {
+            Flip.Local = true;
             ConfigurationManager.AppSettings["Culture"] = "en-US";
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             flip.showQuestionPage(true);

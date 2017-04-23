@@ -1,6 +1,7 @@
 ﻿using BigMoscow.Windows;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,7 @@ namespace BigMoscow.Pages
         }
         private void SetBackGround()
         {
+            localized_folder = Flip.Local ? "en" : "ru";
             string url = "../../Images/Mediakit/" + localized_folder + "/" + currentSlide.ToString() + ".jpg";
             BitmapImage b = new BitmapImage(new Uri(url, UriKind.Relative));
 
@@ -57,12 +59,14 @@ namespace BigMoscow.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            ConfigurationManager.AppSettings["Culture"] = Flip.Local ? "en-US" : "ru-RU";
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
             SetBackGround();
         }
 
         private void click_right(object sender, RoutedEventArgs e)//
         {
-            if(localized_folder=="en")
+            if(Flip.Local)
             {
                 if(currentSlide<len_eng)
                 {
@@ -94,15 +98,15 @@ namespace BigMoscow.Pages
         private void RU_click(object sender, RoutedEventArgs e)
         {
             currentSlide = 0;
-            localized_folder = "ru";
+            Flip.Local = false;
             SetBackGround();
         }
 
         private void en_click(object sender, RoutedEventArgs e)
         {
             currentSlide = 0;
-            
-            localized_folder = "en";
+
+            Flip.Local = true;
             SetBackGround();
         }
     }

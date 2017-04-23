@@ -96,6 +96,8 @@ namespace BigMoscow.Pages
             IInputPanelConfiguration icp = cp as IInputPanelConfiguration;
             if (icp != null)
                 icp.EnableFocusTracking();
+            ConfigurationManager.AppSettings["Culture"] = Flip.Local ? "en-US" : "ru-RU";
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
         }
 
         private void textbox_Email_GotTouchCapture(object sender, TouchEventArgs e)
@@ -155,6 +157,7 @@ namespace BigMoscow.Pages
 
         private void en_click(object sender, RoutedEventArgs e)
         {
+            Flip.Local = true;
             ConfigurationManager.AppSettings["Culture"] = "en-US";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);
@@ -163,6 +166,7 @@ namespace BigMoscow.Pages
 
         private void RU_click(object sender, RoutedEventArgs e)
         {
+            Flip.Local = false;
             ConfigurationManager.AppSettings["Culture"] = "ru-RU";
 
             Properties.Resources.Culture = new System.Globalization.CultureInfo(ConfigurationManager.AppSettings["Culture"]);

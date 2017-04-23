@@ -65,7 +65,7 @@ namespace BigMoscow.Windows
                 carousel = new CarouselPage(this);
 
             Content = carousel;
-            carousel.InitializeComponent();
+           // carousel.InitializeComponent();
         }
 
 
@@ -156,7 +156,7 @@ namespace BigMoscow.Windows
         void Counter(object sender, EventArgs e)
         {
             time++;
-            if (time > 120 )
+            if (time > 30 )
             {
                 showCarouselPage();
             }

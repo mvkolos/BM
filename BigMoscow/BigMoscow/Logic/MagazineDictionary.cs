@@ -200,7 +200,7 @@ namespace BigMoscow.Logic
 
             });
             contentDictionary.Add("_12", new string[] {
-                Properties.Resources.m12_1+";"+"4",
+                Properties.Resources.m12_1+";"+"4"+";"+"4",
                 Properties.Resources.m12_2+";"+"21"+";"+"20",
                 Properties.Resources.m12_3+";"+"59"+";"+"56",
                 Properties.Resources.m12_4+";"+"70"+";"+"67",
@@ -232,8 +232,8 @@ namespace BigMoscow.Logic
 
             });
             contentDictionary.Add("_14", new string[] {
-                Properties.Resources.m14_1+";"+"4",
-                Properties.Resources.m14_2+";"+"20",
+                Properties.Resources.m14_1+";"+"4"+";"+"4",
+                Properties.Resources.m14_2+";"+"20"+";"+"20",
                 Properties.Resources.m14_3+";"+"60"+";"+"59",
                 Properties.Resources.m14_4+";"+"72"+";"+"71",
                 Properties.Resources.m14_5+";"+"83"+";"+"82",
